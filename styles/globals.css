@@ -1,22 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fefffe;
+  --foreground: #000000;
+  --infitech-surface: #fefffe;
+  --infitech-ink: #000000;
+  --infitech-cyan: #1cf0e8;
+  --infitech-orange: #ffa500;
+  --infitech-turquoise: #40e0d0;
+  --infitech-olive: #c8c871;
+  --infitech-gold: #f6b216;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-infitech-surface: var(--infitech-surface);
+  --color-infitech-ink: var(--infitech-ink);
+  --color-infitech-cyan: var(--infitech-cyan);
+  --color-infitech-orange: var(--infitech-orange);
+  --color-infitech-turquoise: var(--infitech-turquoise);
+  --color-infitech-olive: var(--infitech-olive);
+  --color-infitech-gold: var(--infitech-gold);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

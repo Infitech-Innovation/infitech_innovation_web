@@ -11,47 +11,48 @@ export default function PageUnderDevelopment({
   title = "Page",
 }: PageUnderDevelopmentProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-6 flex-col relative overflow-hidden gap-8">
-      <div className="flex flex-col items-center text-center">
-        <div className="mb-6 p-4 bg-amber-100 rounded-2xl">
+    <div className="relative flex min-h-screen flex-col items-center justify-center gap-8 overflow-hidden bg-infitech-surface px-6 text-infitech-ink">
+      <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-turquoise),var(--infitech-gold),var(--infitech-orange))]" />
+      <div className="absolute h-80 w-80 rounded-full bg-infitech-cyan/20 blur-3xl" />
+      <div className="absolute bottom-12 right-8 h-28 w-28 rounded-md bg-infitech-orange/75" />
+      <div className="absolute left-8 top-24 h-24 w-24 rounded-md bg-infitech-olive/80" />
+
+      <div className="relative flex flex-col items-center text-center">
+        <div className="mb-6 rounded-md border border-infitech-olive bg-infitech-cyan/15 p-4">
           <Construction
-            className="w-12 h-12 text-amber-600"
+            className="h-12 w-12 text-infitech-orange"
             strokeWidth={1.5}
           />
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 mb-3">
+        <h1 className="mb-3 text-4xl font-bold text-infitech-ink">
           {title} Under Development
         </h1>
-        <p className="text-slate-600 text-lg mb-8 max-w-sm">
+        <p className="mb-8 max-w-sm text-lg text-infitech-ink/70">
           Our team is hard at work creating something amazing for you. Check
           back soon for updates.
         </p>
-        <div className="w-64 h-1 bg-slate-200 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 w-1/2 rounded-full" />
+        <div className="h-1 w-64 overflow-hidden rounded-full bg-infitech-olive/40">
+          <div className="h-full w-1/2 rounded-full bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-gold),var(--infitech-orange))]" />
         </div>
       </div>
 
-      {/* CTA button */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-orange-500 border borer-orange-500  justify-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all duration-200 active:scale-95"
-          >
-            <Home className="w-5 h-5" strokeWidth={2} />
-            Go Home
-          </Link>
+      <div className="relative flex flex-col gap-4 sm:flex-row">
+        <Link
+          href="/"
+          className="inline-flex items-center justify-center gap-2 rounded-md border border-infitech-ink bg-infitech-ink px-4 py-2 font-semibold text-infitech-surface transition-all duration-200 hover:bg-infitech-orange hover:text-infitech-ink active:scale-95"
+        >
+          <Home className="h-5 w-5" strokeWidth={2} />
+          Go Home
+        </Link>
 
-          <Link
-            href="#"
-            onClick={() => window.history.back()}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all duration-200 active:scale-95"
-            style={{
-              border: "1.5px solid #60a5fa",
-            }}
-          >
-            ← Go Back
-          </Link>
-        </div>
+        <Link
+          href="#"
+          onClick={() => window.history.back()}
+          className="inline-flex items-center justify-center gap-2 rounded-md border border-infitech-turquoise px-4 py-2 font-semibold text-infitech-ink transition-all duration-200 hover:bg-infitech-cyan/20 active:scale-95"
+        >
+          Back
+        </Link>
+      </div>
     </div>
   );
 }
