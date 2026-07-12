@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "logoAlt": "Infitech Innovation logo",
+    "toggleMenu": "Toggle menu",
+    "language": "Select language",
+    "home": "Home",
+    "digitalTransformation": "Digital Transformation",
+    "erpSaas": "ERP SaaS",
+    "customDevelopment": "Custom Development",
+    "aiConsultation": "AI Consultation",
+    "marketing": "Marketing",
+    "innovation": "Innovation"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Infitech Innovation",
+      "description": "Infitech Innovation builds modern digital systems, AI-powered workflows, ERP SaaS tools, and custom software for growing teams."
+    },
+    "eyebrow": "Technology. Automation. Innovation.",
+    "title": "Infitech Innovation",
+    "description": "We build modern digital systems, AI-powered workflows, ERP SaaS tools, and custom software for teams that need technology to move with clarity.",
+    "primaryCta": "Explore Services",
+    "secondaryCta": "Book AI Consultation",
+    "logoAlt": "Infitech Innovation logo",
+    "services": {
+      "digital": {
+        "accent": "Digital",
+        "label": "Transformation"
+      },
+      "erp": {
+        "accent": "ERP",
+        "label": "SaaS"
+      },
+      "custom": {
+        "accent": "Custom",
+        "label": "Development"
+      },
+      "ai": {
+        "accent": "AI",
+        "label": "Automation"
+      }
+    }
+  },
+  "ComingSoon": {
+    "title": "{page} Under Development",
+    "description": "Our team is hard at work creating something amazing for you. Check back soon for updates.",
+    "home": "Go Home",
+    "back": "Back",
+    "pages": {
+      "aiAutomation": "AI Integration & Automation Page",
+      "customDevelopment": "Custom System Development Page",
+      "erpSaas": "ERP SaaS Page",
+      "innovation": "Innovation Page",
+      "chatbot": "AI Chatbot Page",
+      "digitalTransformation": "Digital Transformation Page",
+      "marketing": "Digital Marketing Page"
+    }
+  }
+}

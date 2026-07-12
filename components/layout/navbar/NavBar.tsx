@@ -2,26 +2,70 @@
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import {
+    Link,
+    locales,
+    type AppPathname,
+    type Locale,
+    usePathname,
+    useRouter,
+} from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Digital Transformation", href: "/digital-transform" },
-    { label: "ERP SaaS", href: "/erp-saas" },
-    { label: "Custom Development", href: "/custom-develop" },
-    { label: "AI Consultation", href: "/ai-automation-booking" },
-    { label: "Marketing", href: "/marketing" },
-    { label: "Innovation", href: "/innovation" },
-];
+    { labelKey: "home", href: "/" },
+    { labelKey: "digitalTransformation", href: "/digital-transform" },
+    { labelKey: "erpSaas", href: "/erp-saas" },
+    { labelKey: "customDevelopment", href: "/custom-develop" },
+    { labelKey: "aiConsultation", href: "/ai-automation-booking" },
+    { labelKey: "marketing", href: "/marketing" },
+    { labelKey: "innovation", href: "/innovation" },
+] satisfies Array<{ labelKey: string; href: AppPathname }>;
+
+const languageLabels: Record<Locale, string> = {
+    en: "English",
+    fr: "Français",
+    sw: "Swahili",
+    de: "Deutsch",
+};
 
 export function Navbar() {
     const [open, setOpen] = useState(false);
+    const locale = useLocale();
+    const t = useTranslations("Navbar");
     const pathname = usePathname();
+    const router = useRouter();
 
-    const isActive = (href: string) =>
-        pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+    const isActive = (href: string) => {
+        return (
+            pathname === href ||
+            (href !== "/" && pathname.startsWith(`${href}/`))
+        );
+    };
+
+    const handleLocaleChange = (nextLocale: Locale) => {
+        setOpen(false);
+        router.replace(pathname, { locale: nextLocale });
+    };
+
+    const renderLanguageSelect = () => (
+        <label className="inline-flex items-center gap-2 text-sm font-semibold text-infitech-ink">
+            <span className="sr-only">{t("language")}</span>
+            <select
+                aria-label={t("language")}
+                value={locale}
+                onChange={(event) => handleLocaleChange(event.target.value as Locale)}
+                className="h-10 rounded-md border border-infitech-olive bg-infitech-surface px-3 text-sm font-semibold text-infitech-ink outline-none transition hover:border-infitech-turquoise focus:border-infitech-orange focus:ring-2 focus:ring-infitech-orange/20"
+            >
+                {locales.map((item) => (
+                    <option key={item} value={item}>
+                        {languageLabels[item]}
+                    </option>
+                ))}
+            </select>
+        </label>
+    );
 
     return (
         <header className="sticky top-0 z-50 border-b border-infitech-olive bg-infitech-surface/95 backdrop-blur">
@@ -35,7 +79,7 @@ export function Navbar() {
                 >
                     <Image
                         src="/icon0.svg"
-                        alt="Infitech Innovation"
+                        alt={t("logoAlt")}
                         width={48}
                         height={48}
                         className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
@@ -58,22 +102,26 @@ export function Navbar() {
                                 className={`whitespace-nowrap transition hover:text-infitech-gold ${active ? "text-infitech-orange font-semibold" : ""
                                     }`}
                             >
-                                {link.label}
+                                {t(link.labelKey)}
                             </Link>
                         );
                     })}
                 </div>
 
-                {/* Mobile Menu Toggle Button */}
-                <button
-                    type="button"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-infitech-olive text-infitech-ink transition hover:bg-infitech-olive/20 lg:hidden"
-                    onClick={() => setOpen((value) => !value)}
-                    aria-label="Toggle menu"
-                    aria-expanded={open}
-                >
-                    {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                </button>
+                <div className="flex items-center gap-2">
+                    <div className="hidden lg:block">{renderLanguageSelect()}</div>
+
+                    {/* Mobile Menu Toggle Button */}
+                    <button
+                        type="button"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-infitech-olive text-infitech-ink transition hover:bg-infitech-olive/20 lg:hidden"
+                        onClick={() => setOpen((value) => !value)}
+                        aria-label={t("toggleMenu")}
+                        aria-expanded={open}
+                    >
+                        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    </button>
+                </div>
             </nav>
 
             {/* Mobile Drawer Dropdown */}
@@ -92,10 +140,13 @@ export function Navbar() {
                                     className={`rounded-md px-3 py-2 transition hover:bg-infitech-olive/20 hover:text-infitech-orange ${active ? "bg-infitech-cyan/15 text-infitech-ink font-semibold" : ""
                                         }`}
                                 >
-                                    {link.label}
+                                    {t(link.labelKey)}
                                 </Link>
                             );
                         })}
+                        <div className="mt-2 border-t border-infitech-olive/70 pt-3">
+                            {renderLanguageSelect()}
+                        </div>
                     </div>
                 </div>
             )}

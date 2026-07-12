@@ -1,15 +1,21 @@
 "use client";
 
 import { Construction, Home } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface PageUnderDevelopmentProps {
   title?: string;
+  titleKey?: string;
 }
 
 export default function PageUnderDevelopment({
   title = "Page",
+  titleKey,
 }: PageUnderDevelopmentProps) {
+  const t = useTranslations("ComingSoon");
+  const pageTitle = titleKey ? t(`pages.${titleKey}`) : title;
+
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center gap-8 overflow-hidden bg-infitech-surface px-6 text-infitech-ink">
       <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-turquoise),var(--infitech-gold),var(--infitech-orange))]" />
@@ -25,11 +31,10 @@ export default function PageUnderDevelopment({
           />
         </div>
         <h1 className="mb-3 text-4xl font-bold text-infitech-ink">
-          {title} Under Development
+          {t("title", { page: pageTitle })}
         </h1>
         <p className="mb-8 max-w-sm text-lg text-infitech-ink/70">
-          Our team is hard at work creating something amazing for you. Check
-          back soon for updates.
+          {t("description")}
         </p>
         <div className="h-1 w-64 overflow-hidden rounded-full bg-infitech-olive/40">
           <div className="h-full w-1/2 rounded-full bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-gold),var(--infitech-orange))]" />
@@ -42,15 +47,7 @@ export default function PageUnderDevelopment({
           className="inline-flex items-center justify-center gap-2 rounded-md border border-infitech-ink bg-infitech-ink px-4 py-2 font-semibold text-infitech-surface transition-all duration-200 hover:bg-infitech-orange hover:text-infitech-ink active:scale-95"
         >
           <Home className="h-5 w-5" strokeWidth={2} />
-          Go Home
-        </Link>
-
-        <Link
-          href="#"
-          onClick={() => window.history.back()}
-          className="inline-flex items-center justify-center gap-2 rounded-md border border-infitech-turquoise px-4 py-2 font-semibold text-infitech-ink transition-all duration-200 hover:bg-infitech-cyan/20 active:scale-95"
-        >
-          Back
+          {t("home")}
         </Link>
       </div>
     </div>

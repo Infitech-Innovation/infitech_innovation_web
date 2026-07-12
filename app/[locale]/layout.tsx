@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import QueryProvider from "@/lib/queryProvider";
 import { Navbar } from "@/components/layout/navbar/NavBar";
+import { NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { isLocale, locales } from "@/i18n/routing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +18,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://infitech-innovation-web.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Infitech Innovation",
     template: "%s | Infitech Innovation",
@@ -43,6 +49,14 @@ export const metadata: Metadata = {
       "Modern digital systems, AI-powered workflows, ERP SaaS tools, and custom software built for growing teams.",
     url: "/",
     siteName: "Infitech Innovation",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Infitech Innovation",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -51,6 +65,7 @@ export const metadata: Metadata = {
     title: "Infitech Innovation",
     description:
       "Modern digital systems, AI-powered workflows, ERP SaaS tools, and custom software built for growing teams.",
+    images: ["/opengraph-image.jpg"],
   },
   // robots: {
   //   index: true,
@@ -68,18 +83,44 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  return <LocaleLayout params={params}>{children}</LocaleLayout>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+async function LocaleLayout({
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale } = await params;
+
+  if (!isLocale(locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <QueryProvider>
-          <Navbar />
-          {children}
+          <NextIntlClientProvider>
+            <Navbar />
+            {children}
+          </NextIntlClientProvider>
         </QueryProvider></body>
     </html>
   );

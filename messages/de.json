@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "logoAlt": "Infitech Innovation Logo",
+    "toggleMenu": "Menü öffnen oder schließen",
+    "language": "Sprache auswählen",
+    "home": "Startseite",
+    "digitalTransformation": "Digitale Transformation",
+    "erpSaas": "ERP SaaS",
+    "customDevelopment": "Individuelle Entwicklung",
+    "aiConsultation": "KI-Beratung",
+    "marketing": "Marketing",
+    "innovation": "Innovation"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Infitech Innovation",
+      "description": "Infitech Innovation entwickelt moderne digitale Systeme, KI-gestützte Workflows, ERP-SaaS-Tools und individuelle Software für wachsende Teams."
+    },
+    "eyebrow": "Technologie. Automatisierung. Innovation.",
+    "title": "Infitech Innovation",
+    "description": "Wir entwickeln moderne digitale Systeme, KI-gestützte Workflows, ERP-SaaS-Tools und individuelle Software für Teams, die klar und gezielt vorankommen wollen.",
+    "primaryCta": "Services ansehen",
+    "secondaryCta": "KI-Beratung buchen",
+    "logoAlt": "Infitech Innovation Logo",
+    "services": {
+      "digital": {
+        "accent": "Digitale",
+        "label": "Transformation"
+      },
+      "erp": {
+        "accent": "ERP",
+        "label": "SaaS"
+      },
+      "custom": {
+        "accent": "Individuelle",
+        "label": "Entwicklung"
+      },
+      "ai": {
+        "accent": "KI",
+        "label": "Automatisierung"
+      }
+    }
+  },
+  "ComingSoon": {
+    "title": "{page} in Entwicklung",
+    "description": "Unser Team arbeitet daran, etwas Wertvolles für Sie zu erstellen. Schauen Sie bald wieder vorbei.",
+    "home": "Zur Startseite",
+    "back": "Zurück",
+    "pages": {
+      "aiAutomation": "Seite KI-Integration und Automatisierung",
+      "customDevelopment": "Seite Individuelle Systementwicklung",
+      "erpSaas": "Seite ERP SaaS",
+      "innovation": "Seite Innovation",
+      "chatbot": "Seite KI-Chatbot",
+      "digitalTransformation": "Seite Digitale Transformation",
+      "marketing": "Seite Digitales Marketing"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "logoAlt": "Logo Infitech Innovation",
+    "toggleMenu": "Ouvrir ou fermer le menu",
+    "language": "Choisir la langue",
+    "home": "Accueil",
+    "digitalTransformation": "Transformation numérique",
+    "erpSaas": "ERP SaaS",
+    "customDevelopment": "Développement sur mesure",
+    "aiConsultation": "Consultation IA",
+    "marketing": "Marketing",
+    "innovation": "Innovation"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Infitech Innovation",
+      "description": "Infitech Innovation conçoit des systèmes numériques modernes, des flux de travail alimentés par l'IA, des outils ERP SaaS et des logiciels sur mesure pour les équipes en croissance."
+    },
+    "eyebrow": "Technologie. Automatisation. Innovation.",
+    "title": "Infitech Innovation",
+    "description": "Nous créons des systèmes numériques modernes, des flux de travail alimentés par l'IA, des outils ERP SaaS et des logiciels sur mesure pour les équipes qui veulent avancer avec clarté.",
+    "primaryCta": "Explorer les services",
+    "secondaryCta": "Réserver une consultation IA",
+    "logoAlt": "Logo Infitech Innovation",
+    "services": {
+      "digital": {
+        "accent": "Transformation",
+        "label": "Numérique"
+      },
+      "erp": {
+        "accent": "ERP",
+        "label": "SaaS"
+      },
+      "custom": {
+        "accent": "Développement",
+        "label": "Sur mesure"
+      },
+      "ai": {
+        "accent": "IA",
+        "label": "Automatisation"
+      }
+    }
+  },
+  "ComingSoon": {
+    "title": "{page} en développement",
+    "description": "Notre équipe prépare quelque chose d'utile pour vous. Revenez bientôt pour découvrir les prochaines mises à jour.",
+    "home": "Retour à l'accueil",
+    "back": "Retour",
+    "pages": {
+      "aiAutomation": "Page Intégration et automatisation IA",
+      "customDevelopment": "Page Développement de systèmes sur mesure",
+      "erpSaas": "Page ERP SaaS",
+      "innovation": "Page Innovation",
+      "chatbot": "Page Chatbot IA",
+      "digitalTransformation": "Page Transformation numérique",
+      "marketing": "Page Marketing numérique"
+    }
+  }
+}

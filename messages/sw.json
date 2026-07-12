@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "logoAlt": "Nembo ya Infitech Innovation",
+    "toggleMenu": "Fungua au funga menyu",
+    "language": "Chagua lugha",
+    "home": "Nyumbani",
+    "digitalTransformation": "Mageuzi ya Kidijitali",
+    "erpSaas": "ERP SaaS",
+    "customDevelopment": "Utengenezaji Maalum",
+    "aiConsultation": "Ushauri wa AI",
+    "marketing": "Masoko",
+    "innovation": "Ubunifu"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Infitech Innovation",
+      "description": "Infitech Innovation hujenga mifumo ya kisasa ya kidijitali, mitiririko ya kazi inayotumia AI, zana za ERP SaaS na programu maalum kwa timu zinazokua."
+    },
+    "eyebrow": "Teknolojia. Uendeshaji otomatiki. Ubunifu.",
+    "title": "Infitech Innovation",
+    "description": "Tunajenga mifumo ya kisasa ya kidijitali, mitiririko ya kazi inayotumia AI, zana za ERP SaaS na programu maalum kwa timu zinazohitaji teknolojia yenye mwelekeo wazi.",
+    "primaryCta": "Angalia Huduma",
+    "secondaryCta": "Weka miadi ya Ushauri wa AI",
+    "logoAlt": "Nembo ya Infitech Innovation",
+    "services": {
+      "digital": {
+        "accent": "Mageuzi",
+        "label": "ya Kidijitali"
+      },
+      "erp": {
+        "accent": "ERP",
+        "label": "SaaS"
+      },
+      "custom": {
+        "accent": "Programu",
+        "label": "Maalum"
+      },
+      "ai": {
+        "accent": "AI",
+        "label": "Otomatiki"
+      }
+    }
+  },
+  "ComingSoon": {
+    "title": "{page} linaendelea kutengenezwa",
+    "description": "Timu yetu inaandaa kitu kizuri kwa ajili yako. Tafadhali rudi hivi karibuni kwa masasisho.",
+    "home": "Nenda Nyumbani",
+    "back": "Rudi",
+    "pages": {
+      "aiAutomation": "Ukurasa wa Ujumuishaji na Uendeshaji wa AI",
+      "customDevelopment": "Ukurasa wa Utengenezaji wa Mfumo Maalum",
+      "erpSaas": "Ukurasa wa ERP SaaS",
+      "innovation": "Ukurasa wa Ubunifu",
+      "chatbot": "Ukurasa wa Chatbot ya AI",
+      "digitalTransformation": "Ukurasa wa Mageuzi ya Kidijitali",
+      "marketing": "Ukurasa wa Masoko ya Kidijitali"
+    }
+  }
+}

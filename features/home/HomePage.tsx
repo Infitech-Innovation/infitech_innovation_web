@@ -1,7 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
+    const t = useTranslations("HomePage");
+    const services = [
+        ["services.digital.accent", "services.digital.label"],
+        ["services.erp.accent", "services.erp.label"],
+        ["services.custom.accent", "services.custom.label"],
+        ["services.ai.accent", "services.ai.label"],
+    ] as const;
+
     return (
         <main className="flex flex-1 flex-col bg-infitech-surface text-infitech-ink">
             <section className="relative isolate overflow-hidden border-b border-infitech-olive/70">
@@ -9,26 +18,26 @@ export default function HomePage() {
                 <div className="mx-auto grid min-h-[calc(100vh-81px)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-20">
                     <div className="max-w-3xl">
                         <p className="mb-5 inline-flex border-l-4 border-infitech-cyan bg-infitech-olive/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-infitech-ink">
-                            Technology. Automation. Innovation.
+                            {t("eyebrow")}
                         </p>
                         <h1 className="max-w-4xl text-4xl font-black leading-[1.02] text-infitech-ink sm:text-6xl lg:text-7xl">
-                            Infitech Innovation
+                            {t("title")}
                         </h1>
                         <p className="mt-6 max-w-2xl text-lg leading-8 text-infitech-ink/72 sm:text-xl">
-                            We build modern digital systems, AI-powered workflows, ERP SaaS tools, and custom software for teams that need technology to move with clarity.
+                            {t("description")}
                         </p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                             <Link
                                 href="/digital-transform"
                                 className="inline-flex items-center justify-center rounded-md bg-infitech-ink px-6 py-3 text-sm font-bold text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
                             >
-                                Explore Services
+                                {t("primaryCta")}
                             </Link>
                             <Link
                                 href="/ai-automation-booking"
                                 className="inline-flex items-center justify-center rounded-md border border-infitech-ink px-6 py-3 text-sm font-bold text-infitech-ink transition hover:border-infitech-turquoise hover:bg-infitech-cyan/20"
                             >
-                                Book AI Consultation
+                                {t("secondaryCta")}
                             </Link>
                         </div>
                     </div>
@@ -40,7 +49,7 @@ export default function HomePage() {
                         <div className="relative flex aspect-square w-full max-w-[420px] items-center justify-center rounded-md border border-infitech-olive bg-infitech-surface p-8 shadow-2xl shadow-infitech-ink/10">
                             <Image
                                 src="/icon0.svg"
-                                alt="Infitech Innovation"
+                                alt={t("logoAlt")}
                                 height={320}
                                 width={320}
                                 sizes="(max-width: 768px) 70vw, 320px"
@@ -56,15 +65,10 @@ export default function HomePage() {
 
             <section className="bg-infitech-ink px-4 py-10 text-infitech-surface sm:px-6 lg:px-8">
                 <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {[
-                        ["Digital", "Transformation"],
-                        ["ERP", "SaaS"],
-                        ["Custom", "Development"],
-                        ["AI", "Automation"],
-                    ].map(([accent, label]) => (
+                    {services.map(([accent, label]) => (
                         <div key={label} className="border-l-4 border-infitech-gold bg-infitech-surface/5 px-5 py-4">
-                            <p className="text-sm font-semibold text-infitech-cyan">{accent}</p>
-                            <p className="mt-1 text-xl font-bold">{label}</p>
+                            <p className="text-sm font-semibold text-infitech-cyan">{t(accent)}</p>
+                            <p className="mt-1 text-xl font-bold">{t(label)}</p>
                         </div>
                     ))}
                 </div>
