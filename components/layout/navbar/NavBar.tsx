@@ -4,38 +4,25 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import {
     Link,
-    locales,
     type AppPathname,
-    type Locale,
     usePathname,
-    useRouter,
 } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const navLinks = [
-    { labelKey: "home", href: "/" },
-    { labelKey: "digitalTransformation", href: "/digital-transform" },
-    { labelKey: "erpSaas", href: "/erp-saas" },
-    { labelKey: "customDevelopment", href: "/custom-develop" },
-    { labelKey: "aiConsultation", href: "/ai-automation-booking" },
-    { labelKey: "marketing", href: "/marketing" },
-    { labelKey: "innovation", href: "/innovation" },
-] satisfies Array<{ labelKey: string; href: AppPathname }>;
-
-const languageLabels: Record<Locale, string> = {
-    en: "English",
-    fr: "Français",
-    sw: "Swahili",
-    de: "Deutsch",
-};
+    { label: "Digital Transformation", href: "/digital-transform" },
+    { label: "Erp Saas", href: "/erp-saas" },
+    { label: "Custom Development", href: "/custom-develop" },
+    { label: "AI Consultation", href: "/ai-automation-booking" },
+    { label: "Marketing", href: "/marketing" },
+    { label: "Innovation", href: "/innovation" },
+] satisfies Array<{ label: string; href: AppPathname }>;
 
 export function Navbar() {
     const [open, setOpen] = useState(false);
-    const locale = useLocale();
     const t = useTranslations("Navbar");
     const pathname = usePathname();
-    const router = useRouter();
 
     const isActive = (href: string) => {
         return (
@@ -44,77 +31,49 @@ export function Navbar() {
         );
     };
 
-    const handleLocaleChange = (nextLocale: Locale) => {
-        setOpen(false);
-        router.replace(pathname, { locale: nextLocale });
-    };
-
-    const renderLanguageSelect = () => (
-        <label className="inline-flex items-center gap-2 text-sm font-semibold text-infitech-ink">
-            <span className="sr-only">{t("language")}</span>
-            <select
-                aria-label={t("language")}
-                value={locale}
-                onChange={(event) => handleLocaleChange(event.target.value as Locale)}
-                className="h-10 rounded-md border border-infitech-olive bg-infitech-surface px-3 text-sm font-semibold text-infitech-ink outline-none transition hover:border-infitech-turquoise focus:border-infitech-orange focus:ring-2 focus:ring-infitech-orange/20"
-            >
-                {locales.map((item) => (
-                    <option key={item} value={item}>
-                        {languageLabels[item]}
-                    </option>
-                ))}
-            </select>
-        </label>
-    );
+    // Locale switching is paused for now; English is the default display language.
+    // const renderLanguageSelect = () => null;
 
     return (
-        <header className="sticky top-0 z-50 border-b border-infitech-olive bg-infitech-surface/95 backdrop-blur">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 md:py-4 lg:px-8">
-
-                {/* Logo Section - Flex Shrink 0 protects text from squeezing */}
+        <header className="fixed inset-x-0 top-0 z-50 bg-transparent px-4 py-4 sm:px-6 lg:px-8 lg:py-10">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-infitech-surface px-5 py-3  sm:px-7">
                 <Link
                     href="/"
-                    className="flex shrink-0 items-center gap-2.5 text-lg font-bold text-infitech-ink transition hover:text-infitech-turquoise sm:text-xl"
+                    className="flex shrink-0 items-center gap-2.5 text-lg font-black text-infitech-ink transition hover:text-infitech-orange sm:text-xl"
                     onClick={() => setOpen(false)}
                 >
                     <Image
                         src="/icon0.svg"
                         alt={t("logoAlt")}
-                        width={48}
-                        height={48}
-                        className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
+                        width={72}
+                        height={72}
+                        className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
                     />
-                    <span className="hidden sm:inline-block truncate max-w-[180px] md:max-w-none leading-tight">
+                    {/* <span className="hidden max-w-[180px] truncate leading-tight sm:inline-block md:max-w-none">
                         Infitech Innovation
-                    </span>
+                    </span> */}
                 </Link>
 
-                {/* Desktop Navigation Links - Dynamic gaps to protect 7 items on smaller monitors */}
-                <div className="hidden items-center justify-center gap-x-4 text-sm font-medium text-infitech-ink/75 lg:flex xl:gap-x-6 xl:text-base">
-                    {navLinks.map((link) => {
-                        const active = isActive(link.href);
-
-                        return (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                aria-current={active ? "page" : undefined}
-                                className={`whitespace-nowrap transition hover:text-infitech-gold ${active ? "text-infitech-orange font-semibold" : ""
-                                    }`}
-                            >
-                                {t(link.labelKey)}
-                            </Link>
-                        );
-                    })}
+                <div className="hidden items-center justify-center gap-x-2 text-sm font-bold text-infitech-ink lg:flex xl:text-base">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={`whitespace-nowrap rounded-xl px-6 py-3 transition hover:bg-infitech-olive/25 ${link.label === "Templates" ? "bg-infitech-olive/25" : ""}`}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <div className="hidden lg:block">{renderLanguageSelect()}</div>
+                    {/* <div className="hidden h-14 items-center rounded-full bg-infitech-cyan px-6 text-base font-black text-infitech-ink lg:flex">
+                        English
+                    </div> */}
 
-                    {/* Mobile Menu Toggle Button */}
                     <button
                         type="button"
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-infitech-olive text-infitech-ink transition hover:bg-infitech-olive/20 lg:hidden"
+                        className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-infitech-ink text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink lg:hidden"
                         onClick={() => setOpen((value) => !value)}
                         aria-label={t("toggleMenu")}
                         aria-expanded={open}
@@ -124,28 +83,50 @@ export function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Drawer Dropdown */}
             {open && (
-                <div className="border-t border-infitech-olive bg-infitech-surface px-4 py-3 shadow-md shadow-infitech-ink/5 lg:hidden">
-                    <div className="mx-auto flex flex-col gap-y-1.5 text-sm font-medium text-infitech-ink/75">
-                        {navLinks.map((link) => {
-                            const active = isActive(link.href);
+                <div className="fixed inset-0 z-50 bg-infitech-ink/45 backdrop-blur-sm lg:hidden">
+                    <div className="infitech-mobile-drawer ml-auto flex h-full w-full flex-col bg-infitech-surface px-6 py-5 text-infitech-ink">
+                        <div className="mb-8 flex items-center justify-between">
+                            <Image
+                                src="/icon0.svg"
+                                alt={t("logoAlt")}
+                                width={72}
+                                height={72}
+                                className="h-14 w-14 shrink-0 object-contain"
+                            />
+                            <button
+                                type="button"
+                                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-infitech-ink text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+                                onClick={() => setOpen(false)}
+                                aria-label={t("toggleMenu")}
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                        </div>
 
-                            return (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    aria-current={active ? "page" : undefined}
-                                    onClick={() => setOpen(false)}
-                                    className={`rounded-md px-3 py-2 transition hover:bg-infitech-olive/20 hover:text-infitech-orange ${active ? "bg-infitech-cyan/15 text-infitech-ink font-semibold" : ""
-                                        }`}
-                                >
-                                    {t(link.labelKey)}
-                                </Link>
-                            );
-                        })}
-                        <div className="mt-2 border-t border-infitech-olive/70 pt-3">
-                            {renderLanguageSelect()}
+                        <div className="flex flex-1 flex-col gap-y-2 text-2xl font-black">
+                            {navLinks.map((link) => {
+                                const active = isActive(link.href);
+
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        aria-current={active ? "page" : undefined}
+                                        onClick={() => setOpen(false)}
+                                        className={`rounded-3xl px-5 py-4 transition hover:bg-infitech-olive/20 ${active ? "bg-infitech-olive/25 text-infitech-ink" : ""
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+
+                        <div className="border-t border-infitech-olive/70 pt-5">
+                            {/* <div className="inline-flex h-14 items-center rounded-full bg-infitech-cyan px-6 text-base font-black text-infitech-ink">
+                                English
+                            </div> */}
                         </div>
                     </div>
                 </div>

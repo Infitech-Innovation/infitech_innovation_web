@@ -1,76 +1,121 @@
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-    const t = useTranslations("HomePage");
-    const services = [
-        ["services.digital.accent", "services.digital.label"],
-        ["services.erp.accent", "services.erp.label"],
-        ["services.custom.accent", "services.custom.label"],
-        ["services.ai.accent", "services.ai.label"],
+    const carouselCards = [
+        {
+            title: "AI Automation",
+            kicker: "Smart systems",
+            description: "Automate bookings, support, reporting, and repeat workflows with practical AI tools.",
+            tags: ["AI", "Booking", "Support", "Ops"],
+            color: "from-infitech-orange via-infitech-gold to-infitech-ink",
+            href: "/ai-automation-booking",
+        },
+        {
+            title: "ERP SaaS",
+            kicker: "Business hub",
+            description: "Connect inventory, sales, finance, teams, and approvals in one clean operating system.",
+            tags: ["ERP", "SaaS", "Finance", "Teams"],
+            color: "from-infitech-turquoise via-infitech-cyan to-infitech-ink",
+            href: "/erp-saas",
+        },
+        {
+            title: "Digital Growth",
+            kicker: "Launch room",
+            description: "Build modern web experiences, campaigns, and digital journeys that convert visitors.",
+            tags: ["Web", "SEO", "Launch", "Brand"],
+            color: "from-infitech-olive via-infitech-turquoise to-infitech-ink",
+            href: "/digital-transform",
+        },
+        {
+            title: "Custom Build",
+            kicker: "Product lab",
+            description: "Design and ship custom portals, dashboards, and internal tools around your workflow.",
+            tags: ["Apps", "Portals", "API", "Data"],
+            color: "from-infitech-gold via-infitech-orange to-infitech-ink",
+            href: "/custom-develop",
+        },
+        {
+            title: "Innovation",
+            kicker: "Founder desk",
+            description: "Turn early ideas into validated prototypes, technical roadmaps, and scalable products.",
+            tags: ["MVP", "Strategy", "UX", "Scale"],
+            color: "from-infitech-ink via-infitech-olive to-infitech-ink",
+            href: "/innovation",
+        },
     ] as const;
 
     return (
-        <main className="flex flex-1 flex-col bg-infitech-surface text-infitech-ink">
-            <section className="relative isolate overflow-hidden border-b border-infitech-olive/70">
-                <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-turquoise),var(--infitech-gold),var(--infitech-orange))]" />
-                <div className="mx-auto grid min-h-[calc(100vh-81px)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-20">
-                    <div className="max-w-3xl">
-                        <p className="mb-5 inline-flex border-l-4 border-infitech-cyan bg-infitech-olive/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-infitech-ink">
-                            {t("eyebrow")}
-                        </p>
-                        <h1 className="max-w-4xl text-4xl font-black leading-[1.02] text-infitech-ink sm:text-6xl lg:text-7xl">
-                            {t("title")}
-                        </h1>
-                        <p className="mt-6 max-w-2xl text-lg leading-8 text-infitech-ink/72 sm:text-xl">
-                            {t("description")}
-                        </p>
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                            <Link
-                                href="/digital-transform"
-                                className="inline-flex items-center justify-center rounded-md bg-infitech-ink px-6 py-3 text-sm font-bold text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
-                            >
-                                {t("primaryCta")}
-                            </Link>
-                            <Link
-                                href="/ai-automation-booking"
-                                className="inline-flex items-center justify-center rounded-md border border-infitech-ink px-6 py-3 text-sm font-bold text-infitech-ink transition hover:border-infitech-turquoise hover:bg-infitech-cyan/20"
-                            >
-                                {t("secondaryCta")}
-                            </Link>
+        <main className="flex flex-1 flex-col bg-infitech-cyan text-infitech-ink">
+            <section className="relative isolate min-h-screen overflow-hidden pb-8 pt-32 lg:pb-0 lg:pt-0">
+                <div className="grid min-h-screen items-start lg:grid-cols-2">
+                    <div className="relative z-10 flex min-h-[560px] w-full justify-center px-5 sm:px-8 lg:min-h-screen lg:px-10">
+                        <div className="w-full max-w-[640px] pt-10 sm:pt-16 lg:pt-44 xl:pt-48">
+                            <h1 className="max-w-[640px] text-4xl font-black leading-[0.98] tracking-normal text-infitech-ink sm:text-5xl lg:text-[4.25rem] xl:text-[4.9rem]">
+                                Digital systems built for ambitious teams.
+                            </h1>
+                            <p className="mt-4 max-w-[620px] text-base font-semibold leading-7 text-infitech-ink sm:text-lg lg:text-[1.15rem] lg:leading-7">
+                                Infitech Innovation designs websites, ERP SaaS platforms, custom systems, and AI-powered workflows that help businesses operate faster and serve customers better.
+                            </p>
+                            <div className="mt-5 grid w-full max-w-[560px] gap-2 sm:grid-cols-[minmax(0,1fr)_160px]">
+                                <Link
+                                    href="/digital-transform"
+                                    className="inline-flex min-h-12 min-w-0 items-center justify-center rounded-full bg-infitech-ink px-4 text-sm font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+                                >
+                                    Start a project
+                                </Link>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="relative flex min-h-[360px] items-center justify-center">
-                        <div className="absolute h-72 w-72 rounded-full bg-infitech-cyan/25 blur-3xl" />
-                        <div className="absolute right-6 top-8 h-24 w-24 rounded-md bg-infitech-orange/80" />
-                        <div className="absolute bottom-10 left-4 h-28 w-28 rounded-md bg-infitech-olive" />
-                        <div className="relative flex aspect-square w-full max-w-[420px] items-center justify-center rounded-md border border-infitech-olive bg-infitech-surface p-8 shadow-2xl shadow-infitech-ink/10">
-                            <Image
-                                src="/icon0.svg"
-                                alt={t("logoAlt")}
-                                height={320}
-                                width={320}
-                                sizes="(max-width: 768px) 70vw, 320px"
-                                className="h-auto w-full object-contain"
-                                priority
-                                unoptimized
-                                loading="eager"
-                            />
+                    <div className="relative flex min-h-[560px] items-center justify-center px-5 sm:px-8 lg:min-h-screen lg:items-start lg:px-10">
+                        <div className="relative h-[520px] w-full max-w-[680px] overflow-hidden bg-transparent sm:h-[600px] lg:h-screen lg:max-h-none lg:min-h-screen">
+                            <div className="infitech-hero-card-track flex gap-5 lg:gap-6">
+                                {[...carouselCards, ...carouselCards].map((card, index) => (
+                                    <Link
+                                        key={`${card.title}-${index}`}
+                                        href={card.href}
+                                        className={`relative flex h-[520px] w-full shrink-0 overflow-hidden rounded-[48px] bg-gradient-to-br ${card.color} p-8 text-infitech-surface sm:h-[600px] lg:h-[72vh] lg:max-h-[720px] lg:min-h-[560px] lg:p-12`}
+                                    >
+                                        {/* <p className="absolute inset-x-0 bottom-5 z-20 text-center font-mono text-sm font-black tracking-[0.06em] text-infitech-surface sm:text-lg">
+                                            {card.kicker}. Built by Infitech Innovation.
+                                        </p> */}
+                                        <div className="absolute inset-0 bg-gradient-to-r from-infitech-ink/20 to-transparent" />
+                                        <div className="relative z-10 flex w-full items-center justify-center">
+                                            <div className="grid w-full max-w-[620px] items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
+                                                <div className="space-y-5">
+                                                    <p className="font-mono text-sm font-black uppercase tracking-[0.18em] text-infitech-gold">
+                                                        {card.kicker}
+                                                    </p>
+                                                    <h2 className="text-4xl font-black leading-[0.95] sm:text-5xl">
+                                                        {card.title}
+                                                    </h2>
+                                                    <p className="max-w-sm text-base font-bold leading-7 text-infitech-surface/82 sm:text-lg">
+                                                        {card.description}
+                                                    </p>
+                                                    <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-sm font-black uppercase tracking-[0.12em] text-infitech-surface/75">
+                                                        {card.tags.map((tag) => (
+                                                            <span key={tag}>{tag}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                <div className="relative hidden min-h-[430px] items-center justify-center md:flex">
+                                                    <div className="absolute h-72 w-72 rounded-full bg-infitech-surface/12" />
+                                                    <div className="absolute h-48 w-48 rotate-12 rounded-[36px] border-8 border-infitech-gold/80" />
+                                                    <div className="absolute left-8 top-16 h-24 w-24 rounded-full bg-infitech-turquoise" />
+                                                    <div className="absolute bottom-16 right-10 h-28 w-28 rounded-full bg-infitech-orange" />
+                                                    <div className="absolute bottom-28 left-20 h-4 w-56 rotate-[-18deg] rounded-full bg-infitech-surface" />
+                                                    <div className="absolute right-24 top-28 h-4 w-44 rotate-[24deg] rounded-full bg-infitech-surface/70" />
+                                                    <div className="relative text-center text-8xl font-black leading-none text-infitech-surface">
+                                                        {index % 5 + 1}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section className="bg-infitech-ink px-4 py-10 text-infitech-surface sm:px-6 lg:px-8">
-                <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {services.map(([accent, label]) => (
-                        <div key={label} className="border-l-4 border-infitech-gold bg-infitech-surface/5 px-5 py-4">
-                            <p className="text-sm font-semibold text-infitech-cyan">{t(accent)}</p>
-                            <p className="mt-1 text-xl font-bold">{t(label)}</p>
-                        </div>
-                    ))}
                 </div>
             </section>
         </main>

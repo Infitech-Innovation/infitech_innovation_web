@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
+  /* Secondary Colors */
   --background: #fefffe;
   --foreground: #000000;
   --infitech-surface: #fefffe;
   --infitech-ink: #000000;
   --infitech-cyan: #1cf0e8;
   --infitech-orange: #ffa500;
+  /* Main Colors */
   --infitech-turquoise: #40e0d0;
   --infitech-olive: #c8c871;
   --infitech-gold: #f6b216;
@@ -30,4 +32,96 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.infitech-mobile-drawer {
+  animation: infitech-drawer-slide-in 240ms ease-out;
+}
+
+.infitech-hero-card-track {
+  animation: infitech-hero-card-slide-left 25s ease-in-out infinite;
+}
+
+.infitech-hero-card-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infitech-drawer-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes infitech-hero-card-rise {
+  0%,
+  8% {
+    transform: translateY(0);
+  }
+
+  20%,
+  28% {
+    transform: translateY(-10%);
+  }
+
+  40%,
+  48% {
+    transform: translateY(-20%);
+  }
+
+  60%,
+  68% {
+    transform: translateY(-30%);
+  }
+
+  80%,
+  88% {
+    transform: translateY(-40%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes infitech-hero-card-slide-left {
+  0%,
+  8% {
+    transform: translateX(0);
+  }
+
+  20%,
+  28% {
+    transform: translateX(-10%);
+  }
+
+  40%,
+  48% {
+    transform: translateX(-20%);
+  }
+
+  60%,
+  68% {
+    transform: translateX(-30%);
+  }
+
+  80%,
+  88% {
+    transform: translateX(-40%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .infitech-hero-card-track {
+    animation-name: infitech-hero-card-rise;
+    display: flex;
+    flex-direction: column;
+  }
 }
