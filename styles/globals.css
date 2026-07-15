@@ -40,6 +40,13 @@ body {
 
 .infitech-hero-card-track {
   animation: infitech-hero-card-slide-left 25s ease-in-out infinite;
+  width: 1000%;
+  will-change: transform;
+}
+
+.infitech-hero-card-track > div {
+  flex: 0 0 10%;
+  max-width: 10%;
 }
 
 .infitech-hero-card-track:hover {
@@ -123,5 +130,12 @@ body {
     animation-name: infitech-hero-card-rise;
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .infitech-hero-card-track > div {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
   }
 }

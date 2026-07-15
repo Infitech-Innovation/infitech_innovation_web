@@ -80,10 +80,10 @@ export default function ServicesPage() {
     const activeService = services[activeIndex];
 
     return (
-        <section className="relative isolate overflow-hidden bg-infitech-ink px-4 py-14 text-infitech-surface sm:px-6 sm:py-20 lg:min-h-screen lg:px-12 lg:py-28">
-            <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
-                <div className="relative mx-auto flex w-full max-w-[560px] items-center justify-center sm:min-h-[560px] lg:min-h-[650px]">
-                    <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[28px] bg-infitech-surface p-3 sm:max-w-[420px] sm:rounded-[32px] sm:p-4 lg:max-w-[460px]">
+        <section className="relative isolate overflow-hidden bg-infitech-ink px-4 py-12 text-infitech-surface sm:px-6 sm:py-16 lg:min-h-screen lg:px-12 lg:py-28">
+            <div className="mx-auto grid max-w-7xl items-center gap-9 md:gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+                <div className="relative mx-auto w-full max-w-[560px]">
+                    <div className="relative mx-auto aspect-[4/5] w-full max-w-[260px] overflow-hidden rounded-[24px] bg-infitech-surface p-3 min-[390px]:max-w-[300px] sm:max-w-[360px] sm:rounded-[28px] md:max-w-[400px] lg:max-w-[460px] lg:rounded-[32px] lg:p-4">
                         <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-infitech-surface sm:rounded-[24px]">
                             <Image
                                 src="/infitectlogo.jpg"
@@ -96,11 +96,11 @@ export default function ServicesPage() {
                         </div>
                     </div>
 
-                    <div className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 sm:bottom-auto sm:left-auto sm:right-2 sm:top-1/2 sm:-translate-y-1/2 sm:translate-x-0 sm:flex-col sm:gap-3 lg:right-8 lg:gap-4">
+                    <div className="mt-4 flex justify-center gap-2 sm:gap-3 lg:pointer-events-none lg:absolute lg:right-0 lg:top-1/2 lg:mt-0 lg:-translate-y-1/2 lg:flex-col lg:gap-4 xl:right-8">
                         {activeService.tags.slice(0, 3).map((item) => (
                             <div
                                 key={item}
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-infitech-gold text-[0.62rem] font-black text-infitech-ink sm:h-14 sm:w-14 sm:text-[0.7rem] lg:h-16 lg:w-16 lg:text-xs"
+                                className="flex h-11 w-11 items-center justify-center rounded-full bg-infitech-gold text-[0.58rem] font-black text-infitech-ink sm:h-12 sm:w-12 sm:text-[0.64rem] md:h-14 md:w-14 md:text-[0.72rem] lg:h-16 lg:w-16 lg:text-xs"
                             >
                                 {item}
                             </div>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="mx-auto w-full max-w-3xl text-center lg:mx-0 lg:text-left">
-                    <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+                    <div className="-mx-4 flex max-w-[100vw] gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
                         {services.map((service, index) => {
                             const active = index === activeIndex;
 
@@ -118,7 +118,7 @@ export default function ServicesPage() {
                                     key={service.href}
                                     type="button"
                                     onClick={() => setActiveIndex(index)}
-                                    className={`shrink-0 rounded-full px-4 py-2 text-sm font-black transition ${active
+                                    className={`shrink-0 rounded-full px-3 py-2 text-xs font-black transition sm:px-4 sm:text-sm ${active
                                             ? "bg-infitech-gold text-infitech-ink"
                                             : "bg-infitech-surface/15 text-infitech-surface hover:bg-infitech-surface/25"
                                         }`}
@@ -130,7 +130,7 @@ export default function ServicesPage() {
                         })}
                     </div>
 
-                    <h1 className="mt-6 text-3xl font-black leading-[1.04] text-infitech-cyan sm:mt-7 sm:text-4xl md:text-5xl lg:text-[4.35rem] lg:leading-[1]">
+                    <h1 className="mt-6 text-2xl font-black leading-[1.04] text-infitech-cyan min-[390px]:text-3xl sm:mt-7 sm:text-4xl md:text-5xl lg:text-[4.35rem] lg:leading-[1]">
                         {activeService.title}
                     </h1>
                     <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-surface sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
