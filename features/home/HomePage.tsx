@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/routing";
+import ServicesPage from "./ServicesPage";
 
 export default function HomePage() {
     const carouselCards = [
@@ -118,6 +119,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+
+            <ServicesPage/>
         </main>
     );
 }
