@@ -1,0 +1,8 @@
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3001
+- PID:          1148
+- Dir:          C:\Users\Admin\Desktop\Ongoing Projects\infitech_innovation_web
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 1148 /F to stop it.
