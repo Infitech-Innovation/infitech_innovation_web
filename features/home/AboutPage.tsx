@@ -44,18 +44,16 @@ const aboutCapabilities = [
 export default function AboutPage() {
     return (
         <>
-            <section className="relative isolate overflow-hidden bg-infitech-olive/35 px-4 py-12 text-infitech-ink sm:px-6 sm:py-14 lg:px-12 lg:py-20">
-                <div className="mx-auto grid max-w-7xl items-center gap-9 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+            <section className="relative isolate overflow-hidden bg-infitech-olive/35 px-4 py-14 text-infitech-ink sm:px-6 sm:py-16 lg:px-12 lg:py-20">
+                <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
 
-                    <div className="mx-auto mt-6 w-full max-w-2xl text-center lg:mx-0 lg:mt-0 lg:text-left">
+                    <div className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
                         <h2 className="mt-4 text-[2rem] font-black leading-[1] tracking-normal text-infitech-ink min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
                             Digital systems built around your next move
                         </h2>
                         <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-ink/75 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
                             Infitech Innovation designs and builds modern platforms for teams that want cleaner operations, stronger customer experiences, and software that can keep growing with the business.
                         </p>
-
-
 
                         <Link
                             href="/digital-transform"
@@ -65,7 +63,7 @@ export default function AboutPage() {
                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
                         </Link>
                     </div>
-                    <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4">
+                    <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
                         {aboutCapabilities.map((item) => {
                             const Icon = item.icon;
 

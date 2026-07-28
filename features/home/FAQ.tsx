@@ -25,7 +25,7 @@ const faqs = [
 
 export default function FAQ() {
     return (
-        <section className="relative isolate overflow-hidden bg-infitech-orange px-4 py-14 text-infitech-surface sm:px-6 sm:py-16 lg:px-12 lg:py-24">
+        <section className="relative isolate overflow-hidden bg-infitech-orange px-4 py-14 text-infitech-surface sm:px-6 sm:py-16 lg:px-12 lg:py-20">
             <div className="mx-auto max-w-7xl">
                 <div className="relative mx-auto max-w-5xl text-center">
                     <h2 className="text-[2.15rem] font-black leading-[0.98] tracking-normal text-infitech-surface min-[390px]:text-4xl sm:text-5xl lg:text-[4rem]">
@@ -36,7 +36,7 @@ export default function FAQ() {
                     </p>
                 </div>
 
-                <div className="mx-auto mt-10 grid max-w-6xl gap-4 sm:mt-12">
+                <div className="mx-auto mt-8 grid max-w-6xl gap-4 sm:mt-10 lg:mt-12">
                     {faqs.map((item, index) => (
                         <details
                             key={item.question}

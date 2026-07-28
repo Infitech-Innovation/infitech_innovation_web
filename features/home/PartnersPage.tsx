@@ -55,8 +55,8 @@ export default function PartnersPage() {
 
     return (
         <div>
-            <section className="relative isolate overflow-hidden bg-infitech-surface py-14 text-infitech-ink sm:py-16 lg:py-22">
-                <div className="mx-auto grid max-w-7xl items-end gap-6 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-12">
+            <section className="relative isolate overflow-hidden bg-infitech-surface py-14 text-infitech-ink sm:py-16 lg:py-20">
+                <div className="mx-auto grid max-w-7xl items-end gap-5 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:gap-8 lg:px-12">
                     <div className="relative">
                         <div className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-infitech-cyan/25" />
                         <h2 className="relative mt-3 max-w-3xl text-[2.15rem] font-black leading-[1] tracking-normal min-[390px]:text-4xl sm:text-5xl lg:text-[3.65rem]">
@@ -68,7 +68,7 @@ export default function PartnersPage() {
                     </p>
                 </div>
 
-                <div className="relative mt-10 overflow-hidden sm:mt-12">
+                <div className="relative mt-8 overflow-hidden sm:mt-10 lg:mt-12">
                     <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-infitech-surface to-transparent sm:w-28" />
                     <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-infitech-surface to-transparent sm:w-28" />
 

@@ -48,11 +48,11 @@ export default function HomePage() {
     return (
         <>
             <main className="flex flex-1 flex-col bg-infitech-cyan text-infitech-ink">
-                <section className="relative isolate min-h-screen overflow-hidden pb-25 pt-28 sm:pt-32 lg:pb-0 lg:pt-0">
-                    <div className="grid min-h-screen items-start lg:grid-cols-2">
-                        <div className="relative z-10 flex w-full justify-center px-4 sm:px-8 lg:min-h-screen lg:px-10">
-                            <div className="w-full max-w-[640px] py-8 sm:py-12 lg:py-0 lg:pt-44 xl:pt-48">
-                                <h1 className="max-w-[640px] text-[2.30rem] font-black leading-[1] tracking-normal text-infitech-ink min-[390px]:text-5xl sm:text-6xl lg:text-[4.25rem] xl:text-[4.9rem]">
+                <section className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:py-0">
+                    <div className="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
+                        <div className="relative z-10 flex w-full justify-center lg:min-h-screen lg:items-center">
+                            <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
+                                <h1 className="max-w-[700px] text-[2.6rem] font-black leading-[1.02] tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-16 lg:text-[2.0rem] xl:text-[4.0rem]">
                                     Digital systems built for ambitious teams.
                                 </h1>
                                 <p className="mt-4 max-w-[620px] text-sm font-semibold leading-6 text-infitech-ink sm:text-base sm:leading-7 lg:text-[1.15rem] lg:leading-7">
@@ -69,13 +69,13 @@ export default function HomePage() {
                             </div>
                         </div>
 
-                        <div className="relative flex min-h-[390px] items-center justify-center px-4 sm:min-h-[500px] sm:px-8 md:min-h-[560px] lg:min-h-screen lg:items-start lg:px-10">
-                            <div className="relative h-[360px] w-full max-w-[360px] overflow-hidden bg-transparent min-[390px]:h-[390px] sm:h-[460px] sm:max-w-[520px] md:h-[520px] md:max-w-[640px] lg:h-screen lg:max-h-none lg:min-h-screen lg:max-w-[680px]">
+                        <div className="relative flex min-h-[360px] items-center justify-center sm:min-h-[460px] md:min-h-[520px] lg:min-h-screen">
+                            <div className="relative h-[350px] w-full max-w-[360px] overflow-hidden bg-transparent min-[390px]:h-[380px] sm:h-[450px] sm:max-w-[520px] md:h-[510px] md:max-w-[640px] lg:h-screen lg:max-h-none lg:min-h-screen lg:max-w-[680px]">
                                 <div className="infitech-hero-card-track flex">
                                     {[...carouselCards, ...carouselCards].map((card, index) => (
                                         <div
                                             key={`${card.title}-${index}`}
-                                            className="h-[360px] w-full shrink-0 basis-full px-2 min-[390px]:h-[390px] sm:h-[460px] sm:px-3 md:h-[520px] lg:h-[72vh] lg:max-h-[720px] lg:min-h-[560px] lg:px-0 lg:py-3"
+                                            className="h-[350px] w-full shrink-0 basis-full px-1 min-[390px]:h-[380px] sm:h-[450px] sm:px-2 md:h-[510px] lg:h-[72vh] lg:max-h-[720px] lg:min-h-[560px] lg:px-0 lg:py-3"
                                         >
                                             <Link
                                                 href={card.href}

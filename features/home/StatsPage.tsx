@@ -50,8 +50,8 @@ const statStyles = [
 export default function StatsPage() {
     return (
         <>
-            <section className="relative isolate overflow-hidden bg-infitech-ink px-4 py-14 text-infitech-surface sm:px-6 sm:py-16 lg:px-12 lg:py-24">
-                <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-14">
+            <section className="relative isolate overflow-hidden bg-infitech-ink px-4 py-14 text-infitech-surface sm:px-6 sm:py-16 lg:px-12 lg:py-20">
+                <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-12">
                     <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
                         <h2 className="mt-4 text-[2.25rem] font-black leading-[1] tracking-normal text-infitech-surface min-[390px]:text-4xl sm:text-5xl lg:text-[4rem]">
                             Proof of Infitech work in motion
@@ -60,7 +60,7 @@ export default function StatsPage() {
                             A quick look at the delivery, reliability, and technical range Infitech brings into each project.
                         </p>
 
-                        <div className="mt-7 rounded-[28px] border border-infitech-surface/12 bg-infitech-surface/8 p-5 text-left shadow-[0_24px_60px_rgba(0,0,0,0.22)] sm:p-6">
+                        <div className="mt-6 rounded-[28px] border border-infitech-surface/12 bg-infitech-surface/8 p-5 text-left shadow-[0_24px_60px_rgba(0,0,0,0.22)] sm:p-6 lg:mt-7">
                             <div className="flex items-center justify-between gap-4">
                                 <div>
                                     <p className="text-sm font-black text-infitech-gold">Delivery signal</p>
@@ -78,7 +78,7 @@ export default function StatsPage() {
                         </div>
                     </div>
 
-                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
+                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6">
                         {portfolioStats.map((stat, index) => {
                             const style = statStyles[index];
                             const Icon = style.icon;
