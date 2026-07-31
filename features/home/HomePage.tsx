@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/routing";
 import ServicesPage from "./ServicesPage";
+import HeroTechBackground from "./HeroTechBackground";
 
 export default function HomePage() {
     const carouselCards = [
@@ -50,7 +51,8 @@ export default function HomePage() {
         {/* Hero Section */}
             <main className="flex flex-1 flex-col bg-infitech-olive/35 text-infitech-ink">
                 <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:py-0">
-                    <div className="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
+                    <HeroTechBackground />
+                    <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
                         <div className="relative z-10 flex w-full justify-center lg:min-h-screen lg:items-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
                                 <h1 className="max-w-[700px] text-[2.6rem] font-black leading-[1.02] tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-16 lg:text-[2.0rem] xl:text-[4.0rem]">

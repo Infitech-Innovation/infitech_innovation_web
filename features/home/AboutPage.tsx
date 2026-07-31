@@ -1,5 +1,9 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
+import { motion } from "motion/react";
+import AboutTechBackground from "./AboutTechBackground";
 import PartnersPage from "./PartnersPage";
 
 const aboutCapabilities = [
@@ -45,9 +49,43 @@ export default function AboutPage() {
     return (
         <>
             <section className="relative isolate overflow-hidden bg-infitech-olive/35 px-4 py-14 text-infitech-ink sm:px-6 sm:py-16 lg:px-12 lg:py-20">
-                <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+                <AboutTechBackground />
+                <motion.div
+                    aria-hidden="true"
+                    className="absolute left-[-18%] top-10 z-0 h-28 w-[72%] skew-x-[-18deg] border-y border-infitech-ink/10 bg-infitech-surface/15"
+                    animate={{
+                        x: ["-8%", "20%", "-8%"],
+                        opacity: [0.18, 0.42, 0.18],
+                    }}
+                    transition={{
+                        duration: 20,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                    }}
+                />
+                <motion.div
+                    aria-hidden="true"
+                    className="absolute bottom-8 right-[-20%] z-0 h-24 w-[68%] skew-x-[16deg] border-y border-infitech-orange/20 bg-infitech-gold/15"
+                    animate={{
+                        x: ["8%", "-18%", "8%"],
+                        opacity: [0.16, 0.38, 0.16],
+                    }}
+                    transition={{
+                        duration: 24,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                    }}
+                />
 
-                    <div className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
+                <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+
+                    <motion.div
+                        className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left"
+                        initial={{ opacity: 0, y: 34 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.35 }}
+                        transition={{ duration: 0.65, ease: "easeOut" }}
+                    >
                         <h2 className="mt-4 text-[2rem] font-black leading-[1] tracking-normal text-infitech-ink min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
                             Digital systems built around your next move
                         </h2>
@@ -62,21 +100,44 @@ export default function AboutPage() {
                             Build with Infitech
                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
                         </Link>
-                    </div>
+                    </motion.div>
                     <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
-                        {aboutCapabilities.map((item) => {
+                        {aboutCapabilities.map((item, index) => {
                             const Icon = item.icon;
 
                             return (
-                                <article
+                                <motion.article
                                     key={item.title}
                                     className={`relative flex overflow-hidden rounded-[22px] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.12)] sm:rounded-[28px] sm:p-5 ${item.layout} ${item.cardClass}`}
+                                    initial={{ opacity: 0, y: 44, rotate: index % 2 === 0 ? -1.5 : 1.5 }}
+                                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                                    whileHover={{ y: -6, scale: 1.015 }}
+                                    viewport={{ once: true, amount: 0.35 }}
+                                    transition={{ duration: 0.55, delay: index * 0.08, ease: "easeOut" }}
                                 >
+                                    <motion.div
+                                        aria-hidden="true"
+                                        className="absolute inset-x-0 top-0 h-1 bg-infitech-surface/35"
+                                        initial={{ scaleX: 0, transformOrigin: "left" }}
+                                        whileInView={{ scaleX: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.85, delay: 0.18 + index * 0.08, ease: "easeOut" }}
+                                    />
                                     <div className={`flex w-full ${item.layout ? "justify-between gap-4" : "flex-col items-center justify-center text-center"}`}>
                                         <div className={`${item.layout ? "max-w-[520px]" : ""}`}>
-                                            <div className={`mb-3 grid h-11 w-11 place-items-center rounded-full ${item.iconClass} ${item.layout ? "" : "mx-auto"} sm:h-12 sm:w-12`}>
+                                            <motion.div
+                                                className={`mb-3 grid h-11 w-11 place-items-center rounded-full ${item.iconClass} ${item.layout ? "" : "mx-auto"} sm:h-12 sm:w-12`}
+                                                animate={{
+                                                    rotate: [0, 5, -5, 0],
+                                                }}
+                                                transition={{
+                                                    duration: 7 + index,
+                                                    ease: "easeInOut",
+                                                    repeat: Infinity,
+                                                }}
+                                            >
                                                 <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
-                                            </div>
+                                            </motion.div>
                                             <h3 className="text-xl font-black leading-none sm:text-2xl">
                                                 {item.title}
                                             </h3>
@@ -95,7 +156,7 @@ export default function AboutPage() {
                                             ) : null
                                         }
                                     </div>
-                                </article>
+                                </motion.article>
                             );
                         })}
                     </div>
