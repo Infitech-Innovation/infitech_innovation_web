@@ -8,7 +8,7 @@ import {
     usePathname,
 } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
     { label: "Digital Transformation", href: "/digital-transform" },
@@ -21,6 +21,7 @@ const navLinks = [
 
 export function Navbar() {
     const [open, setOpen] = useState(false);
+    const [pastHero, setPastHero] = useState(false);
     const t = useTranslations("Navbar");
     const pathname = usePathname();
 
@@ -34,9 +35,52 @@ export function Navbar() {
     // Locale switching is paused for now; English is the default display language.
     // const renderLanguageSelect = () => null;
 
+    useEffect(() => {
+        const hero = document.querySelector<HTMLElement>("[data-infitech-hero]");
+        let animationFrame = 0;
+
+        const setPastHeroOnFrame = (value: boolean) => {
+            window.cancelAnimationFrame(animationFrame);
+            animationFrame = window.requestAnimationFrame(() => {
+                setPastHero(value);
+            });
+        };
+
+        if (!hero) {
+            setPastHeroOnFrame(true);
+            return () => window.cancelAnimationFrame(animationFrame);
+        }
+
+        const updateNavbarPosition = () => {
+            setPastHeroOnFrame(hero.getBoundingClientRect().bottom <= 0);
+        };
+
+        updateNavbarPosition();
+        window.addEventListener("scroll", updateNavbarPosition, { passive: true });
+        window.addEventListener("resize", updateNavbarPosition);
+
+        return () => {
+            window.cancelAnimationFrame(animationFrame);
+            window.removeEventListener("scroll", updateNavbarPosition);
+            window.removeEventListener("resize", updateNavbarPosition);
+        };
+    }, [pathname]);
+
     return (
-        <header className="fixed inset-x-0 top-0 z-50 bg-transparent px-4 py-4 sm:px-6 lg:px-8 lg:py-10">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-infitech-surface px-5 py-3  sm:px-7">
+        <header
+            className={`fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300 ease-out ${
+                pastHero
+                    ? "px-0 py-0"
+                    : "px-4 py-4 sm:px-6 lg:px-8 lg:py-10"
+            }`}
+        >
+            <nav
+                className={`mx-auto flex items-center justify-between bg-infitech-surface px-5 py-3 shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-300 sm:px-7 ${
+                    pastHero
+                        ? "w-full max-w-none rounded-none"
+                        : "max-w-7xl rounded-full"
+                }`}
+            >
                 <Link
                     href="/"
                     className="flex shrink-0 items-center gap-2.5 text-lg font-black text-infitech-ink transition hover:text-infitech-orange sm:text-xl"

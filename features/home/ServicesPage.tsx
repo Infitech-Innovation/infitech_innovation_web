@@ -102,10 +102,10 @@ export default function ServicesPage() {
     const imageHeight = useTransform(
         scrollYProgress,
         [0, 1],
-        ["100vh", isWideScreen ? "78vh" : "42vh"]
+        ["100vh", isWideScreen ? "100vh" : "42vh"]
     );
     const imageLeft = useTransform(scrollYProgress, [0, 1], ["0vw", "0vw"]);
-    const imageTop = useTransform(scrollYProgress, [0, 1], ["0vh", isWideScreen ? "11vh" : "0vh"]);
+    const imageTop = useTransform(scrollYProgress, [0, 1], ["0rem", "0rem"]);
     const imageRadius = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
     const textOpacity = useTransform(scrollYProgress, [0.45, 1], [0, 1]);
@@ -137,7 +137,7 @@ export default function ServicesPage() {
 
                     <motion.div
                         style={{ opacity: textOpacity, y: textY }}
-                        className="absolute inset-x-0 bottom-0 z-10 flex h-[58vh] w-full items-center bg-infitech-ink/88 px-4 py-8 backdrop-blur-sm sm:px-6 lg:inset-x-auto lg:inset-y-0 lg:right-0 lg:h-auto lg:max-w-[52vw] lg:px-12"
+                        className="absolute inset-x-0 bottom-0 z-10 flex h-[58vh] min-h-[22rem] w-full items-center bg-infitech-ink/88 px-4 py-8 backdrop-blur-sm sm:px-6 lg:inset-x-auto lg:bottom-0 lg:right-0 lg:top-[5.5rem] lg:h-auto lg:max-w-[52vw] lg:px-12"
                     >
                         <div className="mx-auto w-full max-w-3xl text-left">
                             <div className="-mx-4 flex max-w-[100vw] gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                                 })}
                             </div>
 
-                            <h1 className="mt-6 text-2xl font-black leading-[1.04] text-infitech-cyan min-[390px]:text-3xl sm:mt-7 sm:text-4xl md:text-5xl lg:text-[4.35rem] lg:leading-[1]">
+                            <h1 className="mt-6 text-xl font-black leading-[1.1] text-infitech-cyan min-[390px]:text-2xl sm:mt-7 sm:text-3xl md:text-[2.15rem] lg:text-[2.55rem] lg:leading-[1.08] xl:text-[2.85rem]">
                                 {activeService.title}
                             </h1>
                             <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-surface sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">

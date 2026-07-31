@@ -47,8 +47,9 @@ export default function HomePage() {
 
     return (
         <>
-            <main className="flex flex-1 flex-col bg-infitech-cyan text-infitech-ink">
-                <section className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:py-0">
+        {/* Hero Section */}
+            <main className="flex flex-1 flex-col bg-infitech-olive/35 text-infitech-ink">
+                <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:py-0">
                     <div className="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
                         <div className="relative z-10 flex w-full justify-center lg:min-h-screen lg:items-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
@@ -125,6 +126,8 @@ export default function HomePage() {
                     </div>
                 </section>
             </main>
+
+            {/* Service Section */}
             <ServicesPage />
         </>
     );
