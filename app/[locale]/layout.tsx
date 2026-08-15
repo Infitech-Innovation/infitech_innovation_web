@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/routing";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,7 +123,15 @@ async function LocaleLayout({
             <Navbar />
             {children}
           </NextIntlClientProvider>
-        </QueryProvider></body>
+        </QueryProvider>
+        <Script
+          src="https://bot.infi-saas.com/static/infitech-widget.js"
+          data-tenant={process.env.NEXT_PUBLIC_INFITECH_TENANT}
+          data-secret={process.env.NEXT_PUBLIC_INFITECH_SECRET}
+          data-backend="https://bot.infi-saas.com/webchat"
+          strategy="lazyOnload"
+        />
+      </body>
     </html>
   );
 }
