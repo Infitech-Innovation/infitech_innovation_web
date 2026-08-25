@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 
 const clientStories = [
@@ -81,9 +82,11 @@ export default function ClientStory() {
                                 <span
                                     className={`grid place-items-center overflow-hidden  bg-white p-2 transition ${isActive ? "border-transparent shadow-[0_12px_24px_rgba(0,0,0,0.12)]" : "border-infitech-ink/15 opacity-45 group-hover:opacity-80"}`}
                                 >
-                                    <img
+                                    <Image
                                         src={story.image}
                                         alt={`${story.title} logo`}
+                                        width={80}
+                                        height={64}
                                         className="h-full w-full object-cover"
                                     />
                                 </span>
@@ -111,9 +114,11 @@ export default function ClientStory() {
                             <div className="absolute bottom-0 h-12 w-40 skew-y-[-30deg] bg-white shadow-[0_14px_24px_rgba(0,0,0,0.08)] sm:w-48" />
                             <div className="absolute bottom-0 h-12 w-40 skew-y-[30deg] bg-neutral-200/90 sm:w-48" />
                             <div className="absolute bottom-28 grid h-24 w-36 place-items-center rounded-[8px] border-4 border-white bg-white p-3 shadow-[0_18px_34px_rgba(0,0,0,0.14)] sm:bottom-32 sm:h-28 sm:w-44">
-                                <img
+                                <Image
                                     src={activeStory.image}
                                     alt={`${activeStory.title} logo`}
+                                    width={176}
+                                    height={112}
                                     className="h-full w-full object-contain"
                                 />
                             </div>
