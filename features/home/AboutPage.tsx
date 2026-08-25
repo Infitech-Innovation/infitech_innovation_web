@@ -4,7 +4,6 @@ import { Link } from "@/i18n/routing";
 import { ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
 import { motion } from "motion/react";
 import AboutTechBackground from "./AboutTechBackground";
-import PartnersPage from "./.trash/PartnersPage";
 import ClientStory from "./ClientStory";
 
 const aboutCapabilities = [
@@ -85,14 +84,17 @@ export default function AboutPage() {
                 <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
 
                     <motion.div
-                        className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left"
+                        className="mx-auto w-full max-w-2xl  px-4 py-5 text-center sm:px-6 sm:py-7 lg:mx-0 lg:text-left"
                         initial={{ opacity: 0, y: 34 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.35 }}
                         transition={{ duration: 0.65, ease: "easeOut" }}
                     >
-                        <h2 className="mt-4 text-[2rem] font-black leading-[1] tracking-normal text-infitech-ink min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
-                            Digital systems built around your next move
+                        {/* <h2 className="mt-4 bg-[linear-gradient(180deg,#000000_0%,#000000_44%,#ff8a00_45%,#ffa500_72%,#f6b216_100%)] bg-clip-text text-[2rem] font-black leading-[1] tracking-normal text-transparent min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]"> */}
+                        {/* className="heading-rise font-display text-[clamp(2.5rem,6.5vw,5.25rem)] font-bold leading-[0.95] tracking-[-0.03em]" */}
+                        <h2 className="mt-4 text-[2rem] font-black leading-[0.94] tracking-normal min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
+                            <span className="block text-infitech-ink">Digital systems</span>
+                            <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent">built around your next move</span>
                         </h2>
                         <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-ink/75 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
                             Infitech Innovation designs and builds modern platforms for teams that want cleaner operations, stronger customer experiences, and software that can keep growing with the business.
@@ -106,6 +108,31 @@ export default function AboutPage() {
                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
                         </Link>
                     </motion.div>
+
+                    {/* <motion.div
+                        className="mx-auto w-full max-w-2xl rounded-[8px] bg-infitech-ink bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:64px_64px] px-4 py-5 text-center shadow-[0_22px_60px_rgba(0,0,0,0.2)] sm:px-6 sm:py-7 lg:mx-0 lg:text-left"
+                        initial={{ opacity: 0, y: 34 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.35 }}
+                        transition={{ duration: 0.65, ease: "easeOut" }}
+                    >
+                        <h2 className="mt-4 text-[2rem] font-black leading-[0.94] tracking-normal min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
+
+                           <span className="block">Digital systems </span>
+                            <span className="heading-gradient block">built around your next move</span>
+                        </h2>
+                        <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-surface/75 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
+                            Infitech Innovation designs and builds modern platforms for teams that want cleaner operations, stronger customer experiences, and software that can keep growing with the business.
+                        </p>
+
+                        <Link
+                            href="/digital-transform"
+                            className="mt-7 inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 text-sm font-black text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px] sm:text-base"
+                        >
+                            Build with Infitech
+                            <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
+                        </Link>
+                    </motion.div> */}
                     <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
                         {aboutCapabilities.map((item, index) => {
                             const Icon = item.icon;
@@ -168,7 +195,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            < ClientStory/>
+            < ClientStory />
         </>
     );
 }

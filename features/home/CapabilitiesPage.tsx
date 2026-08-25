@@ -30,9 +30,13 @@ export default function CapabilitiesPage() {
             <section className="bg-background px-5 py-10 text-infitech-ink sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-[1400px]">
                     {/* <h2 className="mb-6 text-3xl font-semibold leading-tight text-center text-infitech-ink sm:text-4xl"> */}
-                    <h1 className="text-center text-[2.6rem] font-black leading-tight tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-4 lg:mb-8 lg:text-[2.0rem] xl:text-[4.0rem]">
+                    {/* <h1 className="text-center text-[2.6rem] font-black leading-tight tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-4 lg:mb-8 lg:text-[2.0rem] xl:text-[4.0rem]">
                         Our Capabilities
-                    </h1>
+                    </h1> */}
+                    <h2 className="heading-rise mx-auto flex max-w-[18ch] justify-center gap-5 text-center font-display text-[clamp(2.5rem,6.5vw,5rem)] leading-[0.95] tracking-[-0.025em] text-balance lg:mb-8 lg:mt-4">
+                        <span className="block font-light text-fog">Our</span>
+                        <span className="block font-bold">Capabilities.</span>
+                    </h2>
                     <div className="grid gap-6 lg:grid-cols-3">
                         {industryCards.map((card) => {
                             const Icon = card.icon;
