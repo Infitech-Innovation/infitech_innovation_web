@@ -3,7 +3,7 @@
 import { Link, type AppPathname } from "@/i18n/routing";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import AboutPage from "./AboutPage";
+import AboutPage from "../AboutPage";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const services = [

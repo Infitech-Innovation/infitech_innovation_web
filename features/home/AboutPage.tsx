@@ -4,55 +4,60 @@ import { Link } from "@/i18n/routing";
 import { ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
 import { motion } from "motion/react";
 import AboutTechBackground from "./AboutTechBackground";
-import PartnersPage from "./PartnersPage";
+import PartnersPage from "./.trash/PartnersPage";
+import ClientStory from "./ClientStory";
 
 const aboutCapabilities = [
     {
-        title: "Digital products",
-        description: "Websites, portals, dashboards, and customer-facing platforms.",
+        title: "Hypechain",
+        description: "Hypechain is a creator-first platform that tracks the real value of creator influence.",
         icon: Code2,
         layout: "sm:col-span-2",
         cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         iconClass: "bg-infitech-cyan text-infitech-ink",
-        accentClass: "bg-infitech-gold",
+        accentClass: "",
+        // bg-infitech-gold
     },
     {
-        title: "AI automation",
-        description: "Smarter booking, support, reports, and repeat operations.",
+        title: "Coming Soon",
+        description: " ",
         icon: Bot,
         layout: "",
-        cardClass: "min-h-[150px] bg-infitech-cyan text-infitech-ink sm:min-h-[175px]",
+        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         iconClass: "bg-infitech-surface text-infitech-ink",
-        accentClass: "bg-infitech-ink",
+        accentClass: "",
+        // bg-infitech-ink
     },
     {
-        title: "ERP SaaS",
-        description: "Connected tools for inventory, finance, workflows, and teams.",
+        title: "",
+        description: "",
         icon: Layers3,
         layout: "",
-        cardClass: "min-h-[150px] bg-infitech-gold text-infitech-ink sm:min-h-[175px]",
-        iconClass: "bg-infitech-ink text-infitech-surface",
-        accentClass: "bg-infitech-orange",
+        cardClass: "",
+        iconClass: "",
+        accentClass: "",
+        // bg-infitech-orange
     },
     {
-        title: "Custom systems",
-        description: "Software shaped around how your business actually works.",
+        title: "Infi-SaaS",
+        description: "Infi-ERP SaaS Streamline your business processes with our cloud-based ERP solution, tailored for the Kenyan market.",
         icon: Workflow,
         layout: "sm:col-span-2",
-        cardClass: "min-h-[150px] bg-infitech-turquoise text-infitech-ink sm:min-h-[175px]",
+        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         iconClass: "bg-infitech-ink text-infitech-cyan",
-        accentClass: "bg-infitech-surface",
+        accentClass: "",
+        // bg-infitech-surface
     },
 ];
 
 export default function AboutPage() {
     return (
         <>
-            <section className="relative isolate overflow-hidden bg-infitech-olive/35 px-4 py-14 text-infitech-ink sm:px-6 sm:py-16 lg:px-12 lg:py-20">
+            <section className="relative isolate overflow-hidden px-4 py-14 text-infitech-ink sm:px-6 sm:py-16 lg:px-12 lg:py-20">
                 <AboutTechBackground />
                 <motion.div
                     aria-hidden="true"
-                    className="absolute left-[-18%] top-10 z-0 h-28 w-[72%] skew-x-[-18deg] border-y border-infitech-ink/10 bg-infitech-surface/15"
+                    className="absolute left-[-18%] top-10 z-0 h-28 w-[72%] skew-x-[-18deg] border-y border-infitech-ink/10"
                     animate={{
                         x: ["-8%", "20%", "-8%"],
                         opacity: [0.18, 0.42, 0.18],
@@ -65,7 +70,7 @@ export default function AboutPage() {
                 />
                 <motion.div
                     aria-hidden="true"
-                    className="absolute bottom-8 right-[-20%] z-0 h-24 w-[68%] skew-x-[16deg] border-y border-infitech-orange/20 bg-infitech-gold/15"
+                    className="absolute bottom-8 right-[-20%] z-0 h-24 w-[68%] skew-x-[16deg] border-y border-infitech-orange/20"
                     animate={{
                         x: ["8%", "-18%", "8%"],
                         opacity: [0.16, 0.38, 0.16],
@@ -163,7 +168,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <PartnersPage />
+            < ClientStory/>
         </>
     );
 }

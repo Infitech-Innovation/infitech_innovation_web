@@ -2,23 +2,23 @@
 
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import type { ISourceOptions } from "@tsparticles/engine";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 import { useMemo } from "react";
 import { initParticles } from "./particlesInit";
 
-const dataPackets = [
-    { top: "18%", left: "-8%", width: "42%", delay: 0, duration: 9, color: "bg-infitech-ink" },
-    { top: "34%", left: "18%", width: "36%", delay: 1.4, duration: 11, color: "bg-infitech-orange" },
-    { top: "57%", left: "-12%", width: "54%", delay: 2.2, duration: 10, color: "bg-infitech-turquoise" },
-    { top: "73%", left: "36%", width: "34%", delay: 0.8, duration: 12, color: "bg-infitech-gold" },
-] as const;
+// const dataPackets = [
+//     { top: "18%", left: "-8%", width: "42%", delay: 0, duration: 9, color: "bg-infitech-ink" },
+//     { top: "34%", left: "18%", width: "36%", delay: 1.4, duration: 11, color: "bg-infitech-orange" },
+//     { top: "57%", left: "-12%", width: "54%", delay: 2.2, duration: 10, color: "bg-infitech-turquoise" },
+//     { top: "73%", left: "36%", width: "34%", delay: 0.8, duration: 12, color: "bg-infitech-gold" },
+// ] as const;
 
-const circuitNodes = [
-    { top: "21%", left: "12%", label: "AI" },
-    { top: "31%", left: "72%", label: "ERP" },
-    { top: "62%", left: "18%", label: "API" },
-    { top: "70%", left: "62%", label: "UX" },
-] as const;
+// const circuitNodes = [
+//     { top: "21%", left: "12%" },
+//     { top: "31%", left: "72%" },
+//     { top: "62%", left: "18%" },
+//     { top: "70%", left: "62%" },
+// ] as const;
 
 export default function HeroTechBackground() {
     const particleOptions = useMemo<ISourceOptions>(
@@ -92,14 +92,14 @@ export default function HeroTechBackground() {
                         max: 0.76,
                     },
                 },
-                shape: {
-                    options: {
-                        polygon: {
-                            sides: 6,
-                        },
-                    },
-                    type: ["circle", "line", "polygon", "square"],
-                },
+                // shape: {
+                //     options: {
+                //         polygon: {
+                //             sides: 6,
+                //         },
+                //     },
+                //     type: ["circle", "line", "polygon", "square"],
+                // },
                 size: {
                     value: {
                         min: 1.2,
@@ -121,32 +121,11 @@ export default function HeroTechBackground() {
                 />
             </ParticlesProvider>
 
-            {dataPackets.map((packet) => (
-                <div
-                    key={`${packet.top}-${packet.left}`}
-                    className="absolute h-px overflow-visible bg-infitech-ink/12"
-                    style={{ top: packet.top, left: packet.left, width: packet.width }}
-                >
-                    <motion.span
-                        className={`absolute -top-1 block h-2 w-9 rounded-full ${packet.color} shadow-[0_0_18px_rgba(64,224,208,0.45)]`}
-                        animate={{
-                            x: ["0%", "100%", "0%"],
-                            opacity: [0, 0.85, 0],
-                        }}
-                        transition={{
-                            delay: packet.delay,
-                            duration: packet.duration,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                        }}
-                    />
-                </div>
-            ))}
 
-            {circuitNodes.map((node, index) => (
+            {/* {circuitNodes.map((node, index) => (
                 <motion.div
-                    key={node.label}
-                    className="absolute grid h-12 w-12 place-items-center rounded-[10px] border border-infitech-ink/15 bg-infitech-surface/22 font-mono text-[0.65rem] font-black text-infitech-ink shadow-[0_0_28px_rgba(64,224,208,0.2)] backdrop-blur-[2px]"
+                    key={`${node.top}-${node.left}`}
+                    className="absolute h-12 w-12 rounded-[10px] border border-infitech-ink/15 bg-infitech-surface/22 shadow-[0_0_28px_rgba(64,224,208,0.2)] backdrop-blur-[2px]"
                     style={{ top: node.top, left: node.left }}
                     animate={{
                         y: [0, -8, 0],
@@ -163,12 +142,11 @@ export default function HeroTechBackground() {
                         ease: "easeInOut",
                         repeat: Infinity,
                     }}
-                >
-                    {node.label}
-                </motion.div>
-            ))}
+                />
+            ))} */}
 
-            <div className="absolute inset-0 bg-gradient-to-r from-infitech-olive/20 via-transparent to-infitech-cyan/20" />
+            <div className="absolute inset-0" />
+            {/* gradient-to-r from-infitech-olive/20 via-transparent to-infitech-cyan/20 */}
         </div>
     );
 }

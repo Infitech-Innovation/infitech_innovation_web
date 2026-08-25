@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
-import ServicesPage from "./ServicesPage";
 import HeroTechBackground from "./HeroTechBackground";
+import CapabilitiesPage from "./CapabilitiesPage";
 
 export default function HomePage() {
     const carouselCards = [
@@ -9,15 +9,17 @@ export default function HomePage() {
             kicker: "Smart systems",
             description: "Automate bookings, support, reporting, and repeat workflows with practical AI tools.",
             tags: ["AI", "Booking", "Support", "Ops"],
-            color: "from-infitech-orange via-infitech-gold to-infitech-ink",
+            color: "", 
             href: "/ai-automation-booking",
+            // #from-infitech-orange via-infitech-gold to-infitech-ink
         },
         {
             title: "ERP SaaS",
             kicker: "Business hub",
             description: "Connect inventory, sales, finance, teams, and approvals in one clean operating system.",
             tags: ["ERP", "SaaS", "Finance", "Teams"],
-            color: "from-infitech-turquoise via-infitech-cyan to-infitech-ink",
+            color: "infitech-ink",
+            //  from-infitech-turquoise via-infitech-cyan to-infitech-ink
             href: "/erp-saas",
         },
         {
@@ -25,7 +27,8 @@ export default function HomePage() {
             kicker: "Launch room",
             description: "Build modern web experiences, campaigns, and digital journeys that convert visitors.",
             tags: ["Web", "SEO", "Launch", "Brand"],
-            color: "from-infitech-olive via-infitech-turquoise to-infitech-ink",
+            color: "infitech-ink",
+            // from-infitech-olive via-infitech-turquoise to-infitech-ink
             href: "/digital-transform",
         },
         {
@@ -33,7 +36,8 @@ export default function HomePage() {
             kicker: "Product lab",
             description: "Design and ship custom portals, dashboards, and internal tools around your workflow.",
             tags: ["Apps", "Portals", "API", "Data"],
-            color: "from-infitech-gold via-infitech-orange to-infitech-ink",
+            color: "infitech-ink",
+            // from-infitech-gold via-infitech-orange to-infitech-ink
             href: "/custom-develop",
         },
         {
@@ -41,7 +45,8 @@ export default function HomePage() {
             kicker: "Founder desk",
             description: "Turn early ideas into validated prototypes, technical roadmaps, and scalable products.",
             tags: ["MVP", "Strategy", "UX", "Scale"],
-            color: "from-infitech-ink via-infitech-olive to-infitech-ink",
+            color: "infitech-ink",
+            //from-infitech-ink via-infitech-olive to-infitech-ink
             href: "/innovation",
         },
     ] as const;
@@ -49,7 +54,7 @@ export default function HomePage() {
     return (
         <>
         {/* Hero Section */}
-            <main className="flex flex-1 flex-col bg-infitech-olive/35 text-infitech-ink">
+            <main className="flex flex-1 flex-col text-infitech-ink">
                 <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:py-0">
                     <HeroTechBackground />
                     <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
@@ -87,7 +92,7 @@ export default function HomePage() {
                                                 {/* <p className="absolute inset-x-0 bottom-5 z-20 text-center font-mono text-sm font-black tracking-[0.06em] text-infitech-surface sm:text-lg">
                                             {card.kicker}. Built by Infitech Innovation.
                                         </p> */}
-                                                <div className="absolute inset-0 bg-gradient-to-r from-infitech-ink/20 to-transparent" />
+                                                <div className="absolute inset-0 bg-infitech-ink" /> {/*// gradient-to-r from-infitech-ink to-transparent */}
                                                 <div className="relative z-10 flex w-full items-center justify-center">
                                                     <div className="grid w-full max-w-[620px] items-center gap-5 md:grid-cols-[0.9fr_1.1fr] md:gap-8">
                                                         <div className="space-y-3 sm:space-y-4 lg:space-y-5">
@@ -109,7 +114,7 @@ export default function HomePage() {
                                                         <div className="relative hidden min-h-[300px] items-center justify-center md:flex lg:min-h-[430px]">
                                                             <div className="absolute h-52 w-52 rounded-full bg-infitech-surface/12 lg:h-72 lg:w-72" />
                                                             <div className="absolute h-36 w-36 rotate-12 rounded-[28px] border-8 border-infitech-gold/80 lg:h-48 lg:w-48 lg:rounded-[36px]" />
-                                                            <div className="absolute left-8 top-12 h-16 w-16 rounded-full bg-infitech-turquoise lg:top-16 lg:h-24 lg:w-24" />
+                                                            <div className="absolute left-8 top-12 h-16 w-16 rounded-full bg-infitech-gold/80 lg:top-16 lg:h-24 lg:w-24" />
                                                             <div className="absolute bottom-12 right-10 h-20 w-20 rounded-full bg-infitech-orange lg:bottom-16 lg:h-28 lg:w-28" />
                                                             <div className="absolute bottom-20 left-14 h-3 w-40 rotate-[-18deg] rounded-full bg-infitech-surface lg:bottom-28 lg:left-20 lg:h-4 lg:w-56" />
                                                             <div className="absolute right-16 top-20 h-3 w-32 rotate-[24deg] rounded-full bg-infitech-surface/70 lg:right-24 lg:top-28 lg:h-4 lg:w-44" />
@@ -130,7 +135,8 @@ export default function HomePage() {
             </main>
 
             {/* Service Section */}
-            <ServicesPage />
+            {/* <ServicesPage /> */}
+            <CapabilitiesPage/>
         </>
     );
 }

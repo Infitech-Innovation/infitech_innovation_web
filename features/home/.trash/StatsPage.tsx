@@ -1,5 +1,4 @@
 import { Activity, Code2, Rocket, SmilePlus } from "lucide-react";
-import FAQ from "./FAQ";
 
 export const portfolioStats = [
     {
@@ -112,7 +111,6 @@ export default function StatsPage() {
                     </div>
                 </div>
             </section>
-            <FAQ />
         </>
     );
 }
