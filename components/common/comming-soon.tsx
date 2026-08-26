@@ -1,6 +1,7 @@
 "use client";
 
-import { Construction, Home } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
@@ -17,39 +18,44 @@ export default function PageUnderDevelopment({
   const pageTitle = titleKey ? t(`pages.${titleKey}`) : title;
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center gap-8 overflow-hidden bg-infitech-surface px-6 text-infitech-ink">
-      <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-turquoise),var(--infitech-gold),var(--infitech-orange))]" />
-      <div className="absolute h-80 w-80 rounded-full bg-infitech-cyan/20 blur-3xl" />
-      <div className="absolute bottom-12 right-8 h-28 w-28 rounded-md bg-infitech-orange/75" />
-      <div className="absolute left-8 top-24 h-24 w-24 rounded-md bg-infitech-olive/80" />
+    <main className="flex min-h-screen items-center justify-center bg-[#f4f5f1] px-5 py-12 text-infitech-ink">
+      <section className="w-full max-w-2xl rounded-3xl bg-infitech-surface px-6 py-10 text-center shadow-[0_18px_50px_rgba(0,0,0,0.08)] sm:px-10">
+        <Image
+          src="/icon0.svg"
+          alt="Infitech Innovation logo"
+          width={72}
+          height={72}
+          className="mx-auto h-16 w-16 object-contain"
+        />
 
-      <div className="relative flex flex-col items-center text-center">
-        <div className="mb-6 rounded-md border border-infitech-olive bg-infitech-cyan/15 p-4">
-          <Construction
-            className="h-12 w-12 text-infitech-orange"
-            strokeWidth={1.5}
-          />
-        </div>
-        <h1 className="mb-3 text-4xl font-bold text-infitech-ink">
+        <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-infitech-orange">
+          Coming soon
+        </p>
+        <h1 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
           {t("title", { page: pageTitle })}
         </h1>
-        <p className="mb-8 max-w-sm text-lg text-infitech-ink/70">
+        <p className="mx-auto mt-4 max-w-lg text-base font-medium leading-7 text-black/60 sm:text-lg">
           {t("description")}
         </p>
-        <div className="h-1 w-64 overflow-hidden rounded-full bg-infitech-olive/40">
-          <div className="h-full w-1/2 rounded-full bg-[linear-gradient(90deg,var(--infitech-cyan),var(--infitech-gold),var(--infitech-orange))]" />
-        </div>
-      </div>
 
-      <div className="relative flex flex-col gap-4 sm:flex-row">
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center gap-2 rounded-md border border-infitech-ink bg-infitech-ink px-4 py-2 font-semibold text-infitech-surface transition-all duration-200 hover:bg-infitech-orange hover:text-infitech-ink active:scale-95"
-        >
-          <Home className="h-5 w-5" strokeWidth={2} />
-          {t("home")}
-        </Link>
-      </div>
-    </div>
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <Link
+            href="/"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 text-base font-bold text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+          >
+            <Home className="h-5 w-5" strokeWidth={2} />
+            {t("home")}
+          </Link>
+          <button
+            type="button"
+            onClick={() => window.history.back()}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/15 bg-white px-6 text-base font-bold text-infitech-ink transition hover:border-infitech-orange hover:text-infitech-orange"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            {t("back")}
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }

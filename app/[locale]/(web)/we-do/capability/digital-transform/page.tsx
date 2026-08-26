@@ -5,7 +5,6 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-
 export default function page() {
-  return <PageUnderDevelopment titleKey="erpSaas" />
+  return <PageUnderDevelopment title="Capability Digital Transform" />
 }

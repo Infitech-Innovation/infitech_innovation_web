@@ -6,5 +6,5 @@ export async function generateStaticParams() {
 }
 
 export default function page() {
-  return <PageUnderDevelopment titleKey="chatbot" />
+  return <PageUnderDevelopment title="What We Do Innovation Research Development" />
 }

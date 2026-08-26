@@ -6,5 +6,5 @@ export async function generateStaticParams() {
 }
 
 export default function page() {
-  return <PageUnderDevelopment titleKey="aiAutomation" />
+  return <PageUnderDevelopment title="Capability Business Systems" />
 }
