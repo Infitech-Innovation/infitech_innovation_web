@@ -89,6 +89,20 @@ body {
   opacity: 1;
 }
 
+.group:hover .infitech-industries-card-title,
+.group:focus-visible .infitech-industries-card-title,
+.group:hover .infitech-industries-last-title,
+.group:focus-visible .infitech-industries-last-title {
+  font-size: 1.1rem;
+}
+
+.group:hover .infitech-industries-card-heading,
+.group:focus-visible .infitech-industries-card-heading,
+.group:hover .infitech-industries-last-heading,
+.group:focus-visible .infitech-industries-last-heading {
+  font-size: 1.75rem;
+}
+
 @keyframes infitech-drawer-slide-in {
   from {
     transform: translateX(100%);

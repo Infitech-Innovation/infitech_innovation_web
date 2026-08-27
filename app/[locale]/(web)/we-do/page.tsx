@@ -5,6 +5,6 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function page() {
+export default function Page() {
   return <PageUnderDevelopment title="What We Do" />
 }

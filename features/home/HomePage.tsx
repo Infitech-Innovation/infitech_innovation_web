@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
 import HeroTechBackground from "./HeroTechBackground";
-import CapabilitiesPage from "./CapabilitiesPage";
+import WhatWeDo from "./WhatWeDo";
 
 export default function HomePage() {
     const carouselCards = [
@@ -66,13 +66,13 @@ export default function HomePage() {
                                 </p>
                                 <div className="mt-5 flex w-full max-w-[360px] flex-col gap-2 lg:max-w-[520px] lg:flex-row">
                                     <Link
-                                        href="/digital-transform"
+                                        href="/contact"
                                         className="inline-flex min-h-11 min-w-0 flex-1 items-center justify-center rounded-full bg-infitech-ink px-4 text-sm font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Start a Conversation
                                     </Link>
                                     <Link
-                                        href="/digital-transform"
+                                        href="/contact"
                                         className="inline-flex min-h-11 min-w-0 flex-1 items-center justify-center rounded-full border bg-infitech-orange px-4 text-sm font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Explore What We Do
@@ -141,7 +141,7 @@ export default function HomePage() {
 
             {/* Service Section */}
             {/* <ServicesPage /> */}
-            <CapabilitiesPage />
+            <WhatWeDo />
         </>
     );
 }

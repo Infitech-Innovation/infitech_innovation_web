@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "features/home/.trash/ServicesPage.tsx", "features/home/.trash/FAQ.tsx", "features/home/.trash/PartnersPage.tsx", "features/home/.trash/StatsPage.tsx", "features/home/.trash/AboutTechBackground.tsx"  ],
+, "features/home/.trash/ServicesPage.tsx", "features/home/.trash/FAQ.tsx", "features/home/.trash/PartnersPage.tsx", "features/home/.trash/StatsPage.tsx", "features/home/.trash/AboutTechBackground.tsx", "features/home/.trash/CapabilitiesPage.tsx"  ],
   "exclude": ["node_modules"]
 }
