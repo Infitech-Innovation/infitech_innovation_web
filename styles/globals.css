@@ -38,15 +38,21 @@ body {
   animation: infitech-drawer-slide-in 240ms ease-out;
 }
 
+.infitech-hero-card-window {
+  --infitech-hero-card-gap: 1rem;
+  overflow: hidden;
+}
+
 .infitech-hero-card-track {
   animation: infitech-hero-card-slide-left 25s ease-in-out infinite;
-  width: 1000%;
+  gap: var(--infitech-hero-card-gap);
+  width: 100%;
   will-change: transform;
 }
 
 .infitech-hero-card-track > div {
-  flex: 0 0 10%;
-  max-width: 10%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .infitech-hero-card-track:hover {
@@ -101,26 +107,26 @@ body {
 
   20%,
   28% {
-    transform: translateY(-10%);
+    transform: translateY(calc(0px - var(--infitech-hero-card-step)));
   }
 
   40%,
   48% {
-    transform: translateY(-20%);
+    transform: translateY(calc(0px - var(--infitech-hero-card-step) - var(--infitech-hero-card-step)));
   }
 
   60%,
   68% {
-    transform: translateY(-30%);
+    transform: translateY(calc(0px - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step)));
   }
 
   80%,
   88% {
-    transform: translateY(-40%);
+    transform: translateY(calc(0px - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step)));
   }
 
   100% {
-    transform: translateY(-50%);
+    transform: translateY(calc(0px - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step) - var(--infitech-hero-card-step)));
   }
 }
 
@@ -132,26 +138,26 @@ body {
 
   20%,
   28% {
-    transform: translateX(-10%);
+    transform: translateX(calc(-100% - var(--infitech-hero-card-gap)));
   }
 
   40%,
   48% {
-    transform: translateX(-20%);
+    transform: translateX(calc(-200% - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap)));
   }
 
   60%,
   68% {
-    transform: translateX(-30%);
+    transform: translateX(calc(-300% - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap)));
   }
 
   80%,
   88% {
-    transform: translateX(-40%);
+    transform: translateX(calc(-400% - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap)));
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-500% - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap) - var(--infitech-hero-card-gap)));
   }
 }
 
@@ -180,6 +186,11 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .infitech-hero-card-window {
+    --infitech-hero-card-gap: 1.5rem;
+    --infitech-hero-card-step: calc(clamp(480px, 62vh, 620px) + var(--infitech-hero-card-gap));
+  }
+
   .infitech-hero-card-track {
     animation-name: infitech-hero-card-rise;
     display: flex;

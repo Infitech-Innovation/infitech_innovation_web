@@ -4,14 +4,7 @@ import Particles, { ParticlesProvider } from "@tsparticles/react";
 import type { ISourceOptions } from "@tsparticles/engine";
 import { motion } from "motion/react";
 import { useMemo } from "react";
-import { initParticles } from "./particlesInit";
-
-// const signalPaths = [
-//     { top: "16%", left: "-12%", width: "44%", delay: 0, duration: 12, color: "bg-infitech-turquoise" },
-//     { top: "38%", left: "52%", width: "48%", delay: 1.5, duration: 14, color: "bg-infitech-orange" },
-//     { top: "68%", left: "-8%", width: "52%", delay: 2.4, duration: 13, color: "bg-infitech-gold" },
-//     { top: "84%", left: "38%", width: "40%", delay: 0.8, duration: 15, color: "bg-infitech-ink" },
-// ] as const;
+import { initParticles } from "../particlesInit";
 
 export default function AboutTechBackground() {
     const particleOptions = useMemo<ISourceOptions>(
@@ -89,49 +82,6 @@ export default function AboutTechBackground() {
                     options={particleOptions}
                 />
             </ParticlesProvider>
-
-            {/* {signalPaths.map((path) => (
-                <div
-                    key={`${path.top}-${path.left}`}
-                    className="absolute h-px bg-infitech-ink/10"
-                    style={{ top: path.top, left: path.left, width: path.width }}
-                >
-                    <motion.span
-                        className={`absolute -top-1 block h-2 w-12 rounded-full ${path.color} shadow-[0_0_20px_rgba(64,224,208,0.34)]`}
-                        animate={{
-                            x: ["0%", "100%", "0%"],
-                            opacity: [0, 0.7, 0],
-                        }}
-                        transition={{
-                            delay: path.delay,
-                            duration: path.duration,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                        }}
-                    />
-                </div>
-            ))} */}
-
-            {/* {systemNodes.map((node, index) => (
-                <motion.div
-                    key={node.label}
-                    className="absolute grid h-12 min-w-12 place-items-center rounded-[8px] border border-infitech-ink/12 bg-infitech-surface/24 px-2 font-mono text-[0.62rem] font-black text-infitech-ink/65 shadow-[0_0_26px_rgba(64,224,208,0.14)] backdrop-blur-[2px]"
-                    style={{ top: node.top, left: node.left }}
-                    animate={{
-                        y: [0, -7, 0],
-                        opacity: [0.28, 0.68, 0.28],
-                        scale: [1, 1.04, 1],
-                    }}
-                    transition={{
-                        delay: index * 0.55,
-                        duration: 7.5 + index,
-                        ease: "easeInOut",
-                        repeat: Infinity,
-                    }}
-                >
-                    {node.label}
-                </motion.div>
-            ))} */}
 
             <motion.div
                 className="absolute left-[-20%] top-[12%] h-40 w-[70%] rotate-[-10deg] border-y border-amber-300/28"

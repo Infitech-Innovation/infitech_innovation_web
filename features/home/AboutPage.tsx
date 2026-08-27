@@ -3,7 +3,6 @@
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
 import { motion } from "motion/react";
-import AboutTechBackground from "./AboutTechBackground";
 import ClientStory from "./ClientStory";
 
 const aboutCapabilities = [
@@ -22,7 +21,7 @@ const aboutCapabilities = [
         description: " ",
         icon: Bot,
         layout: "",
-        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
+        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface blur-[4px] sm:min-h-[175px] ",
         iconClass: "bg-infitech-surface text-infitech-ink",
         accentClass: "",
         // bg-infitech-ink
@@ -32,7 +31,7 @@ const aboutCapabilities = [
         description: "",
         icon: Layers3,
         layout: "",
-        cardClass: "",
+        cardClass: "blur-[8px]",
         iconClass: "",
         accentClass: "",
         // bg-infitech-orange
@@ -53,7 +52,6 @@ export default function AboutPage() {
     return (
         <>
             <section className="relative isolate overflow-hidden px-4 py-14 text-infitech-ink sm:px-6 sm:py-16 lg:px-12 lg:py-20">
-                <AboutTechBackground />
                 <motion.div
                     aria-hidden="true"
                     className="absolute left-[-18%] top-10 z-0 h-28 w-[72%] skew-x-[-18deg] border-y border-infitech-ink/10"
@@ -109,30 +107,6 @@ export default function AboutPage() {
                         </Link>
                     </motion.div>
 
-                    {/* <motion.div
-                        className="mx-auto w-full max-w-2xl rounded-[8px] bg-infitech-ink bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:64px_64px] px-4 py-5 text-center shadow-[0_22px_60px_rgba(0,0,0,0.2)] sm:px-6 sm:py-7 lg:mx-0 lg:text-left"
-                        initial={{ opacity: 0, y: 34 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.35 }}
-                        transition={{ duration: 0.65, ease: "easeOut" }}
-                    >
-                        <h2 className="mt-4 text-[2rem] font-black leading-[0.94] tracking-normal min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
-
-                           <span className="block">Digital systems </span>
-                            <span className="heading-gradient block">built around your next move</span>
-                        </h2>
-                        <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-surface/75 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
-                            Infitech Innovation designs and builds modern platforms for teams that want cleaner operations, stronger customer experiences, and software that can keep growing with the business.
-                        </p>
-
-                        <Link
-                            href="/digital-transform"
-                            className="mt-7 inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 text-sm font-black text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px] sm:text-base"
-                        >
-                            Build with Infitech
-                            <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
-                        </Link>
-                    </motion.div> */}
                     <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
                         {aboutCapabilities.map((item, index) => {
                             const Icon = item.icon;
