@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
-import { ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
 import { motion } from "motion/react";
 import ClientStory from "./ClientStory";
 
@@ -14,6 +14,7 @@ const aboutCapabilities = [
         cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         iconClass: "bg-infitech-cyan text-infitech-ink",
         accentClass: "",
+        href: "https://hypechain.infi-saas.com/"
         // bg-infitech-gold
     },
     {
@@ -24,6 +25,7 @@ const aboutCapabilities = [
         cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface blur-[4px] sm:min-h-[175px] ",
         iconClass: "bg-infitech-surface text-infitech-ink",
         accentClass: "",
+        href: "#"
         // bg-infitech-ink
     },
     {
@@ -34,6 +36,7 @@ const aboutCapabilities = [
         cardClass: "blur-[8px]",
         iconClass: "",
         accentClass: "",
+        href: "#"
         // bg-infitech-orange
     },
     {
@@ -44,6 +47,7 @@ const aboutCapabilities = [
         cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         iconClass: "bg-infitech-ink text-infitech-cyan",
         accentClass: "",
+        href: "https://infitech.infi-saas.com/"
         // bg-infitech-surface
     },
 ];
@@ -129,7 +133,7 @@ export default function AboutPage() {
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.85, delay: 0.18 + index * 0.08, ease: "easeOut" }}
                                     />
-                                    <div className={`flex w-full ${item.layout ? "justify-between gap-4" : "flex-col items-center justify-center text-center"}`}>
+                                    <div className={`flex w-full ${item.layout ? "flex flex-col items-end gap-4" : "flex-col items-center justify-center text-center"}`}>
                                         <div className={`${item.layout ? "max-w-[520px]" : ""}`}>
                                             <motion.div
                                                 className={`mb-3 grid h-11 w-11 place-items-center rounded-full ${item.iconClass} ${item.layout ? "" : "mx-auto"} sm:h-12 sm:w-12`}
@@ -152,6 +156,7 @@ export default function AboutPage() {
                                             </p>
                                         </div>
 
+
                                         {
                                             item.layout ? (
                                                 <div>
@@ -161,6 +166,10 @@ export default function AboutPage() {
 
                                             ) : null
                                         }
+
+                                        <a href={item.href} className="flex items-center gap-2 text-sm font-black text-infitech-orange transition hover:translate-x-1">
+                                            Visit <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
+                                        </a>
                                     </div>
                                 </motion.article>
                             );

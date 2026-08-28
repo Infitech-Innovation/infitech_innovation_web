@@ -1,7 +1,9 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Link, type AppPathname } from "@/i18n/routing";
 import AboutPage from "./AboutPage";
+import financeBg from "@/public/finance_rmbg.png";
+import hospitalityBg from "@/public/hospitality_rmbg.png";
 
 const featuredIndustries = [
   {
@@ -21,8 +23,8 @@ const featuredIndustries = [
       "Improve how customers access your services while giving your teams better systems, smoother processes, and clearer information behind the scenes.",
     cta: "Explore Financial Services",
     href: "/we-do/industry/financial-services",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85",
+    image: financeBg,
+    imageFit: "contain",
   },
   {
     title: "Logistics & Supply Chain",
@@ -41,8 +43,8 @@ const featuredIndustries = [
       "Make it easier for guests to discover, book, communicate, and engage with your business while helping your teams manage the work behind every experience.",
     cta: "Explore Hospitality & Tourism",
     href: "/we-do/industry/hospitality-tourism",
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85",
+    image: hospitalityBg,
+    imageFit: "contain",
   },
   {
     title: "Healthcare",
@@ -60,7 +62,8 @@ const featuredIndustries = [
   description: string;
   cta: string;
   href: AppPathname;
-  image: string;
+  image: string | StaticImageData;
+  imageFit?: "cover" | "contain";
 }>;
 
 const otherIndustries = [
@@ -96,18 +99,30 @@ export default function Industries() {
                 href={industry.href}
                 className="group relative flex min-h-[360px] overflow-hidden rounded-[6px] bg-[#f2f2ef] text-infitech-surface outline-none transition duration-700 ease-out focus-visible:ring-2 focus-visible:ring-infitech-orange md:min-h-[420px] xl:min-h-[470px]"
               >
-                <Image
-                  src={industry.image}
-                  alt={`${industry.title} industry`}
-                  fill
-                  sizes="(min-width: 1280px) 20vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-full group-hover:scale-105 group-hover:opacity-0 group-focus-visible:-translate-x-full group-focus-visible:scale-105 group-focus-visible:opacity-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/20 to-black/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-full group-hover:opacity-0 group-focus-visible:-translate-x-full group-focus-visible:opacity-0" />
+                <div className="absolute inset-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-full group-hover:opacity-0 group-focus-visible:-translate-x-full group-focus-visible:opacity-0">
+                  <Image
+                    src={industry.image}
+                    alt={`${industry.title} industry`}
+                    fill
+                    sizes="(min-width: 1280px) 20vw, (min-width: 768px) 50vw, 100vw"
+                    className={
+                      industry.imageFit === "contain"
+                        ? "object-contain p-2 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-focus-visible:scale-110 sm:p-3"
+                        : "object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-focus-visible:scale-105"
+                    }
+                  />
+                </div>
+                {industry.imageFit !== "contain" && (
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/20 to-black/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-full group-hover:opacity-0 group-focus-visible:-translate-x-full group-focus-visible:opacity-0" />
+                )}
 
                 <article className="relative z-10 flex w-full flex-col justify-between p-6 transition-colors duration-700 ease-out group-hover:text-infitech-ink group-focus-visible:text-infitech-ink">
                   <div>
-                    <h2 className="infitech-industries-card-title mt-6 text-[1.65rem] font-black leading-[1.06] transition-all duration-500 ease-out sm:text-[2rem]">
+                    <h2
+                      className={`infitech-industries-card-title mt-6 text-[1.65rem] font-black leading-[1.06] transition-all duration-500 ease-out sm:text-[2rem] ${
+                        industry.imageFit === "contain" ? "text-infitech-ink" : ""
+                      }`}
+                    >
                       {industry.title}
                     </h2>
                     <p className="infitech-industries-card-heading mt-4 max-h-0 overflow-hidden text-[1.2rem] font-black leading-tight opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
