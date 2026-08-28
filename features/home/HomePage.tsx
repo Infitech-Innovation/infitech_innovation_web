@@ -50,9 +50,9 @@ export default function HomePage() {
         <>
             {/* Hero Section */}
             <main className="flex flex-1 flex-col text-infitech-ink">
-                <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:pb-12 lg:pt-36">
+                <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-[6.5rem] lg:px-10 lg:pb-10 lg:pt-28">
                     <HeroTechBackground />
-                    <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-[calc(100vh-12rem)] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
+                    <div className="relative z-10 mx-auto grid min-h-[calc(100vh-8.5rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-[calc(100vh-9.5rem)] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
                         <div className="relative z-10 flex w-full items-center justify-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
                                 <p>DIGITAL TRANSFORMATION & INNOVATION</p>

@@ -18,26 +18,26 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
 
     return (
         <div className="fixed inset-0 z-50 bg-infitech-ink/45 backdrop-blur-sm lg:hidden">
-            <div className="infitech-mobile-drawer ml-auto flex h-full w-full flex-col bg-infitech-surface px-6 py-5 text-infitech-ink">
-                <div className="mb-8 flex items-center justify-between">
+            <div className="infitech-mobile-drawer ml-auto flex h-full w-full flex-col bg-infitech-surface px-5 py-4 text-infitech-ink">
+                <div className="mb-6 flex items-center justify-between">
                     <Image
                         src="/icon0.svg"
                         alt={t("logoAlt")}
                         width={72}
                         height={72}
-                        className="h-14 w-14 shrink-0 object-contain"
+                        className="h-11 w-11 shrink-0 object-contain"
                     />
                     <button
                         type="button"
-                        className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-infitech-ink text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-infitech-ink text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
                         onClick={onClose}
                         aria-label={t("toggleMenu")}
                     >
-                        <X className="h-5 w-5" />
+                        <X className="h-4 w-4" />
                     </button>
                 </div>
 
-                <div className="flex flex-1 flex-col gap-y-2 overflow-y-auto text-2xl font-black">
+                <div className="flex flex-1 flex-col gap-y-1.5 overflow-y-auto text-xl font-black">
                     {navLinks.map((link) => {
                         const active = isActive(link.href);
 
@@ -47,7 +47,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                 href={link.href}
                                 aria-current={active ? "page" : undefined}
                                 onClick={onClose}
-                                className={`rounded-3xl px-5 py-4 transition hover:bg-infitech-olive/20 ${active ? "bg-infitech-olive/25 text-infitech-ink" : ""
+                                className={`rounded-2xl px-4 py-3 transition hover:bg-infitech-olive/20 ${active ? "bg-infitech-olive/25 text-infitech-ink" : ""
                                     }`}
                             >
                                 {link.label}
@@ -55,8 +55,8 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                         );
                     })}
 
-                    <div className="mt-4 border-t border-black/10 pt-4">
-                        <p className="px-5 pb-2 text-sm font-bold uppercase tracking-[0.18em] text-black/45">
+                    <div className="mt-3 border-t border-black/10 pt-3">
+                        <p className="px-4 pb-2 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
                             What We Do
                         </p>
                         {whatWeDoCapabilityLinks.map((link) => (
@@ -64,20 +64,20 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                 key={link.href}
                                 href={link.href}
                                 onClick={onClose}
-                                className="block rounded-3xl px-5 py-3 transition hover:bg-infitech-olive/20"
+                                className="block rounded-2xl px-4 py-2.5 transition hover:bg-infitech-olive/20"
                             >
-                                <span className="block text-lg font-black">
+                                <span className="block text-base font-black">
                                     {link.label}
                                 </span>
-                                <span className="block text-sm font-semibold text-black/50">
+                                <span className="block text-xs font-semibold text-black/50">
                                     {link.description}
                                 </span>
                             </Link>
                         ))}
                     </div>
 
-                    <div className="mt-4 border-t border-black/10 pt-4">
-                        <p className="px-5 pb-2 text-sm font-bold uppercase tracking-[0.18em] text-black/45">
+                    <div className="mt-3 border-t border-black/10 pt-3">
+                        <p className="px-4 pb-2 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
                             Who We Are
                         </p>
                         {whoWeAreLinks.map((link) => (
@@ -85,12 +85,12 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                 key={link.href}
                                 href={link.href}
                                 onClick={onClose}
-                                className="block rounded-3xl px-5 py-3 transition hover:bg-infitech-olive/20"
+                                className="block rounded-2xl px-4 py-2.5 transition hover:bg-infitech-olive/20"
                             >
-                                <span className="block text-lg font-black">
+                                <span className="block text-base font-black">
                                     {link.label}
                                 </span>
-                                <span className="block text-sm font-semibold text-black/50">
+                                <span className="block text-xs font-semibold text-black/50">
                                     {link.description}
                                 </span>
                             </Link>
@@ -98,11 +98,11 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     </div>
                 </div>
 
-                <div className="grid gap-3 border-t border-infitech-olive/70 pt-5">
+                <div className="grid gap-3 border-t border-infitech-olive/70 pt-4">
                     <Link
                         href="/contact"
                         onClick={onClose}
-                        className="inline-flex h-14 items-center justify-center rounded-full bg-infitech-ink px-6 text-base font-black text-white"
+                        className="inline-flex h-12 items-center justify-center rounded-full bg-infitech-ink px-5 text-sm font-black text-white"
                     >
                         Start a Conversation
                     </Link>

@@ -85,19 +85,19 @@ export function Navbar() {
         <header
             className={`fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300 ease-out ${pastHero
                 ? "px-0 py-0"
-                : "px-4 py-4 sm:px-6 lg:px-8 lg:py-5"
+                : "px-4 py-3 sm:px-6 lg:px-8 lg:py-3"
                 }`}
             onMouseLeave={() => setActiveMegaMenu(null)}
         >
             <nav
-                className={`mx-auto flex min-h-[86px] items-center justify-between gap-5 border border-black/5 bg-infitech-surface px-6 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.08)] transition-all duration-300 sm:px-8 lg:min-h-[102px] ${pastHero
+                className={`mx-auto flex min-h-[66px] items-center justify-between gap-4 border border-black/5 bg-infitech-surface px-4 py-2 shadow-[0_18px_50px_rgba(0,0,0,0.08)] transition-all duration-300 sm:px-6 lg:min-h-[76px] ${pastHero
                     ? "w-full max-w-none rounded-none"
                     : "max-w-[calc(100vw-3rem)] rounded-[8rem] xl:max-w-[calc(100vw-5rem)]"
                     }`}
             >
                 <Link
                     href="/"
-                    className="flex shrink-0 items-center gap-2.5 text-lg font-black text-infitech-ink transition hover:opacity-80 sm:text-xl"
+                    className="flex shrink-0 items-center gap-2 text-base font-black text-infitech-ink transition hover:opacity-80 sm:text-lg"
                     onClick={() => {
                         setOpen(false);
                         setActiveMegaMenu(null);
@@ -108,18 +108,18 @@ export function Navbar() {
                         alt={t("logoAlt")}
                         width={100}
                         height={100}
-                        className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+                        className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
                     />
                 </Link>
 
-                <div className="hidden items-center justify-center gap-x-1 text-base font-semibold text-[#1f2330] lg:flex xl:gap-x-2 xl:text-lg">
+                <div className="hidden items-center justify-center gap-x-1 text-sm font-semibold text-[#1f2330] lg:flex xl:gap-x-1.5 xl:text-base">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
                             href={link.href}
                             onMouseEnter={() => setActiveMegaMenu(link.menu ?? null)}
                             onFocus={() => setActiveMegaMenu(link.menu ?? null)}
-                            className={`whitespace-nowrap rounded-xl px-5 py-4 transition hover:bg-[#eff0ed] xl:px-6 ${(link.menu && activeMegaMenu === link.menu) || isActive(link.href)
+                            className={`whitespace-nowrap rounded-xl px-4 py-2.5 transition hover:bg-[#eff0ed] xl:px-5 ${(link.menu && activeMegaMenu === link.menu) || isActive(link.href)
                                 ? "bg-[#eff0ed] text-infitech-ink"
                                 : ""
                                 }`}
@@ -132,7 +132,7 @@ export function Navbar() {
                 <div className="hidden items-center gap-3 lg:flex">
                     <Link
                         href="/contact"
-                        className="inline-flex h-[72px] items-center justify-center rounded-full bg-infitech-ink px-9 text-lg font-bold text-white transition hover:bg-infitech-orange hover:text-infitech-ink"
+                        className="inline-flex h-11 items-center justify-center rounded-full bg-infitech-ink px-6 text-sm font-bold text-white transition hover:bg-infitech-orange hover:text-infitech-ink xl:h-12 xl:px-7 xl:text-base"
                     >
                         Start a Conversation
                     </Link>
@@ -141,28 +141,28 @@ export function Navbar() {
                 <div className="flex items-center gap-2 lg:hidden">
                     <button
                         type="button"
-                        className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1f2330] text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1f2330] text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
                         onClick={() => setOpen((value) => !value)}
                         aria-label={t("toggleMenu")}
                         aria-expanded={open}
                     >
-                        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
                     </button>
                 </div>
             </nav>
 
             {activeMegaMenu && (
                 <div
-                    className="mx-auto hidden max-w-[calc(100vw-14rem)] pt-2 lg:block"
+                    className="mx-auto hidden max-w-[calc(100vw-14rem)] pt-1.5 lg:block"
                     onMouseEnter={() => setActiveMegaMenu(activeMegaMenu)}
                 >
                     <div
-                        className={`grid min-h-[300px] rounded-3xl bg-infitech-surface px-3 py-3 text-[#1f2330] shadow-[0_22px_60px_rgba(0,0,0,0.12)] xl:max-w-[1536px] ${secondColumnLinks.length > 0
+                        className={`grid min-h-[250px] rounded-3xl bg-infitech-surface px-3 py-3 text-[#1f2330] shadow-[0_22px_60px_rgba(0,0,0,0.12)] xl:max-w-[1536px] ${secondColumnLinks.length > 0
                             ? "grid-cols-[1.05fr_1.12fr_1.15fr]"
                             : "grid-cols-[1.05fr_2.27fr]"
                             }`}
                     >
-                        <div className="space-y-2 border-r border-black/10 pr-3">
+                        <div className="space-y-1.5 border-r border-black/10 pr-3">
                             {selectedMenuCategories.map((item) => {
                                 const Icon = item.icon;
                                 const active =
@@ -183,18 +183,18 @@ export function Navbar() {
                                                 setSelectedWhatWeDoCategory(item.label);
                                             }
                                         }}
-                                        className={`grid w-full grid-cols-[1.75rem_1fr_1rem] items-center gap-4 rounded-lg px-4 py-4 text-left text-lg font-semibold transition hover:bg-[#eff0ed] ${active ? "bg-[#eff0ed]" : ""
+                                        className={`grid w-full grid-cols-[1.5rem_1fr_1rem] items-center gap-3 rounded-lg px-3 py-3 text-left text-base font-semibold transition hover:bg-[#eff0ed] ${active ? "bg-[#eff0ed]" : ""
                                             }`}
                                     >
-                                        <Icon className="h-6 w-6" strokeWidth={2.2} />
+                                        <Icon className="h-5 w-5" strokeWidth={2.2} />
                                         <span className="leading-tight">{item.label}</span>
-                                        <ChevronRight className="h-4 w-4 text-black/35" />
+                                        <ChevronRight className="h-3.5 w-3.5 text-black/35" />
                                     </button>
                                 );
                             })}
                         </div>
 
-                        <div className={`space-y-5 px-7 py-3 ${secondColumnLinks.length > 0 ? "border-r border-black/10" : ""}`}>
+                        <div className={`space-y-4 px-5 py-2.5 ${secondColumnLinks.length > 0 ? "border-r border-black/10" : ""}`}>
                             {firstColumnLinks.map((link) => (
                                 <Link
                                     key={link.href}
@@ -202,10 +202,10 @@ export function Navbar() {
                                     className="block rounded-lg transition hover:text-infitech-orange"
                                     onClick={() => setActiveMegaMenu(null)}
                                 >
-                                    <span className="block text-lg font-semibold leading-tight">
+                                    <span className="block text-base font-semibold leading-tight">
                                         {link.label}
                                     </span>
-                                    <span className="mt-1.5 block text-sm font-medium leading-relaxed text-black/55">
+                                    <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">
                                         {link.description}
                                     </span>
                                 </Link>
@@ -213,7 +213,7 @@ export function Navbar() {
                         </div>
 
                         {secondColumnLinks.length > 0 && (
-                            <div className="space-y-5 px-7 py-3">
+                            <div className="space-y-4 px-5 py-2.5">
                                 {secondColumnLinks.map((link) => (
                                     <Link
                                         key={link.href}
@@ -221,10 +221,10 @@ export function Navbar() {
                                         className="block rounded-lg transition hover:text-infitech-orange"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
-                                        <span className="block text-lg font-semibold leading-tight">
+                                        <span className="block text-base font-semibold leading-tight">
                                             {link.label}
                                         </span>
-                                        <span className="mt-1.5 block text-sm font-medium leading-relaxed text-black/55">
+                                        <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">
                                             {link.description}
                                         </span>
                                     </Link>

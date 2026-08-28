@@ -93,17 +93,17 @@ export default function ClientStory() {
                                     aria-selected={isActive}
                                     aria-controls="client-story-panel"
                                     onClick={() => goToStory(index)}
-                                    className={`group relative flex min-h-36 min-w-[210px] flex-1 snap-center flex-col items-center justify-center gap-3 border-r border-infitech-ink/12 p-4 text-center transition hover:bg-white lg:min-h-40 ${isActive ? "bg-white" : "bg-neutral-50"}`}
+                                    className={`group relative flex min-h-24 min-w-[190px] flex-1 snap-center flex-col items-center justify-center gap-2 border-r border-infitech-ink/12 p-3 text-center transition hover:bg-white lg:min-h-28 ${isActive ? "bg-white" : "bg-neutral-50"}`}
                                 >
                                     <span
-                                        className={`grid place-items-center overflow-hidden bg-white p-2 transition ${isActive ? "border-transparent shadow-[0_12px_24px_rgba(0,0,0,0.12)]" : "border-infitech-ink/15 opacity-45 group-hover:opacity-80"}`}
+                                        className={`grid place-items-center overflow-hidden bg-white p-1.5 transition ${isActive ? "border-transparent shadow-[0_10px_20px_rgba(0,0,0,0.1)]" : "border-infitech-ink/15 opacity-45 group-hover:opacity-80"}`}
                                     >
                                         <Image
                                             src={story.image}
                                             alt={`${story.title} logo`}
-                                            width={80}
-                                            height={64}
-                                            className="h-full w-full object-cover"
+                                            width={68}
+                                            height={48}
+                                            className="h-12 w-17 object-contain"
                                         />
                                     </span>
                                     {/* <span className={`text-sm font-black ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
