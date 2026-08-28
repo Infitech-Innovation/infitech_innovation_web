@@ -3,7 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const clientStories = [
     {
@@ -55,48 +55,77 @@ const clientStories = [
 export default function ClientStory() {
     const [activeIndex, setActiveIndex] = useState(0);
     const activeStory = clientStories[activeIndex];
+
+    const goToStory = useCallback((index: number) => {
+        setActiveIndex((index + clientStories.length) % clientStories.length);
+    }, []);
+
+    const showNextStory = useCallback(() => {
+        goToStory(activeIndex + 1);
+    }, [activeIndex, goToStory]);
+
+    useEffect(() => {
+        const intervalId = window.setInterval(showNextStory, 6500);
+
+        return () => window.clearInterval(intervalId);
+    }, [showNextStory]);
+
     return (
         <section className="bg-infitech-surface px-4 py-14 text-infitech-ink sm:px-6 lg:px-10">
             <h1 className="text-center text-[2.6rem] font-black leading-tight tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-4 lg:mb-8 lg:text-[2.0rem] xl:text-[4.0rem]">
                     Client Story
                 </h1>
             <div className="mx-auto max-w-7xl">
-                <div
-                    role="tablist"
-                    aria-label="Client story tabs"
-                    className="grid overflow-hidden rounded-[8px] border border-infitech-ink/12 bg-neutral-50 sm:grid-cols-2 lg:grid-cols-4"
-                >
-                    {clientStories.map((story, index) => {
-                        const isActive = index === activeIndex;
+                <div className="flex items-stretch">
+                    <div
+                        role="tablist"
+                        aria-label="Client story carousel"
+                        className="flex flex-1 snap-x snap-mandatory overflow-x-auto rounded-[8px] border border-infitech-ink/12 bg-neutral-50"
+                    >
+                        {clientStories.map((story, index) => {
+                            const isActive = index === activeIndex;
 
-                        return (
-                            <button
-                                key={story.title}
-                                type="button"
-                                role="tab"
-                                aria-selected={isActive}
-                                aria-controls="client-story-panel"
-                                onClick={() => setActiveIndex(index)}
-                                className={`group relative flex min-h-36 flex-col items-center justify-center gap-3 border-b border-infitech-ink/12 p-4 text-center transition hover:bg-white sm:border-r lg:min-h-40 lg:border-b-0 ${isActive ? "bg-white" : "bg-neutral-50"}`}
-                            >
-                                <span
-                                    className={`grid place-items-center overflow-hidden  bg-white p-2 transition ${isActive ? "border-transparent shadow-[0_12px_24px_rgba(0,0,0,0.12)]" : "border-infitech-ink/15 opacity-45 group-hover:opacity-80"}`}
+                            return (
+                                <button
+                                    key={story.title}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={isActive}
+                                    aria-controls="client-story-panel"
+                                    onClick={() => goToStory(index)}
+                                    className={`group relative flex min-h-36 min-w-[210px] flex-1 snap-center flex-col items-center justify-center gap-3 border-r border-infitech-ink/12 p-4 text-center transition hover:bg-white lg:min-h-40 ${isActive ? "bg-white" : "bg-neutral-50"}`}
                                 >
-                                    <Image
-                                        src={story.image}
-                                        alt={`${story.title} logo`}
-                                        width={80}
-                                        height={64}
-                                        className="h-full w-full object-cover"
-                                    />
-                                </span>
-                                {/* <span className={`text-sm font-black ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
-                                    {story.shortTitle}
-                                </span> */}
-                                <span className={`absolute inset-x-0 bottom-0 h-1.5 bg-infitech-gold transition ${isActive ? "opacity-100" : "opacity-0"}`} />
-                            </button>
-                        );
-                    })}
+                                    <span
+                                        className={`grid place-items-center overflow-hidden bg-white p-2 transition ${isActive ? "border-transparent shadow-[0_12px_24px_rgba(0,0,0,0.12)]" : "border-infitech-ink/15 opacity-45 group-hover:opacity-80"}`}
+                                    >
+                                        <Image
+                                            src={story.image}
+                                            alt={`${story.title} logo`}
+                                            width={80}
+                                            height={64}
+                                            className="h-full w-full object-cover"
+                                        />
+                                    </span>
+                                    {/* <span className={`text-sm font-black ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
+                                        {story.shortTitle}
+                                    </span> */}
+                                    <span className={`absolute inset-x-0 bottom-0 h-1.5 bg-infitech-gold transition ${isActive ? "opacity-100" : "opacity-0"}`} />
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="mt-5 flex justify-center gap-2">
+                    {clientStories.map((story, index) => (
+                        <button
+                            key={`${story.title}-dot`}
+                            type="button"
+                            aria-label={`Show ${story.title}`}
+                            onClick={() => goToStory(index)}
+                            className={`h-2.5 rounded-full transition ${index === activeIndex ? "w-8 bg-infitech-orange" : "w-2.5 bg-infitech-ink/20 hover:bg-infitech-ink/40"}`}
+                        />
+                    ))}
                 </div>
 
                 <motion.div
@@ -138,16 +167,6 @@ export default function ClientStory() {
                         <p className="mt-4 text-sm font-semibold leading-6 text-infitech-ink/62 sm:text-base sm:leading-7">
                             {activeStory.detail}
                         </p>
-                        {/* <div className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start">
-                            {activeStory.points.map((point) => (
-                                <span
-                                    key={point}
-                                    className="rounded-full border border-infitech-ink/12 bg-white px-4 py-2 text-xs font-black text-infitech-ink/70 shadow-[0_8px_20px_rgba(0,0,0,0.05)]"
-                                >
-                                    {point}
-                                </span>
-                            ))}
-                        </div> */}
                         <a
                             href={activeStory.href}
                             target="_blank"
