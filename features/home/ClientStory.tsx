@@ -19,7 +19,7 @@ const clientStories = [
     },
     {
         title: "Ndogo Farms",
-        shortTitle: "Small Space? Big Harvest!",
+        shortTitle: "Making it easier for customers to discover, order, and grow with Ndogo Farms.",
         description: "Use automation to reduce repetitive work while keeping customer touchpoints responsive.",
         detail: "At Ndogo Farms, we make urban farming effortless. Whether you have a balcony, rooftop, or a small backyard, we provide eco-friendly grow bags, raised beds, and vertical gardens to help you grow fresh, organic veggies at home. With organic soil, fertilizers, and natural pest control, we ensure your food is chemical-free and nutrient-rich",
         href: "https://ndogofarms.co.ke/",
@@ -72,11 +72,19 @@ export default function ClientStory() {
 
     return (
         <section className="bg-infitech-surface px-4 py-14 text-infitech-ink sm:px-6 lg:px-10">
-            <h1 className="text-center text-[2.6rem] font-black leading-tight tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-4 lg:mb-8 lg:text-[2.0rem] xl:text-[4.0rem]">
-                    Client Story
-                </h1>
+            <div className="mx-auto max-w-4xl pb-6 text-center">
+                <p className="font-black uppercase text-infitech-orange">
+                    Client story
+                </p>
+                <h2 className="mx-auto text-center pb-2 pt-3 font-black text-infitech-ink">
+                    What progress looks like in practice.
+                </h2>
+                <p className="text-center text-infitech-ink/70">
+                    See how we work with businesses to solve real problems and turn technology into practical results.
+                </p>
+            </div>
             <div className="mx-auto max-w-7xl">
-                <div className="flex items-stretch">
+                {/* <div className="flex items-stretch">
                     <div
                         role="tablist"
                         aria-label="Client story carousel"
@@ -108,15 +116,15 @@ export default function ClientStory() {
                                     </span>
                                     {/* <span className={`text-sm font-black ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
                                         {story.shortTitle}
-                                    </span> */}
+                                    </span> 
                                     <span className={`absolute inset-x-0 bottom-0 h-1.5 bg-infitech-gold transition ${isActive ? "opacity-100" : "opacity-0"}`} />
                                 </button>
                             );
                         })}
                     </div>
-                </div>
+                </div> */}
 
-                <div className="mt-5 flex justify-center gap-2">
+                {/* <div className="mt-5 flex justify-center gap-2">
                     {clientStories.map((story, index) => (
                         <button
                             key={`${story.title}-dot`}
@@ -126,7 +134,7 @@ export default function ClientStory() {
                             className={`h-2.5 rounded-full transition ${index === activeIndex ? "w-8 bg-infitech-orange" : "w-2.5 bg-infitech-ink/20 hover:bg-infitech-ink/40"}`}
                         />
                     ))}
-                </div>
+                </div> */}
 
                 <motion.div
                     key={activeStory.title}
@@ -155,25 +163,32 @@ export default function ClientStory() {
                     </div>
 
                     <div className="mx-auto w-full max-w-xl text-center lg:mx-0 lg:text-left">
-                        <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-infitech-orange">
-                            Client story
-                        </p>
                         <h2 className="mt-3 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
-                            {activeStory.title}
+                            {activeStory.shortTitle}
                         </h2>
-                        <p className="mt-6 text-lg font-semibold leading-8 text-infitech-ink/78">
+
+                        <h4 className="pt-4">The Challenge</h4>
+                        <p className="pt-4 text-infitech-ink/80">
+                            As Ndogo Farms grew, it needed a stronger digital experience that could make its products easier to discover and create a smoother journey for customers.
+                        </p>
+
+                        <h4 className="pt-4">What We Did</h4>
+                        <p className="pt-4 text-infitech-ink/80">
+                            Infitech worked with Ndogo Farms to create a digital experience that better connects the business with its customers and supports how the company operates and grows.
+                        </p>
+                        {/* <p className="mt-6 text-lg font-semibold leading-8 text-infitech-ink/78">
                             {activeStory.description}
                         </p>
                         <p className="mt-4 text-sm font-semibold leading-6 text-infitech-ink/62 sm:text-base sm:leading-7">
                             {activeStory.detail}
-                        </p>
+                        </p> */}
                         <a
                             href={activeStory.href}
                             target="_blank"
                             rel="noreferrer"
-                            className="mt-8 inline-flex items-center gap-3 text-lg font-black text-blue-600 transition hover:text-infitech-orange"
+                            className="sm-text mt-8 inline-flex items-center gap-3 font-black text-blue-600 transition hover:text-infitech-orange"
                         >
-                            Explore more
+                            Visit {activeStory.title}
                             <ArrowRight className="h-6 w-6" strokeWidth={2.1} />
                         </a>
                     </div>

@@ -62,24 +62,24 @@ export default function WhatWeDo() {
     return (
         <>
             {/* <div className="min-h-screen bg-infitech-surface  text-infitech-ink"> */}
-                <section className="mx-auto w-full max-w-[1640px] px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+                <section className="mx-auto w-full max-w-[1640px] px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pb-24">
                     <div className="grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
                         <div>
-                            <p className="font-mono text-md font-black uppercase tracking-[0.18em] text-infitech-orange sm:text-md">
+                            <p className="uppercase text-infitech-orange pb-4">
                                 What We Do
                             </p>
-                            <h1 className="mt-5 max-w-[15ch] text-[1.5rem] font-light leading-[1.04] tracking-normal text-[#1f1f24] sm:text-[2.5rem] lg:text-[3.5rem]">
+                            <h1 className="mt-5 max-w-[15ch] text-[#1f1f24]">
                                 Technology should solve a business problem.
                             </h1>
                         </div>
 
-                        <div className="max-w-3xl lg:pt-4">
+                        <div className="max-w-3xl lg:pt-16">
                             <p className="text-[1.45rem] font-medium leading-9 text-infitech-ink sm:text-[1.8rem] sm:leading-[1.45]">
                                 We help organizations improve how they work, serve their customers, and grow by putting the right technology to work.
                             </p>
                             <Link
                                 href="/we-do/capability"
-                                className="mt-10 inline-flex items-center gap-4 text-base font-bold text-infitech-orange transition hover:text-infitech-ink sm:text-lg"
+                                className="mt-10 inline-flex sm-text items-center gap-4 text-infitech-orange transition hover:text-infitech-ink"
                             >
                                 Explore All Capabilities
                                 <ArrowRight className="h-6 w-6" strokeWidth={1.8} />
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
                         </div>
                     </div>
 
-                    <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5">
+                    <div className="pt-10 grid gap-4 sm:grid-cols-2 lg:pt-12 lg:grid-cols-5">
                         {whatWeDoCards.map((card) => {
                             const Icon = card.icon;
 
@@ -95,13 +95,13 @@ export default function WhatWeDo() {
                                 <Link
                                     key={card.title}
                                     href={card.href}
-                                    className="group flex min-h-[300px] flex-col justify-between rounded-[6px] border border-black/20 bg-white p-6 text-infitech-ink transition duration-300 hover:border-infitech-orange hover:bg-[#f1f1ef] focus-visible:border-infitech-orange focus-visible:bg-[#f1f1ef] focus-visible:outline-none lg:min-h-[340px]"
+                                    className="group flex min-h-[100px] flex-col justify-between rounded-[6px] border border-black/20 bg-white p-4 text-infitech-ink transition duration-300 hover:border-infitech-orange focus-visible:border-infitech-orange focus-visible:bg-[#f1f1ef] focus-visible:outline-none lg:min-h-[280px]"
                                 >
                                     <div>
-                                        <h2 className="text-[1.45rem] font-medium leading-8 text-[#24242a] sm:text-[1.55rem]">
+                                        <h3 className="text-[#24242a]">
                                             {card.title}
-                                        </h2>
-                                        <p className="mt-5 max-h-0 overflow-hidden text-base font-medium leading-7 text-black/70 opacity-0 transition-all duration-300 group-hover:max-h-44 group-hover:opacity-100 group-focus-visible:max-h-44 group-focus-visible:opacity-100">
+                                        </h3>
+                                        <p className="mt-5 max-h-0 overflow-hidden leading-7 text-black/70 opacity-0 transition-all duration-300 group-hover:max-h-44 group-hover:opacity-100 group-focus-visible:max-h-44 group-focus-visible:opacity-100 pt-2">
                                             {card.description}
                                         </p>
                                         {/* <span className="mt-5 hidden items-center gap-2 text-sm font-bold text-infitech-orange group-hover:inline-flex group-focus-visible:inline-flex">
@@ -111,7 +111,7 @@ export default function WhatWeDo() {
                                     </div>
 
                                     <div className="group">
-                                        <span className="mt-5 hidden items-center gap-2 text-sm font-bold text-infitech-orange group-hover:inline-flex group-focus-visible:inline-flex">
+                                        <span className="mt-5 hidden items-center gap-2 text-infitech-orange group-hover:inline-flex group-focus-visible:inline-flex">
                                             {card.cta}
                                             <ArrowRight className="h-4 w-4" strokeWidth={2} />
                                         </span>

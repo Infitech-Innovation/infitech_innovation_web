@@ -14,7 +14,7 @@ const featuredIndustries = [
     cta: "Explore Manufacturing",
     href: "/we-do/industry/manufacturing",
     image:
-      "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1516216628859-9bccecab13ca?w=600&auto=format&fit=crop&q=60",
   },
   {
     title: "Financial Services",
@@ -34,7 +34,7 @@ const featuredIndustries = [
     cta: "Explore Logistics & Supply Chain",
     href: "/we-do/industry/logistics-supply-chain",
     image:
-      "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1759272840538-ae4b07214c71?q=80&w=1170&auto=format&fit=crop",
   },
   {
     title: "Hospitality & Tourism",
@@ -80,24 +80,28 @@ export default function Industries() {
       <main className="min-h-screen bg-infitech-ink text-infitech-surface pt-8">
         <section className="mx-auto w-full max-w-[1640px] px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="flex flex-col items-center text-center">
-            <h1 className="mt-5 w-full max-w-[980px] text-[1.8rem] font-light leading-[1.06] tracking-normal sm:text-[2.75rem] lg:text-[3.35rem]">
+            <h1 className="mt-5 w-full max-w-[980px]">
               Different industries. Different challenges.
             </h1>
 
             <div className="w-full max-w-[900px] lg:pt-4">
-              <p className="text-[1.05rem] font-medium leading-7 text-infitech-surface/86 sm:text-[1.25rem] sm:leading-8">
+              <p className="text-infitech-surface/86">
                 We take the time to understand how your industry works, where the pressure is, and where technology can make a real difference.
               </p>
             </div>
           </div>
 
 
-          <div className="mx-auto mt-14 grid max-w-[1080px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3">
+          {/* <div className="mx-auto mt-14 grid max-w-[1080px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3"> */}
+          <div className="mx-auto mt-14 grid max-w-[900px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3">
+
             {featuredIndustries.map((industry) => (
               <Link
                 key={industry.title}
                 href={industry.href}
-                className="group relative flex min-h-[360px] overflow-hidden rounded-[6px] bg-[#f2f2ef] text-infitech-surface outline-none transition duration-700 ease-out focus-visible:ring-2 focus-visible:ring-infitech-orange md:min-h-[420px] xl:min-h-[470px]"
+                // className="group relative flex min-h-[360px] overflow-hidden rounded-[6px] bg-[#f2f2ef] text-infitech-surface outline-none transition duration-700 ease-out focus-visible:ring-2 focus-visible:ring-infitech-orange md:min-h-[420px] xl:min-h-[470px]"
+                className="group relative flex min-h-[280px] overflow-hidden rounded-[6px] bg-[#f2f2ef] text-infitech-surface outline-none transition duration-700 ease-out focus-visible:ring-2 focus-visible:ring-infitech-orange md:min-h-[330px] xl:min-h-[370px]"
+
               >
                 <div className="absolute inset-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-full group-hover:opacity-0 group-focus-visible:-translate-x-full group-focus-visible:opacity-0">
                   <Image
@@ -118,23 +122,23 @@ export default function Industries() {
 
                 <article className="relative z-10 flex w-full flex-col justify-between p-6 transition-colors duration-700 ease-out group-hover:text-infitech-ink group-focus-visible:text-infitech-ink">
                   <div>
-                    <h2
-                      className={`infitech-industries-card-title mt-6 text-[1.65rem] font-black leading-[1.06] transition-all duration-500 ease-out sm:text-[2rem] ${
-                        industry.imageFit === "contain" ? "text-infitech-ink" : ""
-                      }`}
+                    <h3
+                      className={`infitech-industries-card-title mt-6 max-h-20 overflow-hidden font-black transition-all duration-500 ease-out group-hover:max-h-0 group-hover:mt-0 group-hover:opacity-0 group-focus-visible:max-h-0 group-focus-visible:mt-0 group-focus-visible:opacity-0 ${industry.imageFit === "contain" ? "text-infitech-ink" : ""
+                        }`}
                     >
                       {industry.title}
-                    </h2>
-                    <p className="infitech-industries-card-heading mt-4 max-h-0 overflow-hidden text-[1.2rem] font-black leading-tight opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
+                    </h3>
+
+                    <h3 className="infitech-industries-card-heading pt-4 max-h-0 overflow-hidden font-black opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
                       {industry.headline}
-                    </p>
-                    <p className="mt-5 max-h-0 overflow-hidden text-md font-medium leading-6 text-infitech-ink opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-60 group-hover:opacity-100 group-focus-visible:max-h-60 group-focus-visible:opacity-100">
+                    </h3>
+                    <p className=" pt-4 max-h-0 overflow-hidden font-medium text-infitech-ink opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-60 group-hover:opacity-100 group-focus-visible:max-h-60 group-focus-visible:opacity-100">
                       {industry.description}
                     </p>
                   </div>
 
                   <div className="flex items-center justify-between gap-5 pt-8">
-                    <span className="max-w-[12rem] text-sm font-black text-infitech-orange opacity-0 transition duration-700 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <span className="max-w-[12rem] sm-text font-black text-infitech-orange opacity-0 transition duration-700 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
                       {industry.cta}
                     </span>
                     <ArrowRight className="h-7 w-7 shrink-0 text-infitech-orange transition duration-500 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1" strokeWidth={1.7} />
@@ -145,24 +149,30 @@ export default function Industries() {
 
             <Link
               href="/we-do/industry"
-              className="group flex min-h-[360px] flex-col justify-between rounded-[6px] border border-infitech-surface/20 bg-gradient-to-br from-white via-[#fff5df] to-infitech-orange/35 p-6 text-infitech-ink transition duration-700 ease-out hover:border-infitech-orange hover:bg-none hover:bg-infitech-surface focus-visible:border-infitech-orange focus-visible:bg-none focus-visible:bg-infitech-surface focus-visible:outline-none md:min-h-[420px] xl:min-h-[470px]"
+              // className="group flex min-h-[360px] flex-col justify-between rounded-[6px] border border-infitech-surface/20 bg-gradient-to-br from-white via-[#fff5df] to-infitech-orange/35 p-6 text-infitech-ink transition duration-700 ease-out hover:border-infitech-orange hover:bg-none hover:bg-infitech-surface focus-visible:border-infitech-orange focus-visible:bg-none focus-visible:bg-infitech-surface focus-visible:outline-none md:min-h-[420px] xl:min-h-[470px]"
+              className="group flex min-h-[360px] flex-col justify-between rounded-[6px] border border-infitech-surface/20 bg-gradient-to-br from-white via-[#fff5df] to-infitech-orange/35 p-6 text-infitech-ink transition duration-700 ease-out hover:border-infitech-orange hover:bg-none hover:bg-infitech-surface focus-visible:border-infitech-orange focus-visible:bg-none focus-visible:bg-infitech-surface focus-visible:outline-none md:min-h-[330px] xl:min-h-[370px]"
+
             >
               <div>
-                <h2 className="infitech-industries-last-title text-[1.65rem] font-black leading-[1.06] transition-all duration-500 ease-out sm:text-[2rem]">
+                <h3 className="infitech-industries-last-title mt-6 max-h-20 overflow-hidden font-black opacity-100 transition-all duration-500 ease-out group-hover:mt-0 group-hover:max-h-0 group-hover:opacity-0 group-focus-visible:mt-0 group-focus-visible:max-h-0 group-focus-visible:opacity-0">
                   Explore All Industries
-                </h2>
-                <p className="infitech-industries-last-heading mt-4 max-h-0 overflow-hidden text-[1.2rem] font-black leading-tight text-black/80 opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100 sm:text-[1.45rem]">
+                </h3>
+
+                <h3 className="infitech-industries-last-heading pt-4 max-h-0 overflow-hidden font-black text-black/80 opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
                   Other industries available on the Industries page.
-                </p>
+                </h3>
                 <div className="mt-5 max-h-0 space-y-2 overflow-hidden text-sm font-semibold leading-6 text-black/68 opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-44 group-hover:opacity-100 group-focus-visible:max-h-44 group-focus-visible:opacity-100">
-                  {otherIndustries.map((industry) => (
-                    <p key={industry}>{industry}</p>
-                  ))}
+                  <ul className="list-disc pl-5">
+                    {otherIndustries.map((industry) => (
+                      <li className="sm-text" key={industry}>{industry}</li>
+                    ))}
+                  </ul>
+
                 </div>
               </div>
 
               <div className="flex items-center justify-between gap-5 pt-8">
-                <span className="text-sm font-black text-infitech-orange">
+                <span className="sm-text text-infitech-orange">
                   Explore All Industries
                 </span>
                 <ArrowRight className="h-7 w-7 text-infitech-orange transition duration-500 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1" strokeWidth={1.7} />

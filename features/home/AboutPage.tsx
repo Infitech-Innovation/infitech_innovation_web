@@ -1,54 +1,62 @@
 "use client";
 
+import Image, { type StaticImageData } from "next/image";
 import { Link } from "@/i18n/routing";
-import { ArrowRight, ArrowUpRight, Bot, Code2, Layers3, Workflow } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Bot } from "lucide-react";
 import { motion } from "motion/react";
 import ClientStory from "./ClientStory";
+import hypechainScreenshot from "@/public/hyperchain.png";
+import infisaasScreenshot from "@/public/infisaas.jpeg";
+
 
 const aboutCapabilities = [
     {
         title: "Hypechain",
-        description: "Hypechain is a creator-first platform that tracks the real value of creator influence.",
-        icon: Code2,
+        subtitle: "Built for the creator economy.",
+        description: "A creator-first platform that helps brands and creators understand the real value of influence.",
+        screenshot: hypechainScreenshot,
         layout: "sm:col-span-2",
-        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
+        // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
+        cardClass:
+            "min-h-[260px] sm:min-h-[300px] bg-infitech-ink text-infitech-surface",
         iconClass: "bg-infitech-cyan text-infitech-ink",
         accentClass: "",
-        href: "https://hypechain.infi-saas.com/"
+        href: "https://hypechain.infi-saas.com/",
+        btntitle: "Explore Hypechain",
+        flip: true,
         // bg-infitech-gold
     },
     {
-        title: "Coming Soon",
-        description: " ",
-        icon: Bot,
-        layout: "",
-        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface blur-[4px] sm:min-h-[175px] ",
-        iconClass: "bg-infitech-surface text-infitech-ink",
-        accentClass: "",
-        href: "#"
-        // bg-infitech-ink
-    },
-    {
-        title: "",
-        description: "",
-        icon: Layers3,
-        layout: "",
-        cardClass: "blur-[8px]",
-        iconClass: "",
-        accentClass: "",
-        href: "#"
-        // bg-infitech-orange
-    },
-    {
         title: "Infi-SaaS",
-        description: "Infi-ERP SaaS Streamline your business processes with our cloud-based ERP solution, tailored for the Kenyan market.",
-        icon: Workflow,
+        subtitle: "Bring your business together.",
+        description: "A connected business management platform designed to bring operations, teams, and information into one place.",
+        screenshot: infisaasScreenshot,
         layout: "sm:col-span-2",
-        cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
+        // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
+        cardClass:
+            "min-h-[260px] sm:min-h-[300px] bg-infitech-ink text-infitech-surface",
         iconClass: "bg-infitech-ink text-infitech-cyan",
         accentClass: "",
-        href: "https://infitech.infi-saas.com/"
+        href: "https://infitech.infi-saas.com/",
+        btntitle: "Explore Infi-SaaS",
+        flip: true,
         // bg-infitech-surface
+    },
+    {
+        title: "Coming Soon",
+        subtitle: "Something new is taking shape.",
+        description: "New ideas and products are being developed through the Infitech Innovation Lab.",
+        screenshot: Bot,
+        layout: "",
+        // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px] ",
+        cardClass:
+            "min-h-[180px] sm:min-h-[220px] bg-infitech-surface text-infitech-ink border border-black/15",
+        iconClass: "bg-infitech-surface text-infitech-ink",
+        accentClass: "",
+        btntitle: "Discover Our Innovation Lab",
+        href: "/we-do/innovation/innovation-lab",
+        flip: false,
+        // bg-infitech-ink
     },
 ];
 
@@ -83,7 +91,7 @@ export default function AboutPage() {
                     }}
                 />
 
-                <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+                <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.46fr_0.54fr] lg:gap-8">
 
                     <motion.div
                         className="mx-auto w-full max-w-2xl  px-4 py-5 text-center sm:px-6 sm:py-7 lg:mx-0 lg:text-left"
@@ -94,31 +102,169 @@ export default function AboutPage() {
                     >
                         {/* <h2 className="mt-4 bg-[linear-gradient(180deg,#000000_0%,#000000_44%,#ff8a00_45%,#ffa500_72%,#f6b216_100%)] bg-clip-text text-[2rem] font-black leading-[1] tracking-normal text-transparent min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]"> */}
                         {/* className="heading-rise font-display text-[clamp(2.5rem,6.5vw,5.25rem)] font-bold leading-[0.95] tracking-[-0.03em]" */}
-                        <h2 className="mt-4 text-[2rem] font-black leading-[0.94] tracking-normal min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]">
-                            <span className="block text-infitech-ink">Digital systems</span>
-                            <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent">built around your next move</span>
-                        </h2>
-                        <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-ink/75 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
-                            Infitech Innovation designs and builds modern platforms for teams that want cleaner operations, stronger customer experiences, and software that can keep growing with the business.
+                        <p>
+                            PRODUCTS
+                        </p>
+                        <h1 className="pt-4 font-black"> <span className="block text-infitech-ink"> We don&apos;t just use </span> <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent"> technology. </span> <span className="block text-infitech-ink"> We build it. </span> </h1>
+                        <p className="mx-auto pt-5 max-w-2xl text-infitech-ink/75">
+                            We turn the problems and opportunities we see into products that help businesses work better and open new possibilities.
                         </p>
 
                         <Link
-                            href="/digital-transform"
-                            className="mt-7 inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 text-sm font-black text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px] sm:text-base"
+                            href="/products"
+                            className="mt-8 sm-text inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 font-black text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px]"
                         >
-                            Build with Infitech
+                            Explore Our Products
                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
                         </Link>
                     </motion.div>
 
-                    <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
+                    <div className="grid w-full gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
                         {aboutCapabilities.map((item, index) => {
-                            const Icon = item.icon;
+                            const hasScreenshotImage = typeof item.screenshot === "object" && item.screenshot !== null && "src" in item.screenshot;
+                            const screenshotImage = hasScreenshotImage ? (item.screenshot as StaticImageData) : null;
+                            const ScreenshotIcon = typeof item.screenshot === "function" ? item.screenshot : Bot;
 
                             return (
                                 <motion.article
                                     key={item.title}
-                                    className={`relative flex overflow-hidden rounded-[22px] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.12)] sm:rounded-[28px] sm:p-5 ${item.layout} ${item.cardClass}`}
+                                    className={`group ${item.layout} ${index === 0 ? "sm:col-start-2" : ""}`}
+                                    initial={{
+                                        opacity: 0,
+                                        y: 30,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: 0,
+                                    }}
+                                    viewport={{
+                                        once: true,
+                                        amount: 0.25,
+                                    }}
+                                    transition={{
+                                        duration: 0.55,
+                                        delay: index * 0.08,
+                                        ease: "easeOut",
+                                    }}
+                                >
+                                    {item.flip ? (
+                                        <a
+                                            href={item.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block h-full [perspective:1200px]"
+                                        >
+                                            <div className="relative h-full min-h-[260px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] sm:min-h-[300px]">
+                                                {/* Front */}
+                                                <div className="absolute inset-0 [backface-visibility:hidden]">
+                                                    <div
+                                                        className={`flex h-full w-full flex-col justify-between rounded-[20px] p-5 sm:rounded-[24px] sm:p-6 ${item.cardClass}`}
+                                                    >
+                                                        <div>
+                                                            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-infitech-orange">
+                                                                Product
+                                                            </p>
+
+                                                            <h2 className="pt-3 font-black">
+                                                                {item.title}
+                                                            </h2>
+
+                                                            <h4 className="pt-3">
+                                                                {item.subtitle}
+                                                            </h4>
+
+                                                            <p className="pt-3 font-normal text-infitech-surface/70">
+                                                                {item.description}
+                                                            </p>
+                                                        </div>
+
+                                                        <div className="flex items-center justify-between pt-6">
+                                                            <span className="text-sm font-semibold text-infitech-orange">
+                                                                {item.btntitle}
+                                                            </span>
+
+                                                            <ArrowRight
+                                                                className="h-5 w-5 text-infitech-orange transition-transform duration-300 group-hover:translate-x-1"
+                                                                strokeWidth={2}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Back */}
+                                                <div className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#111] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:rounded-[24px]">
+                                                    {screenshotImage ? (
+                                                        <Image
+                                                            src={screenshotImage}
+                                                            alt={`${item.title} product interface`}
+                                                            fill
+                                                            className="object-cover object-top"
+                                                        />
+                                                    ) : (
+                                                        <div className="flex h-full w-full items-center justify-center bg-infitech-ink text-infitech-cyan">
+                                                            <ScreenshotIcon className="h-16 w-16" strokeWidth={1.5} />
+                                                        </div>
+                                                    )}
+
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+                                                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-black/80 px-4 py-2 text-white">
+                                                        <span className="text-sm font-semibold">
+                                                            Explore {item.title}
+                                                        </span>
+
+                                                        <ArrowUpRight
+                                                            className="h-4 w-4 text-infitech-orange"
+                                                            strokeWidth={2.5}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    ) : (
+                                        <a
+                                            href={item.href}
+                                            className="flex min-h-[180px] flex-col justify-between rounded-[20px] p-5 transition duration-300 hover:-translate-y-1 hover:border-infitech-orange sm:min-h-[220px] sm:rounded-[24px] sm:p-6"
+                                        >
+                                            <div>
+                                                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-infitech-orange">
+                                                    Innovation
+                                                </p>
+
+                                                <h2 className="pt-3 font-black">
+                                                    {item.title}
+                                                </h2>
+
+                                                <h4 className="pt-3 font-semibold">
+                                                    {item.subtitle}
+                                                </h4>
+                                            </div>
+
+                                            <div className="flex items-center justify-between pt-6">
+                                                <span className="text-sm font-semibold">
+                                                    {item.btntitle}
+                                                </span>
+
+                                                <ArrowRight
+                                                    className="h-5 w-5 text-infitech-orange"
+                                                    strokeWidth={2}
+                                                />
+                                            </div>
+                                        </a>
+                                    )}
+                                </motion.article>
+                            );
+                        })}
+                    </div>
+
+
+                    {/* <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
+                        {aboutCapabilities.map((item, index) => {
+
+                            return (
+                                <motion.article
+                                    key={item.title}
+                                    className={`relative flex overflow-hidden rounded-[22px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:rounded-[28px] sm:p-5 ${item.layout} ${item.cardClass}`}
                                     initial={{ opacity: 0, y: 44, rotate: index % 2 === 0 ? -1.5 : 1.5 }}
                                     whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                                     whileHover={{ y: -6, scale: 1.015 }}
@@ -135,23 +281,13 @@ export default function AboutPage() {
                                     />
                                     <div className={`flex w-full ${item.layout ? "flex flex-col items-end gap-4" : "flex-col items-center justify-center text-center"}`}>
                                         <div className={`${item.layout ? "max-w-[520px]" : ""}`}>
-                                            <motion.div
-                                                className={`mb-3 grid h-11 w-11 place-items-center rounded-full ${item.iconClass} ${item.layout ? "" : "mx-auto"} sm:h-12 sm:w-12`}
-                                                animate={{
-                                                    rotate: [0, 5, -5, 0],
-                                                }}
-                                                transition={{
-                                                    duration: 7 + index,
-                                                    ease: "easeInOut",
-                                                    repeat: Infinity,
-                                                }}
-                                            >
-                                                <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
-                                            </motion.div>
-                                            <h3 className="text-xl font-black leading-none sm:text-2xl">
+                                            <h2 className="font-black">
                                                 {item.title}
-                                            </h3>
-                                            <p className={`mt-2 text-xs font-black leading-5 opacity-75 ${item.layout ? "max-w-sm" : ""} sm:text-sm sm:leading-5`}>
+                                            </h2>
+                                            <h4 className="pt-4">
+                                                {item.subtitle}
+                                            </h4>
+                                            <p className="pt-4">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -168,13 +304,13 @@ export default function AboutPage() {
                                         }
 
                                         <a href={item.href} className="flex items-center gap-2 text-sm font-black text-infitech-orange transition hover:translate-x-1">
-                                            Visit <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
+                                            {item.btntitle} <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
                                         </a>
                                     </div>
                                 </motion.article>
                             );
                         })}
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

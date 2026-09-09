@@ -56,24 +56,24 @@ export default function HomePage() {
                         <div className="relative z-10 flex w-full items-center justify-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
                                 <p>DIGITAL TRANSFORMATION & INNOVATION</p>
-                                <h1 className="max-w-[680px] text-[2.2rem] font-black leading-[1.04] tracking-normal text-infitech-ink min-[390px]:text-[2.45rem] sm:text-[2.7rem] lg:text-[2rem] xl:text-[3.25rem]">
-                                    Your Business Is Growing.
-                                    Your Technology Should Grow With It.
+                                <h1 className="max-w-[680px] font-black tracking-normal text-infitech-ink pt-4 pb-4">
+                                    Your business is growing.
+                                    Your technology should grow with it.
 
                                 </h1>
-                                <p className="mt-4 max-w-[620px] text-sm font-semibold leading-6 text-infitech-ink sm:text-base sm:leading-7 lg:text-[1.15rem] lg:leading-7">
-                                   We help organizations improve how they work, serve their customers, and make decisions by bringing the right technology into the business at the right time.
+                                <p className="mt-4 max-w-[620px] text-infitech-ink">
+                                    We help organizations improve how they work, serve their customers, and make decisions by bringing the right technology into the business at the right time.
                                 </p>
                                 <div className="mt-5 flex w-full max-w-[360px] flex-col gap-2 lg:max-w-[520px] lg:flex-row">
                                     <Link
                                         href="/contact"
-                                        className="inline-flex min-h-11 min-w-0 flex-1 items-center justify-center rounded-full bg-infitech-ink px-4 text-sm font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
+                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full bg-infitech-ink px-4 font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Start a Conversation
                                     </Link>
                                     <Link
-                                        href="/contact"
-                                        className="inline-flex min-h-11 min-w-0 flex-1 items-center justify-center rounded-full border bg-infitech-orange px-4 text-sm font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
+                                        href="/we-do/capability"
+                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full border bg-infitech-orange px-4 font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Explore What We Do
                                     </Link>
@@ -101,13 +101,13 @@ export default function HomePage() {
                                                 <div className="relative z-10 flex w-full items-center justify-center">
                                                     <div className="grid w-full max-w-[620px] items-center gap-5 md:grid-cols-[0.9fr_1.1fr] md:gap-8">
                                                         <div className="space-y-3 sm:space-y-4 lg:space-y-5">
-                                                            <p className="font-mono text-base font-black uppercase tracking-[0.16em] text-infitech-gold sm:text-lg lg:text-xl">
+                                                            <p className="font-mono font-black uppercase text-infitech-gold">
                                                                 {card.kicker}
                                                             </p>
-                                                            <h2 className="text-2xl font-black leading-[0.98] min-[390px]:text-3xl sm:text-4xl">
+                                                            <h2 className="font-black pt-4">
                                                                 {card.title}
                                                             </h2>
-                                                            <p className="max-w-sm text-sm font-bold leading-6 text-infitech-surface/82 sm:text-base sm:leading-7 lg:text-base">
+                                                            <p className="max-w-sm font-bold text-infitech-surface/82 pt-4">
                                                                 {card.description}
                                                             </p>
                                                             {/* <div className="flex flex-wrap gap-x-3 gap-y-2 font-mono text-[0.68rem] font-black uppercase tracking-[0.1em] text-infitech-surface/75 sm:gap-x-5 sm:text-xs lg:text-sm">
