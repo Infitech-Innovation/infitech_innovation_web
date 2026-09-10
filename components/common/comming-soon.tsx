@@ -23,25 +23,25 @@ export default function PageUnderDevelopment({
         <Image
           src="/icon0.svg"
           alt="Infitech Innovation logo"
-          width={72}
-          height={72}
+          width={100}
+          height={100}
           className="mx-auto h-16 w-16 object-contain"
         />
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-infitech-orange">
+        <p className="pt-8 uppercase text-infitech-orange">
           Coming soon
         </p>
-        <h1 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
+        <h3 className="pt-3 font-black leading-tight">
           {t("title", { page: pageTitle })}
-        </h1>
-        <p className="mx-auto mt-4 max-w-lg text-base font-medium leading-7 text-black/60 sm:text-lg">
+        </h3>
+        <p className="mx-auto pt-4 max-w-lg leading-7 text-black/60 sm:text-lg">
           {t("description")}
         </p>
 
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="/"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 text-base font-bold text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 sm-text text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink"
           >
             <Home className="h-5 w-5" strokeWidth={2} />
             {t("home")}
@@ -49,7 +49,7 @@ export default function PageUnderDevelopment({
           <button
             type="button"
             onClick={() => window.history.back()}
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/15 bg-white px-6 text-base font-bold text-infitech-ink transition hover:border-infitech-orange hover:text-infitech-orange"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/15 bg-white sm-text px-6  text-infitech-ink transition hover:border-infitech-orange hover:text-infitech-orange"
           >
             <ArrowLeft className="h-5 w-5" />
             {t("back")}

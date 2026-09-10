@@ -108,18 +108,18 @@ export function Navbar() {
                         alt={t("logoAlt")}
                         width={100}
                         height={100}
-                        className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
+                        className="h-11 w-11 shrink-0 object-contain sm:h-16 sm:w-16"
                     />
                 </Link>
 
-                <div className="hidden items-center justify-center gap-x-1 text-sm font-semibold text-[#1f2330] lg:flex xl:gap-x-1.5 xl:text-base">
+                <div className="hidden items-center justify-center gap-x-1 sm-text font-semibold text-[#1f2330] lg:flex xl:gap-x-1.5">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
                             href={link.href}
                             onMouseEnter={() => setActiveMegaMenu(link.menu ?? null)}
                             onFocus={() => setActiveMegaMenu(link.menu ?? null)}
-                            className={`whitespace-nowrap rounded-xl px-4 py-2.5 transition hover:bg-[#eff0ed] xl:px-5 ${(link.menu && activeMegaMenu === link.menu) || isActive(link.href)
+                            className={`sm-text whitespace-nowrap rounded-xl px-4 py-2.5 transition hover:bg-[#eff0ed] xl:px-5 ${(link.menu && activeMegaMenu === link.menu) || isActive(link.href)
                                 ? "bg-[#eff0ed] text-infitech-ink"
                                 : ""
                                 }`}
@@ -132,7 +132,7 @@ export function Navbar() {
                 <div className="hidden items-center gap-3 lg:flex">
                     <Link
                         href="/contact"
-                        className="inline-flex h-11 items-center justify-center rounded-full bg-infitech-ink px-6 text-sm font-bold text-white transition hover:bg-infitech-orange hover:text-infitech-ink xl:h-12 xl:px-7 xl:text-base"
+                        className="sm-text inline-flex h-11 items-center justify-center rounded-full bg-infitech-ink px-6 text-white transition hover:bg-infitech-orange hover:text-infitech-ink"
                     >
                         Start a Conversation
                     </Link>
@@ -183,7 +183,7 @@ export function Navbar() {
                                                 setSelectedWhatWeDoCategory(item.label);
                                             }
                                         }}
-                                        className={`grid w-full grid-cols-[1.5rem_1fr_1rem] items-center gap-3 rounded-lg px-3 py-3 text-left text-base font-semibold transition hover:bg-[#eff0ed] ${active ? "bg-[#eff0ed]" : ""
+                                        className={`grid w-full grid-cols-[1.5rem_1fr_1rem] items-center gap-3 rounded-lg px-3 py-3 text-left sm-text transition hover:bg-[#eff0ed] ${active ? "bg-[#eff0ed]" : ""
                                             }`}
                                     >
                                         <Icon className="h-5 w-5" strokeWidth={2.2} />
@@ -202,7 +202,7 @@ export function Navbar() {
                                     className="block rounded-lg transition hover:text-infitech-orange"
                                     onClick={() => setActiveMegaMenu(null)}
                                 >
-                                    <span className="block text-base font-semibold leading-tight">
+                                    <span className="block sm-text font-semibold leading-tight">
                                         {link.label}
                                     </span>
                                     <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">
@@ -221,7 +221,7 @@ export function Navbar() {
                                         className="block rounded-lg transition hover:text-infitech-orange"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
-                                        <span className="block text-base font-semibold leading-tight">
+                                        <span className="block sm-text font-semibold leading-tight">
                                             {link.label}
                                         </span>
                                         <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">

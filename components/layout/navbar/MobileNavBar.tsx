@@ -23,8 +23,8 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     <Image
                         src="/icon0.svg"
                         alt={t("logoAlt")}
-                        width={72}
-                        height={72}
+                        width={84}
+                        height={84}
                         className="h-11 w-11 shrink-0 object-contain"
                     />
                     <button
@@ -37,7 +37,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     </button>
                 </div>
 
-                <div className="flex flex-1 flex-col gap-y-1.5 overflow-y-auto text-xl font-black">
+                <div className="flex flex-1 flex-col gap-y-1.5 overflow-y-auto sm-text font-black">
                     {navLinks.map((link) => {
                         const active = isActive(link.href);
 
@@ -55,8 +55,8 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                         );
                     })}
 
-                    <div className="mt-3 border-t border-black/10 pt-3">
-                        <p className="px-4 pb-2 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+                    <div className=" border-t border-black/10 pt-3">
+                        <p className="px-4 pb-2 sm-text uppercase tracking-[0.16em] text-black/45">
                             What We Do
                         </p>
                         {whatWeDoCapabilityLinks.map((link) => (
@@ -66,10 +66,10 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                 onClick={onClose}
                                 className="block rounded-2xl px-4 py-2.5 transition hover:bg-infitech-olive/20"
                             >
-                                <span className="block text-base font-black">
+                                <span className="block sm-text font-black">
                                     {link.label}
                                 </span>
-                                <span className="block text-xs font-semibold text-black/50">
+                                <span className="block text-xs text-black/50">
                                     {link.description}
                                 </span>
                             </Link>
@@ -77,7 +77,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     </div>
 
                     <div className="mt-3 border-t border-black/10 pt-3">
-                        <p className="px-4 pb-2 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+                        <p className="px-4 pb-2 sm-text uppercase tracking-[0.16em] text-black/45">
                             Who We Are
                         </p>
                         {whoWeAreLinks.map((link) => (
@@ -87,10 +87,10 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                 onClick={onClose}
                                 className="block rounded-2xl px-4 py-2.5 transition hover:bg-infitech-olive/20"
                             >
-                                <span className="block text-base font-black">
+                                <span className="block sm-text font-black">
                                     {link.label}
                                 </span>
-                                <span className="block text-xs font-semibold text-black/50">
+                                <span className="block text-xs text-black/50">
                                     {link.description}
                                 </span>
                             </Link>
@@ -102,7 +102,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     <Link
                         href="/contact"
                         onClick={onClose}
-                        className="inline-flex h-12 items-center justify-center rounded-full bg-infitech-ink px-5 text-sm font-black text-white"
+                        className="inline-flex h-12 items-center justify-center rounded-full bg-infitech-ink px-5 sm-text font-black text-white"
                     >
                         Start a Conversation
                     </Link>
