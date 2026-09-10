@@ -62,8 +62,8 @@ export default function WhatWeDo() {
     return (
         <>
             {/* <div className="min-h-screen bg-infitech-surface  text-infitech-ink"> */}
-                <section className="mx-auto w-full max-w-[1640px] px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pb-24">
-                    <div className="grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+                <section className="mx-auto w-full max-w-[1400px] px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pb-24">
+                    <div className="grid gap-8 md:gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
                         <div>
                             <p className="uppercase text-infitech-orange pb-4">
                                 What We Do
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
                         </div>
                     </div>
 
-                    <div className="pt-10 grid gap-4 sm:grid-cols-2 lg:pt-12 lg:grid-cols-5">
+                    <div className="pt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:pt-12 xl:grid-cols-5">
                         {whatWeDoCards.map((card) => {
                             const Icon = card.icon;
 

@@ -45,7 +45,7 @@ const clientStories = [
         description: "The Kenya Benelux-EU Chamber of Commerce & Industry (KBCCI) is a new bridge for growth, connecting Kenyan and European businesses for trade, investment, and partnerships.",
         detail: "The Chamber builds on a long-standing tradition of business cooperation and aims to provide a formal, credible, and sustainable platform for partnerships across sectors.Its founding team includes professionals from Kenya and Europe, with strong support from the Kenyan Embassy in Belgium and key advisors with deep experience in innovation, diplomacy, business development, and institutional networks.",
         href: "https://www.kenya-benelux.trade/",
-        image: "https://www.kenya-benelux.trade/img/KBCCI%20LOGO.png",
+        image: "https://fx.iguanyalabs.com/images/kbcci/logo/kbcci-logo1.png",
         accent: "bg-infitech-ink",
         panel: "from-infitech-ink to-neutral-700",
         points: ["MVP planning", "Custom portals", "API integrations"],

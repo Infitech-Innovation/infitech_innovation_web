@@ -49,10 +49,10 @@ export default function HomePage() {
     return (
         <>
             {/* Hero Section */}
-            <main className="flex flex-1 flex-col text-infitech-ink">
+            <main className="flex flex-1 flex-col overflow-x-hidden text-infitech-ink">
                 <section data-infitech-hero className="relative isolate min-h-screen overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-[6.5rem] lg:px-10 lg:pb-10 lg:pt-28">
                     <HeroTechBackground />
-                    <div className="relative z-10 mx-auto grid min-h-[calc(100vh-8.5rem)] max-w-7xl items-center gap-8 sm:gap-10 lg:min-h-[calc(100vh-9.5rem)] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
+                    <div className="relative z-10 mx-auto grid min-h-[calc(100vh-8.5rem)] w-full max-w-[1280px] items-center gap-8 sm:gap-10 lg:min-h-[calc(100vh-9.5rem)] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
                         <div className="relative z-10 flex w-full items-center justify-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
                                 <p>DIGITAL TRANSFORMATION & INNOVATION</p>
@@ -82,7 +82,7 @@ export default function HomePage() {
                         </div>
 
                         <div className="relative flex min-h-[360px] items-center justify-center sm:min-h-[460px] md:min-h-[520px] lg:min-h-0">
-                            <div className="infitech-hero-card-window relative h-[320px] w-full max-w-[390px] bg-transparent min-[390px]:h-[350px] min-[390px]:max-w-[390px] sm:h-[400px] sm:max-w-[460px] md:h-[460px] md:max-w-[560px] lg:h-[62vh] lg:max-h-[620px] lg:min-h-[480px] lg:max-w-[580px]">
+                            <div className="infitech-hero-card-window relative h-[320px] w-full max-w-[320px] bg-transparent min-[390px]:h-[350px] min-[390px]:max-w-[360px] sm:h-[400px] sm:max-w-[440px] md:h-[460px] md:max-w-[500px] lg:h-[62vh] lg:max-h-[620px] lg:min-h-[480px] lg:max-w-[560px]">
                                 <div className="infitech-hero-card-track flex">
                                     {[...carouselCards, ...carouselCards].map((card, index) => (
                                         <div

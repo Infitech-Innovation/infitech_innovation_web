@@ -78,7 +78,7 @@ export default function Industries() {
   return (
     <>
       <main className="min-h-screen bg-infitech-ink text-infitech-surface pt-8">
-        <section className="mx-auto w-full max-w-[1640px] px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+        <section className="mx-auto w-full max-w-[1400px] px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="flex flex-col items-center text-center">
             <h1 className="mt-5 w-full max-w-[980px]">
               Different industries. Different challenges.
@@ -93,7 +93,7 @@ export default function Industries() {
 
 
           {/* <div className="mx-auto mt-14 grid max-w-[1080px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3"> */}
-          <div className="mx-auto mt-14 grid max-w-[900px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3">
+          <div className="mx-auto mt-14 grid w-full max-w-[980px] gap-4 md:grid-cols-2 xl:mt-20 xl:grid-cols-3">
 
             {featuredIndustries.map((industry) => (
               <Link
