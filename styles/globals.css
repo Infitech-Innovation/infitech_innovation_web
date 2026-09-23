@@ -17,14 +17,40 @@
      Typography — Font Sizes
      ========================= */
 
-  --font-size-hero: clamp(2.5rem, 5vw, 3.4rem);
+  /* --font-size-hero: clamp(2.5rem, 5vw, 3.4rem);
   --font-size-section: clamp(1.75rem, 3vw, 2.75rem);
   --font-size-card: clamp(1.125rem, 1.8vw, 1.5rem);
   --font-size-subheading: clamp(1rem, 1.4vw, 1.25rem);
   --font-size-small-heading: clamp(0.9375rem, 1.2vw, 1.125rem);
   --font-size-body: clamp(0.9375rem, 1.1vw, 1.0625rem);
   --font-size-small: 0.875rem;
-  --font-size-label: 0.75rem;
+  --font-size-label: 0.75rem; */
+  
+  /* --font-size-hero: clamp(2.5rem, 5vw, 4.25rem);
+  --font-size-section: clamp(2rem, 3vw, 3rem);
+  --font-size-card: clamp(1.3125rem, 1.8vw, 1.75rem);
+  --font-size-intro: clamp(1.125rem, 1.4vw, 1.25rem);
+  --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
+  --font-size-label: clamp(0.75rem, 0.8vw, 0.8125rem); */
+
+
+  /* Hero H1: 40–44px mobile / 60–68px desktop */
+  --font-size-hero: clamp(2.5rem, 5.5vw, 4.25rem);
+
+  /* Section H2: 32–36px mobile / 42–48px desktop */
+  --font-size-section: clamp(2rem, 3.5vw, 3rem);
+
+  /* Card H3: 21–24px mobile / 24–28px desktop */
+  --font-size-card: clamp(1.3125rem, 2vw, 1.75rem);
+
+  /* Intro: 18–20px */
+  --font-size-intro: clamp(1.125rem, 1.4vw, 1.25rem);
+
+  /* Body: 16–18px */
+  --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
+
+  /* Labels: 12–13px */
+  --font-size-label: clamp(0.75rem, 0.8vw, 0.8125rem);
 
   /* =========================
      Typography — Font Weights
