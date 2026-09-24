@@ -76,11 +76,11 @@ export default function ClientStory() {
                 <p className="font-black uppercase text-infitech-orange">
                     Client story
                 </p>
-                <h2 className="mx-auto text-center pb-2 pt-3 font-black text-infitech-ink">
-                    What progress looks like in practice.
-                </h2>
+                <h1 className="mx-auto text-center pb-2 pt-3 font-black text-infitech-ink">
+                    Our work in practice.
+                </h1>
                 <p className="text-center text-infitech-ink/70">
-                    See how we work with businesses to solve real problems and turn technology into practical results.
+                    See how we work with organizations to solve real business problems through technology.
                 </p>
             </div>
             <div className="mx-auto max-w-7xl">
@@ -163,9 +163,10 @@ export default function ClientStory() {
                     </div>
 
                     <div className="mx-auto w-full max-w-xl text-center lg:mx-0 lg:text-left">
-                        <h2 className="mt-3 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+                        <p className="pb-3">CLIENT NAME</p>
+                        <h3 className="mt-3 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
                             {activeStory.shortTitle}
-                        </h2>
+                        </h3>
 
                         <h4 className="pt-4">The Challenge</h4>
                         <p className="pt-4 text-infitech-ink/80">
@@ -176,6 +177,9 @@ export default function ClientStory() {
                         <p className="pt-4 text-infitech-ink/80">
                             Infitech worked with Ndogo Farms to create a digital experience that better connects the business with its customers and supports how the company operates and grows.
                         </p>
+
+                        <h4 className="pt-4">The Result</h4>
+                        <p></p>
                         {/* <p className="mt-6 text-lg font-semibold leading-8 text-infitech-ink/78">
                             {activeStory.description}
                         </p>

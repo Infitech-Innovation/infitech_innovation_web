@@ -10,7 +10,7 @@ const featuredIndustries = [
     title: "Manufacturing",
     headline: "Run a more connected operation.",
     description:
-      "Bring production, inventory, sales, finance, and operations together so your teams have better visibility and greater control as the business grows.",
+      "Connect production, inventory, finance, sales, and operations to improve visibility, reduce manual processes, and make better decisions across the business.",
     cta: "Explore Manufacturing",
     href: "/we-do/industry/manufacturing",
     image:
@@ -20,7 +20,7 @@ const featuredIndustries = [
     title: "Financial Services",
     headline: "Make every interaction simpler.",
     description:
-      "Improve how customers access your services while giving your teams better systems, smoother processes, and clearer information behind the scenes.",
+      "Improve customer experiences, streamline internal processes, and connect information across your organization with secure, scalable digital systems.",
     cta: "Explore Financial Services",
     href: "/we-do/industry/financial-services",
     image: financeBg,
@@ -30,7 +30,7 @@ const featuredIndustries = [
     title: "Logistics & Supply Chain",
     headline: "Know what's moving and what needs attention.",
     description:
-      "Connect operations, inventory, customers, and information so your teams can coordinate better and respond faster.",
+      "Connect logistics, inventory, warehousing, customers, and operational data to improve visibility and coordination across your supply chain.",
     cta: "Explore Logistics & Supply Chain",
     href: "/we-do/industry/logistics-supply-chain",
     image:
@@ -40,7 +40,7 @@ const featuredIndustries = [
     title: "Hospitality & Tourism",
     headline: "Make every guest experience count.",
     description:
-      "Make it easier for guests to discover, book, communicate, and engage with your business while helping your teams manage the work behind every experience.",
+      "Connect bookings, customer communication, service, and operations to create smoother guest experiences and help your teams work more effectively.",
     cta: "Explore Hospitality & Tourism",
     href: "/we-do/industry/hospitality-tourism",
     image: hospitalityBg,
@@ -48,9 +48,9 @@ const featuredIndustries = [
   },
   {
     title: "Healthcare",
-    headline: "Improve care through clearer systems.",
+    headline: "Make care easier to access and manage.",
     description:
-      "Bring patient journeys, operations, information, and teams closer together so healthcare work becomes easier to manage and easier to trust.",
+      "Improve how patients, teams, and information move through your organization with connected digital experiences and simpler processes.",
     cta: "Explore Healthcare",
     href: "/we-do/industry/healthcare",
     image:

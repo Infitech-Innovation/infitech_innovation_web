@@ -13,12 +13,12 @@ const aboutCapabilities = [
     {
         title: "Hypechain",
         subtitle: "Built for the creator economy.",
-        description: "A creator-first platform that helps brands and creators understand the real value of influence.",
+        description: "Hypechain helps brands understand creator influence and make better decisions about who they work with, while giving creators a clearer way to show the value they bring.",
         screenshot: hypechainScreenshot,
         layout: "sm:col-span-2",
         // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
         cardClass:
-            "min-h-[260px] sm:min-h-[300px] bg-infitech-ink text-infitech-surface",
+            "min-h-[270px] sm:min-h-[320px] bg-infitech-ink text-infitech-surface",
         iconClass: "bg-infitech-cyan text-infitech-ink",
         accentClass: "",
         href: "https://hypechain.infi-saas.com/",
@@ -27,9 +27,9 @@ const aboutCapabilities = [
         // bg-infitech-gold
     },
     {
-        title: "Infi-SaaS",
+        title: "InfiSaaS",
         subtitle: "Bring your business together.",
-        description: "A connected business management platform designed to bring operations, teams, and information into one place.",
+        description: "A cloud-based ERP platform that connects core business operations, workflows, teams, and information in one place.",
         screenshot: infisaasScreenshot,
         layout: "sm:col-span-2",
         // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px]",
@@ -38,14 +38,14 @@ const aboutCapabilities = [
         iconClass: "bg-infitech-ink text-infitech-cyan",
         accentClass: "",
         href: "https://infitech.infi-saas.com/",
-        btntitle: "Explore Infi-SaaS",
+        btntitle: "Explore InfiSaaS",
         flip: true,
         // bg-infitech-surface
     },
     {
         title: "Coming Soon",
         subtitle: "Something new is taking shape.",
-        description: "New ideas and products are being developed through the Infitech Innovation Lab.",
+        description: "New products are being developed through the Infitech Innovation Lab.",
         screenshot: Bot,
         layout: "",
         // cardClass: "min-h-[150px] bg-infitech-ink text-infitech-surface sm:min-h-[175px] ",
@@ -53,7 +53,7 @@ const aboutCapabilities = [
             "min-h-[180px] sm:min-h-[220px] bg-infitech-surface text-infitech-ink border border-black/15",
         iconClass: "bg-infitech-surface text-infitech-ink",
         accentClass: "",
-        btntitle: "Discover Our Innovation Lab",
+        btntitle: "Explore Innovation",
         href: "/we-do/innovation/innovation-lab",
         flip: false,
         // bg-infitech-ink
@@ -100,14 +100,12 @@ export default function AboutPage() {
                         viewport={{ once: true, amount: 0.35 }}
                         transition={{ duration: 0.65, ease: "easeOut" }}
                     >
-                        {/* <h2 className="mt-4 bg-[linear-gradient(180deg,#000000_0%,#000000_44%,#ff8a00_45%,#ffa500_72%,#f6b216_100%)] bg-clip-text text-[2rem] font-black leading-[1] tracking-normal text-transparent min-[390px]:text-4xl sm:text-[2.9rem] lg:text-[3.45rem] xl:text-[3.8rem]"> */}
-                        {/* className="heading-rise font-display text-[clamp(2.5rem,6.5vw,5.25rem)] font-bold leading-[0.95] tracking-[-0.03em]" */}
                         <p>
                             PRODUCTS
                         </p>
                         <h1 className="pt-4 font-black"> <span className="block text-infitech-ink"> We don&apos;t just use </span> <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent"> technology. </span> <span className="block text-infitech-ink"> We build it. </span> </h1>
                         <p className="mx-auto pt-5 max-w-2xl text-infitech-ink/75">
-                            We turn the problems and opportunities we see into products that help businesses work better and open new possibilities.
+                            Our products come from problems and opportunities we believe technology can address in a better way.
                         </p>
 
                         <Link
@@ -154,7 +152,7 @@ export default function AboutPage() {
                                             rel="noopener noreferrer"
                                             className="block h-full [perspective:1200px]"
                                         >
-                                            <div className="relative h-full min-h-[260px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] sm:min-h-[300px]">
+                                            <div className="relative h-full min-h-[340px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] sm:min-h-[300px]">
                                                 {/* Front */}
                                                 <div className="absolute inset-0 [backface-visibility:hidden]">
                                                     <div
@@ -256,61 +254,6 @@ export default function AboutPage() {
                             );
                         })}
                     </div>
-
-
-                    {/* <div className="grid w-full gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
-                        {aboutCapabilities.map((item, index) => {
-
-                            return (
-                                <motion.article
-                                    key={item.title}
-                                    className={`relative flex overflow-hidden rounded-[22px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:rounded-[28px] sm:p-5 ${item.layout} ${item.cardClass}`}
-                                    initial={{ opacity: 0, y: 44, rotate: index % 2 === 0 ? -1.5 : 1.5 }}
-                                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                                    whileHover={{ y: -6, scale: 1.015 }}
-                                    viewport={{ once: true, amount: 0.35 }}
-                                    transition={{ duration: 0.55, delay: index * 0.08, ease: "easeOut" }}
-                                >
-                                    <motion.div
-                                        aria-hidden="true"
-                                        className="absolute inset-x-0 top-0 h-1 bg-infitech-surface/35"
-                                        initial={{ scaleX: 0, transformOrigin: "left" }}
-                                        whileInView={{ scaleX: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.85, delay: 0.18 + index * 0.08, ease: "easeOut" }}
-                                    />
-                                    <div className={`flex w-full ${item.layout ? "flex flex-col items-end gap-4" : "flex-col items-center justify-center text-center"}`}>
-                                        <div className={`${item.layout ? "max-w-[520px]" : ""}`}>
-                                            <h2 className="font-black">
-                                                {item.title}
-                                            </h2>
-                                            <h4 className="pt-4">
-                                                {item.subtitle}
-                                            </h4>
-                                            <p className="pt-4">
-                                                {item.description}
-                                            </p>
-                                        </div>
-
-
-                                        {
-                                            item.layout ? (
-                                                <div>
-                                                    <div className={`absolute right-4 top-4 h-2 w-12 rounded-full opacity-75 sm:right-5 sm:top-5 ${item.accentClass}`} />
-                                                    <div className={`absolute bottom-4 right-4 h-9 w-9 rounded-full opacity-20 sm:bottom-5 sm:right-5 sm:h-12 sm:w-12 ${item.accentClass}`} />
-                                                </div>
-
-                                            ) : null
-                                        }
-
-                                        <a href={item.href} className="flex items-center gap-2 text-sm font-black text-infitech-orange transition hover:translate-x-1">
-                                            {item.btntitle} <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
-                                        </a>
-                                    </div>
-                                </motion.article>
-                            );
-                        })}
-                    </div> */}
                 </div>
             </section>
 

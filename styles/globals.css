@@ -25,7 +25,7 @@
   --font-size-body: clamp(0.9375rem, 1.1vw, 1.0625rem);
   --font-size-small: 0.875rem;
   --font-size-label: 0.75rem; */
-  
+
   /* --font-size-hero: clamp(2.5rem, 5vw, 4.25rem);
   --font-size-section: clamp(2rem, 3vw, 3rem);
   --font-size-card: clamp(1.3125rem, 1.8vw, 1.75rem);
@@ -33,9 +33,9 @@
   --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
   --font-size-label: clamp(0.75rem, 0.8vw, 0.8125rem); */
 
-
   /* Hero H1: 40–44px mobile / 60–68px desktop */
-  --font-size-hero: clamp(2.5rem, 5.5vw, 4.25rem);
+  /* --font-size-hero: clamp(2.5rem, 5.5vw, 4.25rem); */
+  --font-size-hero: clamp(2.5rem, 5vw, 3.25rem);
 
   /* Section H2: 32–36px mobile / 42–48px desktop */
   --font-size-section: clamp(2rem, 3.5vw, 3rem);
@@ -144,13 +144,13 @@ h2 {
 
 h3 {
   font-size: var(--font-size-card);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.2;
 }
 
 h4 {
   font-size: var(--font-size-subheading);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-regular);
   line-height: 1.25;
   letter-spacing: var(--letter-spacing-heading);
 }
@@ -180,7 +180,23 @@ p {
 
 .infitech-hero-card-window {
   --infitech-hero-card-gap: 1rem;
+  position: relative;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 7%,
+    black 93%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 7%,
+    black 93%,
+    transparent 100%
+  );
 }
 
 .infitech-hero-card-track {
