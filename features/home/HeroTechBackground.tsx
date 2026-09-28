@@ -31,10 +31,10 @@ export default function HeroTechBackground() {
                 },
                 modes: {
                     grab: {
-                        distance: 130,
+                        distance: 150,
 
                         links: {
-                            opacity: 0.14,
+                            opacity: 0.22,
                         },
                     },
                 },
@@ -53,11 +53,11 @@ export default function HeroTechBackground() {
                     color: "#000000",
                     distance: 155,
                     enable: true,
-                    opacity: 0.09,
+                    opacity: 0.15,
 
                     triangles: {
                         enable: true,
-                        opacity: 0.006,
+                        opacity: 0.12,
                     },
 
                     width: 1,
@@ -83,20 +83,20 @@ export default function HeroTechBackground() {
                         height: 900,
                     },
 
-                    value: 48,
+                    value: 55,
                 },
 
                 opacity: {
                     value: {
-                        min: 0.12,
-                        max: 0.34,
+                        min: 0.22,
+                        max: 0.52,
                     },
                 },
 
                 size: {
                     value: {
-                        min: 1,
-                        max: 3,
+                        min: 1.2,
+                        max: 3.5,
                     },
                 },
             },
