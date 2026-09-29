@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
-import HeroTechBackground from "./HeroTechBackground";
 import WhatWeDo from "./WhatWeDo";
+import HeroTechBackground from "./HeroTechBackground";
 
 export default function HomePage() {
     const carouselCards = [
