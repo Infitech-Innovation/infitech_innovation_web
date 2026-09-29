@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
-import CtaSection from "./CtaSection";
+import InsightsSection from "./InsightsSection";
 
 const clientStories = [
     {
@@ -201,6 +201,6 @@ export default function ClientStory() {
                     </motion.div>
                 </div>
             </section>
-            <CtaSection /></>
+            <InsightsSection /></>
     );
 }
