@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import InsightsSection from "./InsightsSection";
+import Insights from "./Insights";
+import FinalCTA from "./FinalCTA";
 
 const clientStories = [
     {
@@ -73,8 +75,8 @@ export default function ClientStory() {
 
     return (
         <>
-            <section className="bg-infitech-surface px-4 py-14 text-infitech-ink sm:px-6 lg:px-10">
-                <div className="mx-auto max-w-4xl pb-6 text-center">
+            <section className="bg-infitech-surface px-4 py-4 text-infitech-ink sm:px-6 lg:px-10">
+                <div className="mx-auto max-w-4xl pb-2 text-center">
                     <p className="font-black uppercase text-infitech-orange">
                         Client story
                     </p>
@@ -201,6 +203,8 @@ export default function ClientStory() {
                     </motion.div>
                 </div>
             </section>
-            <InsightsSection /></>
+            {/* Insights Section */}
+            <Insights />
+            <FinalCTA /></>
     );
 }
