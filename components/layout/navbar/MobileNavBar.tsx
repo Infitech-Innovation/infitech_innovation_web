@@ -53,7 +53,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     </button>
                 </div>
 
-                <div className="flex flex-1 flex-col gap-y-2 overflow-y-auto sm-text font-black">
+                <div className="flex flex-1 flex-col gap-y-2 overflow-y-auto sm-text ">
                     {navLinks.map((link) => {
                         const active = isActive(link.href);
 
@@ -70,7 +70,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                     >
                                         <span>{link.label}</span>
                                         <ChevronRight
-                                            className={`h-4 w-4 transition-transform font-bold ${isOpen ? "rotate-90" : ""}`}
+                                            className={`h-4 w-4 transition-transform  ${isOpen ? "rotate-90" : ""}`}
                                             strokeWidth={2.5}
                                         />
                                     </button>
@@ -109,7 +109,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                                                                 key={item.href}
                                                                                 href={item.href}
                                                                                 onClick={onClose}
-                                                                                className="block rounded-lg px-2 py-2 text-sm font-medium text-black/75 transition hover:bg-black/[0.03] hover:text-infitech-ink"
+                                                                                className="block rounded-lg px-2 py-2   text-black/75 transition hover:bg-black/[0.03] hover:text-infitech-ink"
                                                                             >
                                                                                 {item.label}
                                                                             </Link>
@@ -127,7 +127,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                                                             key={item.href}
                                                             href={item.href}
                                                             onClick={onClose}
-                                                            className="block rounded-lg px-2 py-2 text-sm font-medium text-black/75 transition hover:bg-black/[0.03] hover:text-infitech-ink"
+                                                            className="block rounded-lg px-2 py-2   text-black/75 transition hover:bg-black/[0.03] hover:text-infitech-ink"
                                                         >
                                                             {item.label}
                                                         </Link>
@@ -158,7 +158,7 @@ export default function MobileNavBar({ onClose }: MobileNavBarProps) {
                     <Link
                         href="/contact"
                         onClick={onClose}
-                        className="inline-flex h-12 items-center justify-center rounded-full bg-infitech-ink px-5 sm-text font-black text-white"
+                        className="inline-flex h-12 items-center justify-center rounded-full bg-infitech-ink px-5 sm-text  text-white"
                     >
                         Start a Conversation
                     </Link>

@@ -149,7 +149,7 @@ export default function ServicesPage() {
                                             key={service.href}
                                             type="button"
                                             onClick={() => setActiveIndex(index)}
-                                            className={`shrink-0 rounded-full px-3 py-2 text-xs font-black transition sm:px-4 sm:text-sm ${active
+                                            className={`shrink-0 rounded-full px-3 py-2   transition sm:px-4  ${active
                                                 ? "bg-infitech-gold text-infitech-ink"
                                                 : "bg-infitech-surface/15 text-infitech-surface hover:bg-infitech-surface/25"
                                                 }`}
@@ -161,10 +161,10 @@ export default function ServicesPage() {
                                 })}
                             </div>
 
-                            <h1 className="mt-6 text-xl font-black leading-[1.1] text-infitech-cyan min-[390px]:text-2xl sm:mt-7 sm:text-3xl md:text-[2.15rem] lg:text-[2.55rem] lg:leading-[1.08] xl:text-[2.85rem]">
+                            <h1 className="mt-6    text-infitech-cyan min-[390px]: sm:mt-7     ">
                                 {activeService.title}
                             </h1>
-                            <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-6 text-infitech-surface sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
+                            <p className="mx-auto mt-5 max-w-2xl    text-infitech-surface   lg:mx-0 ">
                                 {activeService.description}
                             </p>
 
@@ -172,7 +172,7 @@ export default function ServicesPage() {
                                 {activeService.tags.map((item) => (
                                     <span
                                         key={item}
-                                        className="rounded-full bg-infitech-surface/15 px-3 py-2 text-xs font-black text-infitech-surface sm:px-4 sm:text-sm"
+                                        className="rounded-full bg-infitech-surface/15 px-3 py-2   text-infitech-surface sm:px-4 "
                                     >
                                         {item}
                                     </span>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
 
                             <Link
                                 href={activeService.href}
-                                className="mt-7 inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-infitech-gold px-6 text-sm font-black text-infitech-ink transition hover:bg-infitech-orange sm:w-auto sm:min-w-[280px] sm:text-base"
+                                className="mt-7 inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-infitech-gold px-6   text-infitech-ink transition hover:bg-infitech-orange sm:w-auto sm:min-w-[280px] "
                             >
                                 Explore {activeService.label}
                             </Link>

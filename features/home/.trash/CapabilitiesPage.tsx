@@ -29,13 +29,13 @@
 //         <>
 //             <section className="bg-background px-5 py-10 text-infitech-ink sm:px-6 lg:px-8">
 //                 <div className="mx-auto max-w-[1400px]">
-//                     {/* <h2 className="mb-6 text-3xl font-semibold leading-tight text-center text-infitech-ink sm:text-4xl"> */}
-//                     {/* <h1 className="text-center text-[2.6rem] font-black leading-tight tracking-normal text-infitech-ink min-[390px]:text-[2.85rem] sm:text-[3.55rem] lg:mt-4 lg:mb-8 lg:text-[2.0rem] xl:text-[4.0rem]">
+//                     {/* <h2 className="mb-6    text-center text-infitech-ink "> */}
+//                     {/* <h1 className="text-center     text-infitech-ink min-[390px]:  lg:mt-4 lg:mb-8  ">
 //                         Our Capabilities
 //                     </h1> */}
-//                     <h2 className="heading-rise mx-auto flex max-w-[18ch] justify-center gap-5 text-center font-display text-[clamp(2.5rem,6.5vw,5rem)] leading-[0.95] tracking-[-0.025em] text-balance lg:mb-8 lg:mt-4">
-//                         <span className="block font-light text-fog">Our</span>
-//                         <span className="block font-bold">Capabilities.</span>
+//                     <h2 className="heading-rise mx-auto flex max-w-[18ch] justify-center gap-5 text-center font-display    text-balance lg:mb-8 lg:mt-4">
+//                         <span className="block  text-fog">Our</span>
+//                         <span className="block ">Capabilities.</span>
 //                     </h2>
 //                     <div className="grid gap-6 lg:grid-cols-3">
 //                         {industryCards.map((card) => {
@@ -51,8 +51,8 @@
 //                                             <Icon className="h-12 w-12" strokeWidth={2} />
 //                                         </div>
 //                                         <div className="min-w-0 pr-8">
-//                                             <h3 className="text-[1.45rem] font-bold leading-tight text-[#343a46]">{card.title}</h3>
-//                                             <p className="mt-4 max-w-[290px] text-[1.2rem] font-normal leading-[1.18] text-infitech-ink">
+//                                             <h3 className="   text-[#343a46]">{card.title}</h3>
+//                                             <p className="mt-4 max-w-[290px]    text-infitech-ink">
 //                                                 {card.description}
 //                                             </p>
 //                                         </div>

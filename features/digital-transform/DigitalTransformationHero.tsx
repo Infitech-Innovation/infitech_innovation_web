@@ -279,23 +279,19 @@ export default function DigitalTransformationHero() {
         {/* Left: business message */}
         <div className="flex items-center">
           <div className="w-full max-w-[620px]">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#E79400]">
+            <p className="  uppercase  text-[#E79400]">
               Digital Transformation
             </p>
 
             <h1
-              className="mt-4 max-w-[590px] font-semibold leading-[1.06] tracking-[-0.04em]"
-              style={{
-                fontSize:
-                  "clamp(2.45rem, 3.3vw, 3.35rem)",
-              }}
+              className="mt-4 max-w-[590px]   "
             >
               Transform the business,
               <br className="hidden sm:block" />
               {" "}not just the technology.
             </h1>
 
-            <p className="mt-5 max-w-[570px] text-[16px] leading-[1.65] text-black/70 sm:text-[17px] lg:text-[18px]">
+            <p className="mt-5 max-w-[570px]   text-black/70  ">
               We start with what your business needs to do
               better, then bring together the right processes,
               systems, data, and technology to make it happen.
@@ -305,7 +301,7 @@ export default function DigitalTransformationHero() {
               <button
                 type="button"
                 onClick={goToContact}
-                className="group inline-flex min-h-12 items-center justify-center gap-4 rounded-full bg-black px-7 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-[#FFA500] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFA500]"
+                className="group inline-flex min-h-12 items-center justify-center gap-4 rounded-full bg-black px-7   text-white transition-colors duration-300 hover:bg-[#FFA500] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFA500]"
               >
                 Start a Conversation
 
@@ -321,7 +317,7 @@ export default function DigitalTransformationHero() {
             <button
               type="button"
               onClick={scrollToChallenges}
-              className="group mt-6 inline-flex items-center gap-3 text-left text-[14px] font-medium text-black/55 transition-colors duration-300 hover:text-black"
+              className="group mt-6 inline-flex items-center gap-3 text-left   text-black/55 transition-colors duration-300 hover:text-black"
             >
               See where transformation starts
 

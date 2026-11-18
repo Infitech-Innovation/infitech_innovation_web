@@ -31,10 +31,10 @@ export default function PageUnderDevelopment({
         <p className="pt-8 uppercase text-infitech-orange">
           Coming soon
         </p>
-        <h3 className="pt-3 font-black leading-tight">
+        <h3 className="pt-3  ">
           {t("title", { page: pageTitle })}
         </h3>
-        <p className="mx-auto pt-4 max-w-lg leading-7 text-black/60 sm:text-lg">
+        <p className="mx-auto pt-4 max-w-lg  text-black/60 ">
           {t("description")}
         </p>
 

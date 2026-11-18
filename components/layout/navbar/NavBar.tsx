@@ -97,7 +97,7 @@ export function Navbar() {
             >
                 <Link
                     href="/"
-                    className="flex shrink-0 items-center gap-2 text-base font-black text-infitech-ink transition hover:opacity-80 sm:text-lg"
+                    className="flex shrink-0 items-center gap-2   text-infitech-ink transition hover:opacity-80 "
                     onClick={() => {
                         setOpen(false);
                         setActiveMegaMenu(null);
@@ -112,7 +112,7 @@ export function Navbar() {
                     />
                 </Link>
 
-                <div className="hidden items-center justify-center gap-x-1 sm-text font-semibold text-[#1f2330] lg:flex xl:gap-x-1.5">
+                <div className="hidden items-center justify-center gap-x-1 sm-text  text-[#1f2330] lg:flex xl:gap-x-1.5">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -187,7 +187,7 @@ export function Navbar() {
                                             }`}
                                     >
                                         <Icon className="h-5 w-5" strokeWidth={2.2} />
-                                        <span className="leading-tight">{item.label}</span>
+                                        <span className="">{item.label}</span>
                                         <ChevronRight className="h-3.5 w-3.5 text-black/35" />
                                     </button>
                                 );
@@ -202,10 +202,10 @@ export function Navbar() {
                                     className="block rounded-lg transition hover:text-infitech-orange"
                                     onClick={() => setActiveMegaMenu(null)}
                                 >
-                                    <span className="block sm-text font-semibold leading-tight">
+                                    <span className="block sm-text  ">
                                         {link.label}
                                     </span>
-                                    <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">
+                                    <span className="mt-1 block    text-black/55">
                                         {link.description}
                                     </span>
                                 </Link>
@@ -221,10 +221,10 @@ export function Navbar() {
                                         className="block rounded-lg transition hover:text-infitech-orange"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
-                                        <span className="block sm-text font-semibold leading-tight">
+                                        <span className="block sm-text  ">
                                             {link.label}
                                         </span>
-                                        <span className="mt-1 block text-xs font-medium leading-relaxed text-black/55">
+                                        <span className="mt-1 block    text-black/55">
                                             {link.description}
                                         </span>
                                     </Link>

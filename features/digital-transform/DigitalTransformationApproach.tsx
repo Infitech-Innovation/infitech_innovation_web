@@ -109,20 +109,20 @@ export default function DigitalTransformationApproach() {
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-7 bg-[#FFA500]" />
 
-              <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B87800]">
+              <span className="  uppercase  text-[#B87800]">
                 Our Approach
               </span>
             </div>
 
             <h2
               id="approach-heading"
-              className="mt-4 text-[clamp(2rem,3vw,3rem)] font-semibold leading-[1.1] tracking-[-0.045em]"
+              className="mt-4    "
             >
               How progress takes shape.
             </h2>
           </div>
 
-          <p className="max-w-[420px] text-[15px] leading-[1.7] text-black/55">
+          <p className="max-w-[420px]   text-black/55">
             We start by understanding your business.
             Every step after that builds on what we learn.
           </p>
@@ -229,15 +229,15 @@ export default function DigitalTransformationApproach() {
                       }`}
                     />
 
-                    <span className="text-[11px] font-semibold tracking-[0.12em] text-[#B87800]">
+                    <span className="   text-[#B87800]">
                       {step.number}
                     </span>
 
-                    <h3 className="mt-2.5 text-[19px] font-semibold leading-[1.2] tracking-[-0.035em]">
+                    <h3 className="mt-2.5    ">
                       {step.title}
                     </h3>
 
-                    <p className="mt-2 text-[13px] leading-[1.65] text-black/55">
+                    <p className="mt-2   text-black/55">
                       {step.description}
                     </p>
 

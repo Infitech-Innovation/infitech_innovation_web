@@ -136,7 +136,7 @@ export default function FooterSection() {
                 <div className="grid gap-x-24 gap-y-20 sm:grid-cols-2 xl:grid-cols-3">
                     {footerGroups.map((group) => (
                         <nav key={group.title} aria-label={group.title}>
-                            <h4 className="font-semibold text-white">{group.title}</h4>
+                            <h4 className=" text-white">{group.title}</h4>
                             <ul className="mt-5 space-y-3">
                                 {group.links.map((item) => (
                                     <li key={item.label}>

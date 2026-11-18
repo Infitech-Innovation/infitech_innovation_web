@@ -63,7 +63,7 @@ export default function HomePage() {
                             <div className="w-full max-w-[700px] py-4 sm:py-6 lg:py-0">
 
                                 {/* Eyebrow */}
-                                <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-infitech-ink/65">
+                                <p className="  uppercase  text-infitech-ink/65">
                                     DIGITAL TRANSFORMATION & INNOVATION
                                 </p>
 
@@ -119,15 +119,15 @@ export default function HomePage() {
                                                         {/* CARD COPY */}
                                                         <div className="space-y-3 sm:space-y-4">
 
-                                                            <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.08em] text-infitech-gold">
+                                                            <p className="   uppercase  text-infitech-gold">
                                                                 {card.kicker}
                                                             </p>
 
-                                                            <h2 className="pt-3 text-[26px] font-semibold leading-[1.12] tracking-[-0.025em] sm:text-[28px] lg:text-[32px]">
+                                                            <h2 className="pt-3      ">
                                                                 {card.title}
                                                             </h2>
 
-                                                            <p className="max-w-[290px] pt-3 text-[15px] font-normal leading-[1.55] text-infitech-surface/70 lg:text-[16px]">
+                                                            <p className="max-w-[290px] pt-3    text-infitech-surface/70 ">
                                                                 {card.description}
                                                             </p>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
 
                                                             <div className="absolute right-16 top-20 h-3 w-28 rotate-[24deg] rounded-full bg-infitech-surface/70 lg:right-16 lg:top-20 lg:w-32" />
 
-                                                            <div className="relative text-center text-5xl font-semibold leading-none text-infitech-surface lg:text-6xl">
+                                                            <div className="relative text-center    text-infitech-surface ">
                                                                 {index % 5 + 1}
                                                             </div>
                                                         </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
                         <div className="relative z-10 flex w-full items-center justify-center">
                             <div className="w-full max-w-[640px] py-4 sm:py-6 lg:py-0">
                                 <p>DIGITAL TRANSFORMATION & INNOVATION</p>
-                                <h1 className="max-w-[680px] font-black tracking-normal text-infitech-ink pt-4 pb-4">
+                                <h1 className="max-w-[680px]   text-infitech-ink pt-4 pb-4">
                                     Your business is growing.
                                     Your technology should grow with it.
 
@@ -182,13 +182,13 @@ export default function HomePage() {
                                 <div className="mt-5 flex w-full max-w-[360px] flex-col gap-2 lg:max-w-[520px] lg:flex-row">
                                     <Link
                                         href="/contact"
-                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full bg-infitech-ink px-4 font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
+                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full bg-infitech-ink px-4  text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Start a Conversation
                                     </Link>
                                     <Link
                                         href="/we-do/capability"
-                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full border bg-infitech-orange px-4 font-black text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
+                                        className="inline-flex min-h-11 min-w-0 sm-text flex-1 items-center justify-center rounded-full border bg-infitech-orange px-4  text-infitech-surface transition hover:bg-infitech-orange hover:text-infitech-ink sm:min-h-12"
                                     >
                                         Explore What We Do
                                     </Link>
@@ -211,13 +211,13 @@ export default function HomePage() {
                                                 <div className="relative z-10 flex w-full items-center justify-center">
                                                     <div className="grid w-full max-w-[620px] items-center gap-5 md:grid-cols-[0.9fr_1.1fr] md:gap-8">
                                                         <div className="space-y-3 sm:space-y-4 lg:space-y-5">
-                                                            <p className="font-mono font-black uppercase text-infitech-gold">
+                                                            <p className="  uppercase text-infitech-gold">
                                                                 {card.kicker}
                                                             </p>
-                                                            <h2 className="font-black pt-4">
+                                                            <h2 className=" pt-4">
                                                                 {card.title}
                                                             </h2>
-                                                            <p className="max-w-sm font-bold text-infitech-surface/82 pt-4">
+                                                            <p className="max-w-sm  text-infitech-surface/82 pt-4">
                                                                 {card.description}
                                                             </p>
                                                         </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
                                                             <div className="absolute bottom-12 right-10 h-16 w-16 rounded-full bg-infitech-orange lg:bottom-14 lg:h-24 lg:w-24" />
                                                             <div className="absolute bottom-20 left-14 h-3 w-32 rotate-[-18deg] rounded-full bg-infitech-surface lg:bottom-24 lg:left-18 lg:w-48" />
                                                             <div className="absolute right-16 top-20 h-3 w-28 rotate-[24deg] rounded-full bg-infitech-surface/70 lg:right-20 lg:top-24 lg:w-36" />
-                                                            <div className="relative text-center text-6xl font-black leading-none text-infitech-surface lg:text-7xl">
+                                                            <div className="relative text-center    text-infitech-surface ">
                                                                 {index % 5 + 1}
                                                             </div>
                                                         </div>

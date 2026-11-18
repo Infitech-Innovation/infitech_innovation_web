@@ -42,6 +42,8 @@
 
   /* Card H3: 21–24px mobile / 24–28px desktop */
   --font-size-card: clamp(1.3125rem, 2vw, 1.75rem);
+  --font-size-subheading: clamp(1rem, 1.4vw, 1.25rem);
+  --font-size-small-heading: clamp(0.9375rem, 1.2vw, 1.125rem);
 
   /* Intro: 18–20px */
   --font-size-intro: clamp(1.125rem, 1.4vw, 1.25rem);
@@ -119,6 +121,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
 }
 
 h1,
@@ -247,20 +252,6 @@ p {
 .infitech-industry-card:hover::before {
   animation: infitech-industry-border-draw 780ms ease-out forwards;
   opacity: 1;
-}
-
-.group:hover .infitech-industries-card-title,
-.group:focus-visible .infitech-industries-card-title,
-.group:hover .infitech-industries-last-title,
-.group:focus-visible .infitech-industries-last-title {
-  font-size: 1.1rem;
-}
-
-.group:hover .infitech-industries-card-heading,
-.group:focus-visible .infitech-industries-card-heading,
-.group:hover .infitech-industries-last-heading,
-.group:focus-visible .infitech-industries-last-heading {
-  font-size: 1.75rem;
 }
 
 @keyframes infitech-drawer-slide-in {

@@ -103,14 +103,14 @@ export default function AboutPage() {
                         <p>
                             PRODUCTS
                         </p>
-                        <h1 className="pt-4 font-black"> <span className="block text-infitech-ink"> We don&apos;t just use </span> <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent"> technology. </span> <span className="block text-infitech-ink"> We build it. </span> </h1>
+                        <h1 className="pt-4 "> <span className="block text-infitech-ink"> We don&apos;t just use </span> <span className="block bg-[linear-gradient(90deg,#ff8a00_0%,#ffa500_34%,#f6b216_56%,#000000_100%)] bg-clip-text text-transparent"> technology. </span> <span className="block text-infitech-ink"> We build it. </span> </h1>
                         <p className="mx-auto pt-5 max-w-2xl text-infitech-ink/75">
                             Our products come from problems and opportunities we believe technology can address in a better way.
                         </p>
 
                         <Link
                             href="/products"
-                            className="mt-8 sm-text inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6 font-black text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px]"
+                            className="mt-8 sm-text inline-flex min-h-12 w-full max-w-xs items-center justify-center gap-2 rounded-full bg-infitech-ink px-6  text-infitech-surface shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition hover:bg-infitech-gold hover:text-infitech-ink sm:min-h-14 sm:w-auto sm:min-w-[270px]"
                         >
                             Explore Our Products
                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
@@ -159,11 +159,11 @@ export default function AboutPage() {
                                                         className={`flex h-full w-full flex-col justify-between rounded-[20px] p-5 sm:rounded-[24px] sm:p-6 ${item.cardClass}`}
                                                     >
                                                         <div>
-                                                            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-infitech-orange">
+                                                            <p className="  uppercase  text-infitech-orange">
                                                                 Product
                                                             </p>
 
-                                                            <h2 className="pt-3 font-black">
+                                                            <h2 className="pt-3 ">
                                                                 {item.title}
                                                             </h2>
 
@@ -171,13 +171,13 @@ export default function AboutPage() {
                                                                 {item.subtitle}
                                                             </h4>
 
-                                                            <p className="pt-3 font-normal text-infitech-surface/70">
+                                                            <p className="pt-3  text-infitech-surface/70">
                                                                 {item.description}
                                                             </p>
                                                         </div>
 
                                                         <div className="flex items-center justify-between pt-6">
-                                                            <span className="text-sm font-semibold text-infitech-orange">
+                                                            <span className="  text-infitech-orange">
                                                                 {item.btntitle}
                                                             </span>
 
@@ -207,7 +207,7 @@ export default function AboutPage() {
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
                                                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-black/80 px-4 py-2 text-white">
-                                                        <span className="text-sm font-semibold">
+                                                        <span className=" ">
                                                             Explore {item.title}
                                                         </span>
 
@@ -225,21 +225,21 @@ export default function AboutPage() {
                                             className="flex min-h-[180px] flex-col justify-between rounded-[20px] p-5 transition duration-300 hover:-translate-y-1 hover:border-infitech-orange sm:min-h-[220px] sm:rounded-[24px] sm:p-6"
                                         >
                                             <div>
-                                                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-infitech-orange">
+                                                <p className="  uppercase  text-infitech-orange">
                                                     Innovation
                                                 </p>
 
-                                                <h2 className="pt-3 font-black">
+                                                <h2 className="pt-3 ">
                                                     {item.title}
                                                 </h2>
 
-                                                <h4 className="pt-3 font-semibold">
+                                                <h4 className="pt-3 ">
                                                     {item.subtitle}
                                                 </h4>
                                             </div>
 
                                             <div className="flex items-center justify-between pt-6">
-                                                <span className="text-sm font-semibold">
+                                                <span className=" ">
                                                     {item.btntitle}
                                                 </span>
 

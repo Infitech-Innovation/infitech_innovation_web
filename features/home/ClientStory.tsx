@@ -77,10 +77,10 @@ export default function ClientStory() {
         <>
             <section className="bg-infitech-surface px-4 py-4 text-infitech-ink sm:px-6 lg:px-10">
                 <div className="mx-auto max-w-4xl pb-2 text-center">
-                    <p className="font-black uppercase text-infitech-orange">
+                    <p className=" uppercase text-infitech-orange">
                         Client story
                     </p>
-                    <h1 className="mx-auto text-center pb-2 pt-3 font-black text-infitech-ink">
+                    <h1 className="mx-auto text-center pb-2 pt-3  text-infitech-ink">
                         Our work in practice.
                     </h1>
                     <p className="text-center text-infitech-ink/70">
@@ -118,7 +118,7 @@ export default function ClientStory() {
                                             className="h-12 w-17 object-contain"
                                         />
                                     </span>
-                                    {/* <span className={`text-sm font-black ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
+                                    {/* <span className={`  ${isActive ? "text-infitech-ink" : "text-infitech-ink/45"}`}>
                                         {story.shortTitle}
                                     </span> 
                                     <span className={`absolute inset-x-0 bottom-0 h-1.5 bg-infitech-gold transition ${isActive ? "opacity-100" : "opacity-0"}`} />
@@ -168,7 +168,7 @@ export default function ClientStory() {
 
                         <div className="mx-auto w-full max-w-xl text-center lg:mx-0 lg:text-left">
                             <p className="pb-3">CLIENT NAME</p>
-                            <h3 className="mt-3 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+                            <h3 className="mt-3     ">
                                 {activeStory.shortTitle}
                             </h3>
 
@@ -184,17 +184,17 @@ export default function ClientStory() {
 
                             <h4 className="pt-4">The Result</h4>
                             <p></p>
-                            {/* <p className="mt-6 text-lg font-semibold leading-8 text-infitech-ink/78">
+                            {/* <p className="mt-6    text-infitech-ink/78">
                             {activeStory.description}
                         </p>
-                        <p className="mt-4 text-sm font-semibold leading-6 text-infitech-ink/62 sm:text-base sm:leading-7">
+                        <p className="mt-4    text-infitech-ink/62  ">
                             {activeStory.detail}
                         </p> */}
                             <a
                                 href={activeStory.href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="sm-text mt-8 inline-flex items-center gap-3 font-black text-blue-600 transition hover:text-infitech-orange"
+                                className="sm-text mt-8 inline-flex items-center gap-3  text-blue-600 transition hover:text-infitech-orange"
                             >
                                 Visit {activeStory.title}
                                 <ArrowRight className="h-6 w-6" strokeWidth={2.1} />

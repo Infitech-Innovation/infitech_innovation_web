@@ -123,22 +123,22 @@ export default function Industries() {
                 <article className="relative z-10 flex w-full flex-col justify-between p-6 transition-colors duration-700 ease-out group-hover:text-infitech-ink group-focus-visible:text-infitech-ink">
                   <div>
                     <h3
-                      className={`infitech-industries-card-title mt-6 max-h-20 overflow-hidden font-black transition-all duration-500 ease-out group-hover:max-h-0 group-hover:mt-0 group-hover:opacity-0 group-focus-visible:max-h-0 group-focus-visible:mt-0 group-focus-visible:opacity-0 ${industry.imageFit === "contain" ? "text-infitech-ink" : ""
+                      className={`infitech-industries-card-title mt-6 max-h-20 overflow-hidden  transition-all duration-500 ease-out group-hover:max-h-0 group-hover:mt-0 group-hover:opacity-0 group-focus-visible:max-h-0 group-focus-visible:mt-0 group-focus-visible:opacity-0 ${industry.imageFit === "contain" ? "text-infitech-ink" : ""
                         }`}
                     >
                       {industry.title}
                     </h3>
 
-                    <h3 className="infitech-industries-card-heading pt-4 max-h-0 overflow-hidden font-black opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
+                    <h3 className="infitech-industries-card-heading pt-4 max-h-0 overflow-hidden  opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
                       {industry.headline}
                     </h3>
-                    <p className=" pt-4 max-h-0 overflow-hidden font-medium text-infitech-ink opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-60 group-hover:opacity-100 group-focus-visible:max-h-60 group-focus-visible:opacity-100">
+                    <p className=" pt-4 max-h-0 overflow-hidden  text-infitech-ink opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-60 group-hover:opacity-100 group-focus-visible:max-h-60 group-focus-visible:opacity-100">
                       {industry.description}
                     </p>
                   </div>
 
                   <div className="flex items-center justify-between gap-5 pt-8">
-                    <span className="max-w-[12rem] sm-text font-black text-infitech-orange opacity-0 transition duration-700 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <span className="max-w-[12rem] sm-text  text-infitech-orange opacity-0 transition duration-700 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
                       {industry.cta}
                     </span>
                     <ArrowRight className="h-7 w-7 shrink-0 text-infitech-orange transition duration-500 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1" strokeWidth={1.7} />
@@ -154,14 +154,14 @@ export default function Industries() {
 
             >
               <div>
-                <h3 className="infitech-industries-last-title mt-6 max-h-20 overflow-hidden font-black opacity-100 transition-all duration-500 ease-out group-hover:mt-0 group-hover:max-h-0 group-hover:opacity-0 group-focus-visible:mt-0 group-focus-visible:max-h-0 group-focus-visible:opacity-0">
+                <h3 className="infitech-industries-last-title mt-6 max-h-20 overflow-hidden  opacity-100 transition-all duration-500 ease-out group-hover:mt-0 group-hover:max-h-0 group-hover:opacity-0 group-focus-visible:mt-0 group-focus-visible:max-h-0 group-focus-visible:opacity-0">
                   Explore All Industries
                 </h3>
 
-                <h3 className="infitech-industries-last-heading pt-4 max-h-0 overflow-hidden font-black text-black/80 opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
+                <h3 className="infitech-industries-last-heading pt-4 max-h-0 overflow-hidden  text-black/80 opacity-0 transition-all duration-700 ease-out group-hover:max-h-32 group-hover:opacity-100 group-focus-visible:max-h-32 group-focus-visible:opacity-100">
                   Other industries available on the Industries page.
                 </h3>
-                <div className="mt-5 max-h-0 space-y-2 overflow-hidden text-sm font-semibold leading-6 text-black/68 opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-44 group-hover:opacity-100 group-focus-visible:max-h-44 group-focus-visible:opacity-100">
+                <div className="mt-5 max-h-0 space-y-2 overflow-hidden    text-black/68 opacity-0 transition-all delay-75 duration-700 ease-out group-hover:max-h-44 group-hover:opacity-100 group-focus-visible:max-h-44 group-focus-visible:opacity-100">
                   <ul className="list-disc pl-5">
                     {otherIndustries.map((industry) => (
                       <li className="sm-text" key={industry}>{industry}</li>

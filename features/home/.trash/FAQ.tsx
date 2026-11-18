@@ -28,10 +28,10 @@ export default function FAQ() {
         <section className="relative isolate overflow-hidden bg-infitech-orange px-4 py-14 text-infitech-surface sm:px-6 sm:py-16 lg:px-12 lg:py-20">
             <div className="mx-auto max-w-7xl">
                 <div className="relative mx-auto max-w-5xl text-center">
-                    <h2 className="text-[2.15rem] font-black leading-[0.98] tracking-normal text-infitech-surface min-[390px]:text-4xl sm:text-5xl lg:text-[4rem]">
+                    <h2 className="    text-infitech-surface min-[390px]:  ">
                         Questions? Answered
                     </h2>
-                    <p className="mx-auto mt-4 max-w-2xl text-sm font-bold leading-6 text-infitech-surface/78 sm:text-base sm:leading-7">
+                    <p className="mx-auto mt-4 max-w-2xl    text-infitech-surface/78  ">
                         Straight answers about working with Infitech, building custom systems, and keeping products useful after launch.
                     </p>
                 </div>
@@ -43,14 +43,14 @@ export default function FAQ() {
                             className="group overflow-hidden rounded-[28px] bg-infitech-ink text-infitech-surface shadow-[0_22px_60px_rgba(0,0,0,0.18)] sm:rounded-[36px]"
                             open={index === 0}
                         >
-                            <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-5 px-6 py-6 text-left text-lg font-black leading-tight marker:hidden sm:px-8 sm:py-7 sm:text-xl lg:px-12 lg:py-8 lg:text-[1.35rem]">
+                            <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-5 px-6 py-6 text-left    marker:hidden sm:px-8 sm:py-7  lg:px-12 lg:py-8 ">
                                 {item.question}
                                 <span className="grid h-10 w-10 place-items-center rounded-full bg-infitech-surface/10 text-infitech-cyan transition group-open:rotate-180">
                                     <ChevronDown className="h-5 w-5" strokeWidth={3} />
                                 </span>
                             </summary>
                             <div className="px-6 pb-7 pt-0 sm:px-8 sm:pb-9 lg:px-12">
-                                <p className="max-w-4xl text-sm font-semibold leading-6 text-infitech-surface/72 sm:text-[0.95rem]">
+                                <p className="max-w-4xl    text-infitech-surface/72 ">
                                     {item.answer}
                                 </p>
                             </div>

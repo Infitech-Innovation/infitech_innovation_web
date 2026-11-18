@@ -14,18 +14,18 @@ export default function Insights() {
 
                     {/* Left */}
                     <div>
-                        <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-infitech-orange">
+                        <p className="  uppercase  text-infitech-orange">
                             INSIGHTS
                         </p>
 
-                        <h2 className="mt-5 max-w-[680px] text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-infitech-ink sm:text-[40px] lg:text-[44px]">
+                        <h2 className="mt-5 max-w-[680px]     text-infitech-ink  ">
                             Thinking about technology starts with thinking about the business.
                         </h2>
                     </div>
 
                     {/* Right */}
                     <div className="lg:pb-1">
-                        <p className="max-w-[540px] text-[16px] font-normal leading-[1.65] text-infitech-ink/70 sm:text-[17px] lg:text-[18px]">
+                        <p className="max-w-[540px]    text-infitech-ink/70  ">
                             Practical perspectives on the technology decisions shaping how
                             organizations work, compete, and grow.
                         </p>
@@ -44,15 +44,15 @@ export default function Insights() {
                     <div className="flex flex-col justify-between">
 
                         <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.09em] text-infitech-orange sm:text-[12px]">
+                            <p className="  uppercase  text-infitech-orange ">
                                 AI & AUTOMATION
                             </p>
 
-                            <h3 className="mt-5 max-w-[560px] text-[30px] font-semibold leading-[1.12] tracking-[-0.025em] text-infitech-ink sm:text-[32px] lg:text-[36px]">
+                            <h3 className="mt-5 max-w-[560px]     text-infitech-ink  ">
                                 Where should your business actually be using AI?
                             </h3>
 
-                            <p className="mt-6 max-w-[540px] text-[15px] font-normal leading-[1.65] text-infitech-ink/70 sm:text-[16px]">
+                            <p className="mt-6 max-w-[540px]    text-infitech-ink/70 ">
                                 AI is creating new possibilities across the business. The
                                 harder question is knowing where it can make a meaningful
                                 difference and where it simply adds complexity.
@@ -61,7 +61,7 @@ export default function Insights() {
 
                         {/* Temporary non-clickable link */}
                         <div className="mt-8 lg:mt-12">
-                            <span className="group inline-flex cursor-pointer items-center gap-3 text-[15px] font-medium text-infitech-ink">
+                            <span className="group inline-flex cursor-pointer items-center gap-3   text-infitech-ink">
                                 Read the insight
 
                                 <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -93,7 +93,7 @@ export default function Insights() {
 
                                 <div className="w-full">
 
-                                    <p className="mb-8 text-[11px] font-semibold uppercase tracking-[0.1em] text-infitech-surface/50">
+                                    <p className="mb-8   uppercase  text-infitech-surface/50">
                                         WHERE AI CAN CREATE VALUE
                                     </p>
 
@@ -103,7 +103,7 @@ export default function Insights() {
                                         {/* Customer Experience */}
                                         <div className="flex items-center gap-4">
 
-                                            <span className="w-[125px] text-[14px] font-normal text-infitech-surface/75 sm:w-[150px] sm:text-[15px]">
+                                            <span className="w-[125px]   text-infitech-surface/75 sm:w-[150px] ">
                                                 Customer experience
                                             </span>
 
@@ -117,7 +117,7 @@ export default function Insights() {
                                         {/* Operations */}
                                         <div className="flex items-center gap-4">
 
-                                            <span className="w-[125px] text-[14px] font-normal text-infitech-surface/75 sm:w-[150px] sm:text-[15px]">
+                                            <span className="w-[125px]   text-infitech-surface/75 sm:w-[150px] ">
                                                 Operations
                                             </span>
 
@@ -131,7 +131,7 @@ export default function Insights() {
                                         {/* Internal Workflows */}
                                         <div className="flex items-center gap-4">
 
-                                            <span className="w-[125px] text-[14px] font-normal text-infitech-surface/75 sm:w-[150px] sm:text-[15px]">
+                                            <span className="w-[125px]   text-infitech-surface/75 sm:w-[150px] ">
                                                 Internal workflows
                                             </span>
 
@@ -145,7 +145,7 @@ export default function Insights() {
                                         {/* Decision Making */}
                                         <div className="flex items-center gap-4">
 
-                                            <span className="w-[125px] text-[14px] font-normal text-infitech-surface/75 sm:w-[150px] sm:text-[15px]">
+                                            <span className="w-[125px]   text-infitech-surface/75 sm:w-[150px] ">
                                                 Decision making
                                             </span>
 
@@ -161,11 +161,11 @@ export default function Insights() {
                                     {/* AI Marker */}
                                     <div className="mt-10 flex items-center justify-between border-t border-infitech-surface/15 pt-6">
 
-                                        <p className="max-w-[260px] text-[13px] font-normal leading-[1.5] text-infitech-surface/50">
+                                        <p className="max-w-[260px]    text-infitech-surface/50">
                                             Start with the problem. Then decide where AI belongs.
                                         </p>
 
-                                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-infitech-orange text-[16px] font-semibold text-infitech-ink sm:h-20 sm:w-20">
+                                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-infitech-orange   text-infitech-ink sm:h-20 sm:w-20">
                                             AI
                                         </div>
 
@@ -191,22 +191,22 @@ export default function Insights() {
                     {/* Insight 2 */}
                     <article className="border-b border-infitech-ink/15 py-10 lg:border-b-0 lg:border-r lg:py-14 lg:pr-12">
 
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.09em] text-infitech-orange sm:text-[12px]">
+                        <p className="  uppercase  text-infitech-orange ">
                             DIGITAL TRANSFORMATION
                         </p>
 
-                        <h3 className="mt-5 max-w-[500px] text-[22px] font-semibold leading-[1.25] tracking-[-0.02em] text-infitech-ink sm:text-[24px]">
+                        <h3 className="mt-5 max-w-[500px]     text-infitech-ink ">
                             Before you invest in new technology, understand what is slowing
                             the business down.
                         </h3>
 
-                        <p className="mt-5 max-w-[500px] text-[15px] font-normal leading-[1.65] text-infitech-ink/65 sm:text-[16px]">
+                        <p className="mt-5 max-w-[500px]    text-infitech-ink/65 ">
                             A look at why transformation should begin with the business
                             problem, not the technology.
                         </p>
 
                         {/* Temporary non-clickable link */}
-                        <span className="group mt-8 inline-flex cursor-pointer items-center gap-3 text-[15px] font-medium text-infitech-ink">
+                        <span className="group mt-8 inline-flex cursor-pointer items-center gap-3   text-infitech-ink">
                             Read the insight
 
                             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -220,21 +220,21 @@ export default function Insights() {
                     {/* Insight 3 */}
                     <article className="py-10 lg:py-14 lg:pl-12">
 
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.09em] text-infitech-orange sm:text-[12px]">
+                        <p className="  uppercase  text-infitech-orange ">
                             BUSINESS SYSTEMS
                         </p>
 
-                        <h3 className="mt-5 max-w-[500px] text-[22px] font-semibold leading-[1.25] tracking-[-0.02em] text-infitech-ink sm:text-[24px]">
+                        <h3 className="mt-5 max-w-[500px]     text-infitech-ink ">
                             When your business grows faster than the systems behind it.
                         </h3>
 
-                        <p className="mt-5 max-w-[500px] text-[15px] font-normal leading-[1.65] text-infitech-ink/65 sm:text-[16px]">
+                        <p className="mt-5 max-w-[500px]    text-infitech-ink/65 ">
                             What happens when disconnected processes, information, and tools
                             begin getting in the way of growth.
                         </p>
 
                         {/* Temporary non-clickable link */}
-                        <span className="group mt-8 inline-flex cursor-pointer items-center gap-3 text-[15px] font-medium text-infitech-ink">
+                        <span className="group mt-8 inline-flex cursor-pointer items-center gap-3   text-infitech-ink">
                             Read the insight
 
                             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -254,10 +254,10 @@ export default function Insights() {
                 <div className="flex justify-start border-t border-infitech-ink/15 pt-8 lg:justify-end">
 
                     {/* Temporary non-clickable CTA */}
-                    <span className="group inline-flex cursor-pointer items-center gap-4 text-[15px] font-medium text-infitech-orange sm:text-[16px]">
+                    <span className="group inline-flex cursor-pointer items-center gap-4   text-infitech-orange ">
                         Explore All Insights
 
-                        <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+                        <span className=" transition-transform duration-300 group-hover:translate-x-1">
                             →
                         </span>
                     </span>

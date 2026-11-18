@@ -451,16 +451,16 @@ function ChallengeItem({
   return (
     <article className="group min-w-0 border-t border-white/15 pt-5 lg:border-t-0 lg:border-l lg:pl-7 lg:first:border-l-0 lg:first:pl-0 xl:pl-8">
       <div className="flex items-start gap-3">
-        <span className="shrink-0 pt-0.5 text-[14px] font-medium text-[#FFA500]">
+        <span className="shrink-0 pt-0.5   text-[#FFA500]">
           {challenge.number}
         </span>
 
         <div className="min-w-0 flex-1">
-          <h3 className="text-[18px] font-semibold leading-tight tracking-[-0.035em] text-white sm:text-[20px]">
+          <h3 className="    text-white ">
             {challenge.title}
           </h3>
 
-          <p className="mt-2 max-w-[280px] text-[13px] leading-[1.6] text-white/65 sm:text-[14px]">
+          <p className="mt-2 max-w-[280px]   text-white/65 ">
             {challenge.description}
           </p>
         </div>
@@ -498,7 +498,7 @@ function ChallengeItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="border-l-2 border-[#FFA500] pb-1 pl-3 pt-4 text-[13px] leading-6 text-white/65">
+          <p className="border-l-2 border-[#FFA500] pb-1 pl-3 pt-4   text-white/65">
             {challenge.detail}
           </p>
         </div>
@@ -519,12 +519,12 @@ export default function DigitalTransformationChallenges() {
           <div className="relative z-10">
             <div className="flex items-center gap-4">
               <span className="h-[2px] w-8 bg-[#FFA500]" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#FFA500] sm:text-[11px]">
+              <span className="  uppercase  text-[#FFA500] ">
                 Where transformation starts
               </span>
             </div>
 
-            <h2 className="mt-6 text-[clamp(2.35rem,3.55vw,3.8rem)] font-semibold leading-[1.07] tracking-[-0.052em]">
+            <h2 className="mt-6    ">
               Your business
               <br />
               is growing.
@@ -536,7 +536,7 @@ export default function DigitalTransformationChallenges() {
               </span>
             </h2>
 
-            <p className="mt-4 max-w-[520px] text-[15px] leading-[1.7] text-white/65 sm:text-[16px]">
+            <p className="mt-4 max-w-[520px]   text-white/65 ">
               As businesses grow, systems don&apos;t always keep up.
               Information gets scattered, processes become harder to
               manage, and teams spend more time working around problems
@@ -563,7 +563,7 @@ export default function DigitalTransformationChallenges() {
         {/* Closing: single strong conclusion */}
         <div className="mt-9 border-t border-white/20 pt-7 lg:mt-10 lg:pt-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-10">
-            <h3 className="max-w-[850px] text-[clamp(1.85rem,3vw,3.2rem)] font-semibold leading-[1.15] tracking-[-0.045em]">
+            <h3 className="max-w-[850px]    ">
               Growth shouldn&apos;t create more friction.
               <br />
               <span className="text-[#FFA500]">
@@ -573,7 +573,7 @@ export default function DigitalTransformationChallenges() {
 
             <a
               href="#transformation-approach"
-              className="group/link inline-flex shrink-0 items-center gap-4 self-start text-[12px] font-medium text-white/75 transition-colors hover:text-white md:self-end"
+              className="group/link inline-flex shrink-0 items-center gap-4 self-start   text-white/75 transition-colors hover:text-white md:self-end"
             >
               <span className="border-b border-white/30 pb-1 transition-colors group-hover/link:border-[#FFA500]">
                 See how we approach it

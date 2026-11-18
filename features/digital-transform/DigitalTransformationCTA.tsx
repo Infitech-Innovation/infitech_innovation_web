@@ -81,14 +81,14 @@ export default function DigitalTransformationCTA() {
             <div className="mb-4 flex items-center gap-3">
               <span className="h-[2px] w-7 bg-[#FFA500]" />
 
-              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#B87800]">
+              <span className="  uppercase  text-[#B87800]">
                 What could work better?
               </span>
             </div>
 
             <h2
               id="transformation-cta-heading"
-              className="max-w-[680px] text-[clamp(2.2rem,3.5vw,3.65rem)] font-semibold leading-[1.1] tracking-[-0.045em] text-black"
+              className="max-w-[680px]     text-black"
             >
               Let&apos;s figure out what
               <br className="hidden sm:block" />
@@ -98,14 +98,14 @@ export default function DigitalTransformationCTA() {
 
           {/* Right: supporting copy and CTA */}
           <div className="flex min-w-0 flex-col items-start">
-            <p className="max-w-[445px] text-[15px] leading-[1.75] text-black/65 sm:text-[16px]">
+            <p className="max-w-[445px]   text-black/65 ">
               Tell us what&apos;s slowing your business down.
               We&apos;ll help you find a practical place to start.
             </p>
 
             <Link
               href={`/${locale}/contact`}
-              className="group mt-7 inline-flex min-h-[52px] items-center justify-center gap-7 rounded-full bg-[#FFA500] px-7 py-3 text-[14px] font-semibold text-black transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-[2px] hover:bg-[#FFB52E] hover:shadow-[0_10px_30px_rgba(255,165,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFA500]"
+              className="group mt-7 inline-flex min-h-[52px] items-center justify-center gap-7 rounded-full bg-[#FFA500] px-7 py-3   text-black transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-[2px] hover:bg-[#FFB52E] hover:shadow-[0_10px_30px_rgba(255,165,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFA500]"
             >
               <span>Start a Conversation</span>
 

@@ -40,21 +40,21 @@ export default function DigitalTransformationOutcomes() {
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-7 bg-[#FFA500]" />
 
-              <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#FFA500]">
+              <span className="  uppercase  text-[#FFA500]">
                 The Impact
               </span>
             </div>
 
             <h2
               id="outcomes-heading"
-              className="mt-4 text-[clamp(2.3rem,3.6vw,3.65rem)] font-semibold leading-[1.07] tracking-[-0.05em]"
+              className="mt-4    "
             >
               Less friction.
               <br />
               More room to grow.
             </h2>
 
-            <p className="mt-3 max-w-[440px] text-[14px] leading-[1.65] text-white/65 sm:text-[15px]">
+            <p className="mt-3 max-w-[440px]   text-white/65 ">
               When work becomes easier for your people,
               the whole business moves forward.
             </p>
@@ -75,7 +75,7 @@ export default function DigitalTransformationOutcomes() {
               <div className="pointer-events-none absolute bottom-4 left-5 flex items-center gap-2">
                 <span className="h-px w-6 bg-[#FFA500]" />
 
-                <span className="text-[10px] font-medium uppercase tracking-[0.13em] text-white">
+                <span className="  uppercase  text-white">
                   People first. Progress follows.
                 </span>
               </div>
@@ -85,7 +85,7 @@ export default function DigitalTransformationOutcomes() {
           {/* Right: compact outcome grid */}
           <div className="relative flex min-w-0 flex-col justify-end">
             <div className="mb-4 flex items-center gap-3">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/45">
+              <span className="  uppercase  text-white/45">
                 What changes
               </span>
 
@@ -130,18 +130,18 @@ export default function DigitalTransformationOutcomes() {
                   className="group relative min-h-[155px] border border-white/15 bg-[#101010] p-5 transition-colors duration-300 hover:border-[#FFA500]/60 sm:min-h-[170px]"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-semibold tracking-[0.12em] text-[#FFA500]">
+                    <span className="   text-[#FFA500]">
                       {outcome.number}
                     </span>
 
                     <span className="h-1 w-1 rounded-full bg-[#FFA500]" />
                   </div>
 
-                  <h3 className="mt-5 text-[17px] font-semibold leading-[1.25] tracking-[-0.025em]">
+                  <h3 className="mt-5    ">
                     {outcome.title}
                   </h3>
 
-                  <p className="mt-2 text-[13px] leading-[1.6] text-white/55">
+                  <p className="mt-2   text-white/55">
                     {outcome.description}
                   </p>
 

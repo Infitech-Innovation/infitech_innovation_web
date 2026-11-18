@@ -21,25 +21,25 @@ export default function FinalCTA() {
 
                     {/* LEFT */}
                     <div>
-                        <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-infitech-orange">
+                        <p className="  uppercase  text-infitech-orange">
                             WHAT COULD YOUR BUSINESS DO BETTER?
                         </p>
 
-                        <h2 className="mt-5 max-w-[700px] text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-[40px] lg:text-[44px]">
+                        <h2 className="mt-5 max-w-[700px]      ">
                             Let&apos;s figure out what comes next.
                         </h2>
                     </div>
 
                     {/* RIGHT */}
                     <div>
-                        <p className="max-w-[540px] text-[16px] font-normal leading-[1.65] text-infitech-surface/70 sm:text-[17px] lg:text-[18px]">
+                        <p className="max-w-[540px]    text-infitech-surface/70  ">
                             Tell us where you want to go, what&apos;s getting in the way,
                             or what you&apos;re trying to improve. We&apos;ll help you
                             think through what comes next.
                         </p>
 
                         <div className="mt-8">
-                            <span className="group inline-flex min-h-12 cursor-pointer items-center justify-center gap-3 rounded-full bg-infitech-orange px-7 text-[15px] font-medium text-infitech-ink transition-transform duration-300 hover:-translate-y-0.5">
+                            <span className="group inline-flex min-h-12 cursor-pointer items-center justify-center gap-3 rounded-full bg-infitech-orange px-7   text-infitech-ink transition-transform duration-300 hover:-translate-y-0.5">
                                 Start a Conversation
 
                                 <span className="transition-transform duration-300 group-hover:translate-x-1">

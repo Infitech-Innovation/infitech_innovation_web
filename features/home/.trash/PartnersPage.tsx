@@ -59,11 +59,11 @@ export default function PartnersPage() {
                 <div className="mx-auto grid max-w-7xl items-end gap-5 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:gap-8 lg:px-12">
                     <div className="relative">
                         <div className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-infitech-cyan/25" />
-                        <h2 className="relative mt-3 max-w-3xl text-[2.15rem] font-black leading-[1] tracking-normal min-[390px]:text-4xl sm:text-5xl lg:text-[3.65rem]">
+                        <h2 className="relative mt-3 max-w-3xl     min-[390px]:  ">
                             Companies growing with Infitech
                         </h2>
                     </div>
-                    <p className="max-w-2xl text-sm font-semibold leading-6 text-infitech-ink/70 sm:text-base sm:leading-7 lg:justify-self-end">
+                    <p className="max-w-2xl    text-infitech-ink/70   lg:justify-self-end">
                         A showcase of organizations that work with Infitech, use our products, or rely on our digital services to run smoother customer and business experiences.
                     </p>
                 </div>
@@ -96,7 +96,7 @@ export default function PartnersPage() {
                                     </div>
 
                                     <div className={`absolute inset-0 grid place-items-center bg-infitech-ink p-5 text-infitech-surface [backface-visibility:hidden] [transform:rotateY(180deg)] ${partner.shapeClass}`}>
-                                        <div className="inline-flex items-center justify-center gap-2 rounded-full bg-infitech-surface px-5 py-3 text-sm font-black text-infitech-ink shadow-[0_16px_34px_rgba(0,0,0,0.22)]">
+                                        <div className="inline-flex items-center justify-center gap-2 rounded-full bg-infitech-surface px-5 py-3   text-infitech-ink shadow-[0_16px_34px_rgba(0,0,0,0.22)]">
                                             Visit website
                                             <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
                                         </div>
