@@ -1,8 +1,6 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
-
 const connections = [
   {
     label: "People",
@@ -46,7 +44,7 @@ const connections = [
   },
 ] as const;
 
-function BusinessVisual({ active }: { active: boolean }) {
+function BusinessVisual() {
   return (
     <div className="relative mx-auto w-full max-w-[560px]">
       <svg
@@ -67,7 +65,7 @@ function BusinessVisual({ active }: { active: boolean }) {
             <stop
               offset="0%"
               stopColor="#FFA500"
-              stopOpacity="0.65"
+              stopOpacity="1"
             />
             <stop
               offset="55%"
@@ -77,7 +75,7 @@ function BusinessVisual({ active }: { active: boolean }) {
             <stop
               offset="100%"
               stopColor="#FFA500"
-              stopOpacity="0.9"
+              stopOpacity="1"
             />
           </linearGradient>
         </defs>
@@ -124,19 +122,15 @@ function BusinessVisual({ active }: { active: boolean }) {
               strokeWidth="1"
             />
 
+            {/* Keep the orange connections visible at the same thickness as the SVG scales. */}
             <path
               d={connection.path}
               pathLength={1}
               fill="none"
               stroke="url(#heroOrangeLine)"
               strokeWidth="1.6"
+              vectorEffect="non-scaling-stroke"
               strokeLinecap="round"
-              strokeDasharray="1"
-              strokeDashoffset={active ? 0 : 1}
-              className="transition-[stroke-dashoffset] duration-[1500ms] ease-out motion-reduce:transition-none"
-              style={{
-                transitionDelay: `${connection.delay}ms`,
-              }}
             />
 
             {/* Moving signal */}
@@ -154,14 +148,9 @@ function BusinessVisual({ active }: { active: boolean }) {
         ))}
 
         {/* Source points and labels */}
-        {connections.map((connection, index) => (
+        {connections.map((connection) => (
           <g
             key={`${connection.label}-label`}
-            className="transition-opacity duration-700 motion-reduce:transition-none"
-            style={{
-              opacity: active ? 1 : 0,
-              transitionDelay: `${150 + index * 140}ms`,
-            }}
           >
             <circle
               cx={connection.x}
@@ -179,12 +168,12 @@ function BusinessVisual({ active }: { active: boolean }) {
               fill="#111111"
             />
 
-            {/* Labels sit above the lines, not across them */}
+            {/* Larger mobile labels stay readable when the illustration scales down. */}
             <text
               x={connection.x + 15}
               y={connection.y - 13}
-              fill="#444444"
-              fontSize="12"
+              fill="#111111"
+              className="text-[18px] lg:text-[12px]"
               fontWeight="600"
               letterSpacing="1.2"
             >
@@ -193,22 +182,19 @@ function BusinessVisual({ active }: { active: boolean }) {
           </g>
         ))}
 
-        {/* Central business circle */}
+        {/* Keep the center and labels visible immediately, including on mobile. */}
         <circle
           cx="435"
           cy="245"
           r="66"
           fill="#000000"
-          className={`origin-center transition-opacity duration-700 ${
-            active ? "opacity-100" : "opacity-0"
-          }`}
         />
 
         <text
           x="435"
           y="231"
           fill="#999999"
-          fontSize="10"
+          className="text-[14px] lg:text-[10px]"
           letterSpacing="1.5"
           textAnchor="middle"
         >
@@ -219,7 +205,7 @@ function BusinessVisual({ active }: { active: boolean }) {
           x="435"
           y="255"
           fill="#FFFFFF"
-          fontSize="19"
+          className="text-[24px] lg:text-[19px]"
           fontWeight="600"
           textAnchor="middle"
           letterSpacing="-0.5"
@@ -249,16 +235,6 @@ function BusinessVisual({ active }: { active: boolean }) {
 }
 
 export default function DigitalTransformationHero() {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setActive(true);
-    }, 300);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
   const scrollToChallenges = () => {
     const section = document.getElementById(
       "transformation-challenges"
@@ -286,7 +262,7 @@ export default function DigitalTransformationHero() {
   return (
     <section
       data-digital-transformation-hero
-      className="relative isolate overflow-hidden bg-[#FEFFFE] px-4 pb-6 pt-10 text-black sm:px-6 sm:pb-8 sm:pt-12 lg:px-10 lg:pb-8 lg:pt-12"
+      className="relative isolate overflow-hidden bg-[#FEFFFE] px-4 pb-6 pt-28 text-black sm:px-6 sm:pb-8 lg:px-10 lg:pb-8 lg:pt-12"
     >
       {/* Quiet background */}
       <div
@@ -361,7 +337,7 @@ export default function DigitalTransformationHero() {
 
         {/* Right: connected business illustration */}
         <div className="flex min-w-0 w-full items-center justify-center lg:justify-end">
-          <BusinessVisual active={active} />
+          <BusinessVisual />
         </div>
       </div>
     </section>
